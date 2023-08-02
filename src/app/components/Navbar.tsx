@@ -86,7 +86,7 @@ export default function Navbar () {
         return (        
           <div className="font-bold text-[18px] flex flex-row items-center gap-2 cursor-pointer hover:text-blue-500 transition delay-100 duration-300 ease-in-out " onClick={(e)=> setDropDown(!dropDown)}>
             {product.name} {
-                product.name === 'Our Homes' &&
+                product.name === 'Our Homes' && idx === 1 &&
                 <span>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
