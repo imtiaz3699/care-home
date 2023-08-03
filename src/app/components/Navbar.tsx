@@ -2,6 +2,7 @@
 'use client'
 import React,{useState} from 'react'
 import Image from "next/image";
+import Link from 'next/link';
 
 
 
@@ -10,7 +11,7 @@ export default function Navbar () {
     const navData = [
         {
             name:'Home',
-            url:'',
+            url:'/',
         },
         {
             name:'Our Homes',
@@ -18,15 +19,15 @@ export default function Navbar () {
         },
         {
             name:'About Us',
-            url:'',
+            url:'/about',
         },
         {
             name:'Join The Team',
-            url:'',
+            url:'/join_team',
         },
         {
             name:'Contact Us',
-            url:'',
+            url:'/contact_us',
         },
     ]
     const dropDownData = [
@@ -84,7 +85,8 @@ export default function Navbar () {
         
       navData.map((product,idx) =>  {
         return (        
-          <div className="font-bold text-[18px] flex flex-row items-center gap-2 cursor-pointer hover:text-blue-500 transition delay-100 duration-300 ease-in-out " onClick={(e)=> setDropDown(!dropDown)}>
+          
+         <Link href={product.url}> <div className="font-bold text-[18px] flex flex-row items-center gap-2 cursor-pointer hover:text-blue-500 transition delay-100 duration-300 ease-in-out " onClick={(e)=> setDropDown(!dropDown)}>
             {product.name} {
                 product.name === 'Our Homes' && idx === 1 &&
                 <span>
@@ -94,14 +96,15 @@ export default function Navbar () {
             </span>
             }    
           </div>       
+          </Link>
         )
         })     
       }
       {
         dropDown && <div className='bg-green-700 rounded-xl absolute right-[10%] top-[10%] px-5 py-5 flex flex-col gap-5 '>
         {
-            dropDownData.map(element => {
-                return <div className='cursor-pointer hover:text-blue-700'>{element.name}</div>
+            dropDownData.map(element => {         
+                return  <div className='cursor-pointer hover:text-blue-700'>{element.name}</div>
             })
         }
         </div>
