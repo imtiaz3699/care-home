@@ -63,7 +63,9 @@ function page() {
             data.map((element,idx)=> {
                 return <div className='flex flex-col items-center' key = {idx}>
                 <h1 className='font-semibold text-[34px] text-green-700'>{element.name}</h1>
-                <img src={element.img} alt="" className='w-52 h-52'/>
+                <div className='w-28 h-28'>
+                <img src={element.img} alt="" className='w-full h-full'/>
+                </div>
             </div>
             })
            }             
