@@ -98,30 +98,18 @@ const footer1 = [
         })
        } 
 </Swiper>
-    <div className="flex flex-row justify-between w-full px-12 bg-white">
-    <div className="font-bold text-[35px]">Quality Care Your Loved Ones Deserve</div>
-    <div className="bg-green-500  py-5 px-5 rounded-t-lg">Call Us Today: <span>01162251632</span></div>
-    </div>        
+            
       
     </div>
+    <div className="flex flex-row justify-between w-full px-12 bg-white py-12">
+    <div className="font-bold text-[35px]">Quality Care Your Loved Ones Deserve</div>
+    <div className="bg-green-800 py-5 px-5 rounded-xl">Call Us Today: <span>01162251632</span></div>
+    </div>
+       
 
-       <div className="flex flex-col items-center py-5 bg-yellow-100">
-        <div className="flex flex-col items-center border-b pb-5 border-gray-500">
-        <h2 className="font-semi-bold text-green-500 text-[25px]">Find a Mauricare Home</h2>
-        <h2>Established over a decade ago, Mauricare is a group of Residential and Nursing Homes offering compassionate and person centered care for the elderly nationwide.</h2>
-        </div>
-        <div className="pt-5 flex flex-row items-center px-28">
-        {
-          houseAddress.map((element,idx)=> {
-            return <div>{element.name}</div>
-          })
-        }  
-        </div>
-       </div>
-
-       <div className="flex flex-col items-center justify-center py-5">
-        <div className="text-[25px] text-green-500">Our Care Services</div>
-        <div className="text-[16px] w-[50%] text-center">We work closely with our residents, their loved ones and all stakeholders to ensure that we support people to live with us as part of our extended family.</div>
+       <div className="flex flex-col items-center justify-center py-5 bg-green-800">
+        <div className="text-[30px] font-bold text-green-500">Our Care Services</div>
+        <div className="text-[20px] w-[50%] text-center">"We collaborate intimately with our residents, their cherished ones, and every invested party to ensure that we provide unwavering assistance for individuals to reside with us as integral members of our extended kinship."</div>
         <div className="flex flex-row items-center justify-between gap-20 py-10">
            {
             ourServices.map((element,idx)=> {
@@ -134,37 +122,18 @@ const footer1 = [
            } 
         </div>
        </div>
-<div className="bg-green-700 py-5">
-  <div className="flex flex-row items-center px-20 gap-10">
-      <div className="flex flex-col items-center">
-        <h1 className="font-bold text-[25px] ">Our Homes</h1>
-        <h1>Our Homes are designed to be a "home from home" in every sense, with delightful surroundings, beautifully furnished rooms, excellent food and, most importantly, a standard of care which is second to none.</h1>
-      </div>
 
-      <div className="w-full h-[200px] overflow-hidden"><img src="/house.jpg" alt="" /></div>
-      </div>
-
-      <div className="pt-5 flex flex-row items-center px-28">
-        {
-          houseAddress.map((element,idx)=> {
-            return <div>{element.name}</div>
-          })
-        }  
-        </div>
-
-
-</div>
 
 <div className="flex flex-col items-center py-10 px-20">
   <div className="flex flex-col items-center gap-5 justify-center  text-center">
         <div className="font-bold text-green-500 text-[20px]">Make an Inquiry</div>
         <div className="font-semibold text-green-500 text-[18px]">We would love to hear from if you you're a resident or a relative.</div>
-        <div className="w-[700px] text-gray-500">Our open and friendly management team allows staff, residents and family members to share any concerns or ideas freely. To contact our head office directly please use the form below. For internal care home enquiries please contact the individual home.</div>
+        <div className="w-[700px] text-gray-500">''Our transparent and approachable leadership group encourages staff, residents, and family members to openly express any apprehensions or suggestions. To directly reach our central administration, kindly utilize the provided form. Regarding internal inquiries about our care home, please get in touch with the specific facility.''</div>
         </div>
 </div>
 
 <div className="flex flex-row items-center justify-center px-10 py-10 gap-20"> 
-<div className="flex flex-col items-center justify-center w-[500px] border border-green-500 gap-5 px-10 py-10">
+<div className="flex flex-col items-center justify-center w-[500px] border border-green-500 rounded-xl gap-5 px-10 py-10">
 <div className="flex flex-col gap-3 w-full"> 
   <label htmlFor="">Your Name</label>
   <input type="text" className="w-full h-[30px] rounded-lg outline-none border border-gray-500 "/>
@@ -186,18 +155,22 @@ const footer1 = [
 </div>
 
 <div className="p-2 gap-5 flex flex-col gap-5">
-  <div className="border border-gray-500 w-[300px] h-[300px]"></div>
-  <div className="border border-gray-500 w-[300px] h-[300px]"></div>
+  <div className="border border-gray-500 w-[300px] h-[250px] rounded-xl">
+    <img src="/care.jpg" alt="" className="w-full h-full bg-cover rounded-xl"/>
+  </div>
+  <div className="border border-gray-500 w-[300px] h-[300px] rounded-xl">
+  <img src="/care2.jpg" alt="" className="w-full h-full bg-cover bg-cover rounded-xl"/>
+  </div>
 </div>
 
 
 </div>
 
-<div className="flex flex-row justify-center items-center gap-20  bg-pink-100">
-<img src="/design.jpg" alt="" className="w-[60%] h-[300px]"/>
+<div className="flex flex-row justify-center items-center gap-20  bg-green-800">
+<img src="/design.jpg" alt="" className="w-[60%] h-[500px]"/>
 <div className="flex flex-col items-center w-[40%] pr-10">
-  <h1 className="font-bold text-green-500 text-[25px]">Our Philosophy</h1>
-  <div className="text-gray-500">Our residents' families can rest assured that their loved ones are in a safe, caring and homely environment and that their dignity, respect, happiness and identities are in safe hands.</div>
+  <h1 className="font-bold text-white text-[30px]">Our Philosophy</h1>
+  <div className="text-white">At our care home, families can trust that their loved ones are in a safe, nurturing, and homely environment. We prioritize dignity, respect, and happiness for each resident, valuing their unique identities. Our dedicated team fosters a warm and supportive atmosphere, encouraging independence and engagement in fulfilling activities. Open communication with staff, residents, and families is vital to us, as we continuously improve our services. Safety is paramount, and our well-trained staff ensures a secure environment. Regular social events strengthen our close-knit community. Our care home is a place of comfort, love, and joy, where residents thrive and families are always welcomed.</div>
 </div>
 
 </div>
@@ -207,7 +180,7 @@ const footer1 = [
     <div className="font-bold text-green-500">What Residents and Families Says</div>
     <div>Here are some of our latest reviews from CareHome.co.uk, the leading care home review web site.</div>
   </div>
-
+      <div className="flex flex-row gap-20 items-center">
   <div className="border border-gray-300 w-[500px] px-5 py-5">
         <h1>
         <svg xmlns="http://www.w3.org/2000/svg"  version="1.1" id="Layer_1" x="0px" y="0px" width="312.25px" height="48.354px" viewBox="0 0 312.25 48.354" enable-background="new 0 0 312.25 48.354" >
@@ -234,15 +207,26 @@ const footer1 = [
 		<path fill="#2A3988" stroke="#FFFFFF" stroke-width="2" d="M13.175,16.937c6.559,0,11.875,5.312,11.875,11.871    c0,6.549-5.316,11.882-11.875,11.882C6.619,40.689,1.3,35.356,1.3,28.808C1.3,22.249,6.619,16.937,13.175,16.937z"/>
 	</g>
 </g>
-</svg>
-
-
+        </svg>
         </h1>
         <div className="border border-b-gray-500 pb-2">the leading care home review website</div>
-  </div>
-  <div className="flex flex-col items-center">
+        <div className="font-bold text-[20px] py-3">Mauricare Homes</div>
+        <div className="font-bold border-b border-b-gray-500 pb-4">carehome.co.uk Review Score <span className="font-normal">146 reviews of the setttings belonging to Mauricane Homes</span></div>
+        <div className="font-bold py-4">A S Care</div>
+        <div><img src="/stars.png" alt="" /></div>
+        <div className="font-bold">1 Aug 2023: Ruth R (Daughter of Resident)</div>
+        <div className="border-b border-b-gray-500 pb-3">My mum has spent 11 weeks in the care home. She has been looked after. The staff are always polite...</div>
+        <div className="font-bold py-3">Ashfield House</div>
+        <div><img src="/stars.png" alt="" /></div>
+        <div className="font-bold">12 Jul 2023: W M (Husband of Resident)</div>
+        <div>My experience with Ashfield House is one of total relief! My wife gets the care which I provided...</div>
 
   </div>
+  <div className="flex flex-col items-center w-[700px] h-[400px] border border-gray-500">
+  
+  </div>
+  </div>
+  
 
 
 
@@ -267,14 +251,7 @@ LE2 2PU</div>
         }
 </div>
 </div>
-<div className="flex flex-col gap-1">
-  <h1 className="text-white font-bold text-[35px]">Our Homes</h1>
-  {
-    houseAddress.map((element,idx)=> {
-      return <div className="hover:underline cursor-pointer text-white">{element.name}</div>
-    })
-  }
-</div>
+
 <div className="flex flex-col">
   <div className="text-white font-bold text-[35px]">Contact Us</div>
   <div className="text-white">Tel:01162251632</div>

@@ -78,14 +78,7 @@ LE2 2PU</div>
         }
 </div>
 </div>
-<div className="flex flex-col gap-1">
-  <h1 className="text-white font-bold text-[35px]">Our Homes</h1>
-  {
-    houseAddress.map((element,idx)=> {
-      return <div className="hover:underline cursor-pointer text-white">{element.name}</div>
-    })
-  }
-</div>
+
 <div className="flex flex-col">
   <div className="text-white font-bold text-[35px]">Contact Us</div>
   <div className="text-white">Tel:01162251632</div>
