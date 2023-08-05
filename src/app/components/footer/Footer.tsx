@@ -63,13 +63,13 @@ function Footer() {
      <div className="footer flex flex-row  bg-green-800 justify-center gap-20 py-10">
 <div>
   <img src="/logo.png" alt="" className="w-[200px] h-[200px]"/>
-  <div className="text-white">Mauricare Homes</div>
+  <div className="text-white">SBH Healthcare Limited</div>
   <div className="text-white">362 London Road
 Leicester
 LE2 2PU</div>
 </div>
 <div>
-<h1 className="text-white font-bold text-[35px]">Mauricare</h1>
+<h1 className="text-white font-bold text-[35px]">SBH Healthcare</h1>
 <div className="flex flex-col gap-1">
         {
           footer1.map((element,idx)=> {

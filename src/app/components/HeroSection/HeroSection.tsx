@@ -5,6 +5,17 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
+// Import Swiper React components
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+
+
+
+// import required modules
+import { FreeMode,Pagination } from 'swiper/modules';
+import { test } from "node:test";
 
 function HeroSection() {
     const images =['/oldAge.jpg','/oldAge2.jpg','/oldAge3.jpg'];
@@ -85,16 +96,58 @@ const footer1 = [
 ]
 
 
+const testimonials = [
+  {
+    name:'Emily Truner',
+    review:'A haven of warmth and care. The staff at this old age home go above and beyond to make each resident feel cherished and valued. I m so grateful for the compassionate environment they provide'
+  },
+  {
+    name:'George Anderson',
+    review:'A true blessing for our seniors. The facilities are top-notch, and the organized activities keep everyone engaged and lively. This old age home sets a shining example for others.',
+  },
+  {
+    name:'Margaret Hughes',
+    review:'Home away from home. The staffs dedication is heartwarming. They ensure that our loved ones are not just cared for, but they flourish with genuine affection.',
+  },
+  {
+    name:'William Parker',
+    review:'Exceptional support for seniors needs. This old age homes commitment to providing personalized attention is commendable. Our family is at peace knowing our relative is in such capable hands.',
+  },
+  {
+    name:'Lily Foster',
+    review:'A treasure for the elderly. The cheerful atmosphere and the constant companionship make it a joyous community. Its evident that the staff here are driven by a deep passion for caregiving.',
+  },
+  {
+    name:'Samuel Wright',
+    review:'A place of respect and honor for seniors. The old age homes commitment to maintaining residents dignity while offering top-quality care is truly inspiring.',
+  },
+  {
+    name:' Olivia Patel',
+    review:'An old age home that feels like family. The warm and friendly ambiance, along with the well-planned recreational activities, creates an environment where seniors can thrive.',
+  },
+  {
+    name:'Henry Carter',
+    review:'Exceptional attention to detail. The staffs unwavering dedication to meeting each residents unique needs sets this old age home apart. Our family is deeply appreciative.',
+  },
+  {
+    name:'Amelia Turner',
+    review:'A haven of tranquility for our loved ones. The picturesque surroundings combined with the staffs genuine care provide a safe and peaceful retreat for seniors.',
+  },
+  {
+    name:'Charles Hughes',
+    review:'A remarkable establishment. The commitment to fostering an environment of companionship and vitality is truly commendable. Our dear ones are in the best hands here.',
+  },
+]
 
   return (
 
 <>
-    <div className="w-full h-[600px]">
+    <div className="w-full h-[700px]">
         
 <Swiper className="mySwiper w-full h-full relative">
        {
         images.map((element,idx)=> {
-            return <SwiperSlide className="w-full h-full"><img src={element} alt="" className="object-contained w-full h-full"/></SwiperSlide>
+            return <SwiperSlide className="w-full h-full"><img src={element} alt="" className="w-full h-full"/></SwiperSlide>
         })
        } 
 </Swiper>
@@ -175,57 +228,32 @@ const footer1 = [
 
 </div>
 
-<div className="flex flex-col items-center justify-center">
-  <div className="flex flex-col items-center gap-2 py-10">
-    <div className="font-bold text-green-500">What Residents and Families Says</div>
-    <div>Here are some of our latest reviews from CareHome.co.uk, the leading care home review web site.</div>
+<div className="flex flex-col items-center justify-center py-10">
+  <div className="flex flex-col items-center gap-2 pb-5">
+    <div className="font-bold text-green-500 text-[30px]">What Residents and Families Says</div>
+    <div className="text-[20px] text-center">Here are some of our latest reviews from CareHome.co.uk,<br /> the leading care home review web site.</div>
   </div>
       <div className="flex flex-row gap-20 items-center">
-  <div className="border border-gray-300 w-[500px] px-5 py-5">
-        <h1>
-        <svg xmlns="http://www.w3.org/2000/svg"  version="1.1" id="Layer_1" x="0px" y="0px" width="312.25px" height="48.354px" viewBox="0 0 312.25 48.354" enable-background="new 0 0 312.25 48.354" >
-<g>
-	<g enable-background="new    ">
-		<path fill="#214497" d="M59.815,34.135c-0.859,0.404-2.543,0.825-4.56,0.825c-5.02,0-8.29-3.233-8.29-8.218    c0-4.819,3.304-8.547,8.949-8.547c1.491,0,3.007,0.329,3.933,0.721l-0.726,3.068c-0.664-0.329-1.621-0.641-3.073-0.641    c-3.103,0-4.954,2.287-4.922,5.232c0,3.296,2.15,5.189,4.922,5.189c1.389,0,2.41-0.309,3.203-0.64L59.815,34.135z"/>
-		<path fill="#214497" d="M75.305,30.778c0,1.44,0.066,2.862,0.263,3.852h-3.666l-0.298-1.771h-0.098    C70.547,34.114,68.864,35,66.748,35c-3.237,0-5.051-2.348-5.051-4.798c0-4.017,3.597-6.097,9.546-6.075v-0.269    c0-1.05-0.431-2.801-3.272-2.801c-1.586,0-3.235,0.494-4.326,1.193l-0.793-2.634c1.187-0.743,3.271-1.423,5.816-1.423    c5.15,0,6.638,3.254,6.638,6.796L75.305,30.778L75.305,30.778z M71.339,26.783c-2.875-0.041-5.615,0.556-5.615,2.99    c0,1.603,1.023,2.323,2.314,2.323c1.649,0,2.805-1.07,3.204-2.225c0.097-0.289,0.097-0.597,0.097-0.887V26.783L71.339,26.783z"/>
-		<path fill="#214497" d="M79.598,23.735c0-2.184-0.034-3.77-0.131-5.189h3.501l0.165,3.048h0.097    c0.793-2.244,2.676-3.397,4.428-3.397c0.397,0,0.628,0.021,0.957,0.083v3.81c-0.362-0.062-0.725-0.104-1.219-0.104    c-1.915,0-3.272,1.216-3.635,3.069c-0.068,0.369-0.101,0.803-0.101,1.216v8.359h-4.063L79.598,23.735L79.598,23.735z"/>
-		<path fill="#214497" d="M93.933,27.73c0.098,2.902,2.348,4.159,4.954,4.159c1.883,0,3.203-0.288,4.459-0.722l0.596,2.781    c-1.389,0.589-3.305,1.01-5.614,1.01c-5.219,0-8.294-3.192-8.294-8.115c0-4.469,2.708-8.648,7.863-8.648    c5.221,0,6.94,4.284,6.94,7.825c0,0.763-0.07,1.34-0.134,1.71H93.933L93.933,27.73z M101.001,24.889    c0.037-1.482-0.628-3.935-3.337-3.935c-2.507,0-3.566,2.286-3.731,3.935H101.001z"/>
-		<path fill="#214497" d="M108.336,11.172h2.904v10.01h0.065c0.46-0.823,1.191-1.563,2.081-2.08    c0.861-0.494,1.882-0.781,2.972-0.781c2.151,0,5.583,1.317,5.583,6.796v9.515h-2.906v-9.185c0-2.575-0.958-4.717-3.697-4.717    c-1.884,0-3.336,1.317-3.902,2.883c-0.165,0.413-0.195,0.845-0.195,1.38v9.639h-2.904L108.336,11.172L108.336,11.172z"/>
-		<path fill="#214497" d="M141.13,26.515c0,5.91-4.121,8.484-7.959,8.484c-4.294,0-7.661-3.171-7.661-8.217    c0-5.334,3.532-8.464,7.929-8.464C138.021,18.319,141.13,21.655,141.13,26.515z M128.484,26.681c0,3.501,1.979,6.136,4.82,6.136    c2.775,0,4.859-2.614,4.859-6.198c0-2.719-1.358-6.116-4.797-6.116C129.968,20.502,128.484,23.674,128.484,26.681z"/>
-		<path fill="#214497" d="M144.793,22.974c0-1.688-0.062-3.008-0.123-4.325h2.532l0.145,2.616h0.083    c0.905-1.524,2.389-2.945,5.065-2.945c2.142,0,3.789,1.317,4.489,3.212h0.063c0.494-0.927,1.152-1.585,1.813-2.101    c0.969-0.721,1.998-1.111,3.502-1.111c2.16,0,5.291,1.379,5.291,6.938v9.371h-2.842v-9.02c0-3.09-1.152-4.924-3.459-4.924    c-1.689,0-2.944,1.235-3.48,2.615c-0.124,0.434-0.227,0.928-0.227,1.463v9.864h-2.843v-9.575c0-2.533-1.111-4.367-3.336-4.367    c-1.793,0-3.131,1.464-3.604,2.925c-0.165,0.392-0.228,0.907-0.228,1.422v9.597h-2.842L144.793,22.974L144.793,22.974z"/>
-		<path fill="#214497" d="M173.952,27.175c0.073,3.934,2.553,5.541,5.497,5.541c2.08,0,3.357-0.353,4.427-0.825l0.517,2.081    c-1.018,0.473-2.801,1.028-5.354,1.028c-4.922,0-7.848-3.273-7.848-8.094c0-4.818,2.834-8.587,7.496-8.587    c5.252,0,6.604,4.551,6.604,7.496c0,0.597-0.034,1.028-0.096,1.358L173.952,27.175L173.952,27.175z M182.479,25.095    c0.041-1.813-0.763-4.695-4.026-4.695c-2.976,0-4.231,2.677-4.459,4.695H182.479z"/>
-		<path fill="#214497" d="M187.791,32.92c0-1.193,0.834-2.08,1.996-2.08c1.152,0,1.938,0.865,1.938,2.08    c0,1.194-0.783,2.08-2.008,2.08C188.592,35,187.791,34.114,187.791,32.92z"/>
-		<path fill="#214497" d="M206.727,34.073c-0.758,0.37-2.443,0.927-4.594,0.927c-4.83,0-7.962-3.273-7.962-8.154    c0-4.923,3.371-8.525,8.588-8.525c1.716,0,3.233,0.433,4.035,0.865l-0.662,2.202c-0.694-0.371-1.786-0.763-3.373-0.763    c-3.665,0-5.643,2.739-5.643,6.057c0,3.687,2.368,5.972,5.54,5.972c1.658,0,2.74-0.391,3.574-0.763L206.727,34.073z"/>
-		<path fill="#214497" d="M224.396,26.515c0,5.91-4.135,8.484-7.965,8.484c-4.293,0-7.662-3.171-7.662-8.217    c0-5.334,3.535-8.464,7.931-8.464C221.292,18.319,224.396,21.655,224.396,26.515z M211.738,26.681c0,3.501,1.988,6.136,4.83,6.136    c2.769,0,4.849-2.614,4.849-6.198c0-2.719-1.347-6.116-4.78-6.116C213.232,20.502,211.738,23.674,211.738,26.681z"/>
-		<path fill="#214497" d="M226.575,32.92c0-1.193,0.827-2.08,1.983-2.08c1.154,0,1.947,0.865,1.947,2.08    c0,1.194-0.793,2.08-2.015,2.08C227.365,35,226.575,34.114,226.575,32.92z"/>
-		<path fill="#214497" d="M247.482,30.242c0,1.688,0.035,3.132,0.127,4.388h-2.575l-0.164-2.596h-0.063    c-0.726,1.277-2.449,2.966-5.291,2.966c-2.506,0-5.512-1.422-5.512-7.002v-9.35h2.91v8.813c0,3.048,0.952,5.128,3.564,5.128    c1.951,0,3.299-1.358,3.832-2.678c0.166-0.392,0.267-0.927,0.267-1.481v-9.782h2.905V30.242L247.482,30.242z"/>
-		<path fill="#214497" d="M255.18,25.979h0.064c0.395-0.557,0.924-1.256,1.383-1.813l4.729-5.52h3.467l-6.143,6.568l7.037,9.412    h-3.57l-5.481-7.661l-1.483,1.647v6.014h-2.877V11.172h2.877v14.808H255.18z"/>
-	</g>
-	<g>
-		<path fill="#14509B" stroke="#FFFFFF" stroke-width="2" d="M23.25,7.064c3.211,5.72,1.172,12.963-4.543,16.165    c-5.717,3.206-12.959,1.175-16.165-4.543C-0.668,12.97,1.371,5.73,7.088,2.524C12.804-0.69,20.046,1.346,23.25,7.064z"/>
-		<path fill="#229BBD" stroke="#FFFFFF" stroke-width="2" d="M39.384,15.958c3.354,5.983,1.225,13.543-4.757,16.909    c-5.971,3.351-13.541,1.219-16.896-4.764c-3.353-5.973-1.229-13.539,4.75-16.897C28.457,7.857,36.023,9.982,39.384,15.958z"/>
-		<path fill="#2A3988" stroke="#FFFFFF" stroke-width="2" d="M13.175,16.937c6.559,0,11.875,5.312,11.875,11.871    c0,6.549-5.316,11.882-11.875,11.882C6.619,40.689,1.3,35.356,1.3,28.808C1.3,22.249,6.619,16.937,13.175,16.937z"/>
-	</g>
-</g>
-        </svg>
-        </h1>
-        <div className="border border-b-gray-500 pb-2">the leading care home review website</div>
-        <div className="font-bold text-[20px] py-3">Mauricare Homes</div>
-        <div className="font-bold border-b border-b-gray-500 pb-4">carehome.co.uk Review Score <span className="font-normal">146 reviews of the setttings belonging to Mauricane Homes</span></div>
-        <div className="font-bold py-4">A S Care</div>
-        <div><img src="/stars.png" alt="" /></div>
-        <div className="font-bold">1 Aug 2023: Ruth R (Daughter of Resident)</div>
-        <div className="border-b border-b-gray-500 pb-3">My mum has spent 11 weeks in the care home. She has been looked after. The staff are always polite...</div>
-        <div className="font-bold py-3">Ashfield House</div>
-        <div><img src="/stars.png" alt="" /></div>
-        <div className="font-bold">12 Jul 2023: W M (Husband of Resident)</div>
-        <div>My experience with Ashfield House is one of total relief! My wife gets the care which I provided...</div>
-
-  </div>
-  <div className="flex flex-col items-center w-[700px] h-[400px] border border-gray-500">
-  
-  </div>
-  </div>
+        
+        <Swiper
+          slidesPerView={3}
+          spaceBetween={30}
+          freeMode={true}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[FreeMode, Pagination]}
+        className="mySwiper w-[900px]  h-[300px]" style = {{paddingRight:'40px',paddingLeft:'40px',paddingTop:'20px',paddingBottom:'20px'}} 
+      >
+              {testimonials.map((element,idx)=> {
+                return <SwiperSlide style = {{margin:0}} className="text-white py-20 flex flex-col gap-3 h-[500px] items-center justify-center text-center rounded-xl px-3 py-5  bg-green-800 ">
+                      <div className="">{element.review}</div>
+                      <h1 className="font-bold text-[20px] ">{element.name}</h1>
+                      {/* <img src="/star.png" alt="" className="w-[20px] h-[20px]"/> */}</SwiperSlide>
+              })}        
+        
+      </Swiper>
+        </div>
   
 
 

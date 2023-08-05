@@ -51,8 +51,8 @@ function page() {
   return (
     <>
       <Navbar/>
-      <div className='w-full h-[500px]' style = {{backgroundImage:'url(/oldAge2.jpg)'}}></div>
-      <div className='bg-green-800 container mx-auto py-7 flex flex-row items-center justify-center'>
+      <div className='w-full h-[500px] bg-cover' style = {{backgroundImage:'url(/oldAge2.jpg)'}}></div>
+      <div className='bg-green-800  py-7 flex flex-row items-center justify-center'>
         <div className='bg-yellow-100 flex flex-col items-center max-w-[500px] py-5 px-10 rounded-xl border-1 border-gray-500'>
             <div className='font-bold text-[40px] text-green-700'>Our Mission</div>
             <p className='font-semibold text-green-500'>We promise to share our caring nature with all our residents and stakeholders, making them feel as homely, comfortable and safe as possible in our care.</p>
