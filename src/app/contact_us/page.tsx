@@ -26,21 +26,21 @@ To enquire about a resident or a specific home, get in touch with the individual
    <div className='flex flex-col'>
    <div className="flex flex-col items-center justify-center w-[500px] gap-5 px-10 py-10">
 <div className="flex flex-col gap-3 w-full"> 
-  <label htmlFor="">Your Name</label>
+  <label htmlFor="name">Your Name</label>
   <input type="text" className="w-full h-[30px] rounded-lg outline-none border border-gray-500 "/>
 </div>
 <div className="flex flex-col gap-3 w-full">
-<label htmlFor="">Your Email Address</label>
+<label htmlFor="email">Your Email Address</label>
   <input type="text" className="w-full h-[30px] rounded-lg outline-none border border-gray-500 "/>
 </div>
 <div className="flex flex-col gap-3 w-full">
-<label htmlFor="">Telephone Number (Optional)</label>
+<label htmlFor="phone">Telephone Number (Optional)</label>
   <input type="text" className="w-full h-[30px] rounded-lg outline-none border border-gray-500 "/>
 </div>
 <div className="flex flex-col gap-3 w-full">
-<label htmlFor="">What would you like to discuss?</label>
-  {/* <input type="text" className="w-full h-[30px] rounded-lg outline-none border border-gray-500 "/> */}
-  <textarea name="" id="" cols="30" rows="10" className="outline-none border border-gray-500"></textarea>
+<label htmlFor="discussion">What would you like to discuss?</label>
+  
+  <textarea name="discussion" cols={30} rows={10} className="outline-none border border-gray-500"></textarea>
 </div>
 <button className="bg-green-800 px-3 py-3 rounded-xl text-white">Send Inquiry</button>
 </div>
