@@ -14,10 +14,6 @@ export default function Navbar () {
             url:'/',
         },
         {
-            name:'Our Homes',
-            url:'',
-        },
-        {
             name:'About Us',
             url:'/about',
         },
@@ -72,7 +68,7 @@ export default function Navbar () {
 
     ]
     
-    return <div className='flex flex-row items-center justify-between bg-green-500  w-full px-10 py-2'>
+    return <div className='flex flex-row items-center justify-between bg-green-800 text-white w-full px-10 py-2'>
         <div className="bg-white rounded-xl flex flex-row items-center">'
     <Image
       src="/logo.png"
@@ -82,11 +78,9 @@ export default function Navbar () {
     /></div>
         <div className="hidden md:flex flex-row items-center gap-5  ">
         {
-        
       navData.map((product,idx) =>  {
         return (        
-          
-         <Link href={product.url}> <div className="font-bold text-[18px] flex flex-row items-center gap-2 cursor-pointer hover:text-blue-500 transition delay-100 duration-300 ease-in-out " onClick={(e)=> setDropDown(!dropDown)}>
+         <Link href={product.url}> <div className="font-bold text-[18px] flex flex-row items-center gap-2 cursor-pointer hover:text-blue-500 transition delay-100 duration-300 ease-in-out " onClick={idx === 1 ? ()=> setDropDown(!dropDown) : ()=> setDropDown(false)}>
             {product.name} {
                 product.name === 'Our Homes' && idx === 1 &&
                 <span>
@@ -100,16 +94,7 @@ export default function Navbar () {
         )
         })     
       }
-      {
-        dropDown && <div className='bg-green-700 rounded-xl absolute right-[10%] top-[10%] px-5 py-5 flex flex-col gap-5 '>
-        {
-            dropDownData.map(element => {         
-                return  <div className='cursor-pointer hover:text-blue-700'>{element.name}</div>
-            })
-        }
-        </div>
-      }
-    
+      
         </div>
 
     </div>
