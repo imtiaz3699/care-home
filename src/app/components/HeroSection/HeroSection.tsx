@@ -240,31 +240,30 @@ Life at SBH is a tapestry of vitality and connection. Our diverse activities, fr
 <div className="flex flex-row items-center justify-center px-10 py-10 gap-20"> 
 <div className="flex flex-col items-center justify-center w-[500px] border border-green-500 rounded-xl gap-5 px-10 py-10">
 <div className="flex flex-col gap-3 w-full"> 
-  <label htmlFor="">Your Name</label>
+  <label htmlFor="name">Your Name</label>
   <input type="text" className="w-full h-[30px] rounded-lg outline-none border border-gray-500 "/>
 </div>
 <div className="flex flex-col gap-3 w-full">
-<label htmlFor="">Your Email Address</label>
+<label htmlFor="email">Your Email Address</label>
   <input type="text" className="w-full h-[30px] rounded-lg outline-none border border-gray-500 "/>
 </div>
 <div className="flex flex-col gap-3 w-full">
-<label htmlFor="">Telephone Number (Optional)</label>
+<label htmlFor="telephone">Telephone Number (Optional)</label>
   <input type="text" className="w-full h-[30px] rounded-lg outline-none border border-gray-500 "/>
 </div>
 <div className="flex flex-col gap-3 w-full">
-<label htmlFor="">What would you like to discuss?</label>
-  {/* <input type="text" className="w-full h-[30px] rounded-lg outline-none border border-gray-500 "/> */}
-  <textarea name="" id="" cols="30" rows="10" className="outline-none border border-gray-500"></textarea>
+<label htmlFor="discussion">What would you like to discuss?</label>
+  <textarea name="" id="" cols={30} rows={10} className="outline-none border border-gray-500"></textarea>
 </div>
 <button className="bg-green-800 px-3 py-3 rounded-xl text-white">Send Inquiry</button>
 </div>
 
-<div className="p-2 gap-5 flex flex-col gap-5">
+<div className="p-2 gap-5 flex flex-col">
   <div className="border border-gray-500 w-[300px] h-[250px] rounded-xl">
     <img src="/care.jpg" alt="" className="w-full h-full bg-cover rounded-xl"/>
   </div>
   <div className="border border-gray-500 w-[300px] h-[300px] rounded-xl">
-  <img src="/care2.jpg" alt="" className="w-full h-full bg-cover bg-cover rounded-xl"/>
+  <img src="/care2.jpg" alt="" className="w-full h-full  bg-cover rounded-xl"/>
   </div>
 </div>
 
@@ -301,7 +300,7 @@ Life at SBH is a tapestry of vitality and connection. Our diverse activities, fr
                 return <SwiperSlide style = {{margin:0}} className="text-white py-20 flex flex-col gap-3 h-[500px] items-center justify-center text-center rounded-xl px-3 py-5  bg-green-800 ">
                       <div className="">{element.review}</div>
                       <h1 className="font-bold text-[20px] ">{element.name}</h1>
-                      {/* <img src="/star.png" alt="" className="w-[20px] h-[20px]"/> */}</SwiperSlide>
+                      </SwiperSlide>
               })}        
         
       </Swiper>
@@ -339,7 +338,7 @@ LE2 2PU</div>
   <div className="mt-2">
   <div className="text-white font-normal text-[35px]">Follow Us</div>
   <div className="flex flex-row">
-    <img src="/facebook.png" alt="" />
+    <img src="/facebook.png" alt="facebook logo" />
     <img src="/twitter.png" alt="" />
     <img src="/linked.png" alt="" />
   </div>
