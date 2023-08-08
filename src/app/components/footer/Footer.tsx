@@ -60,9 +60,9 @@ function Footer() {
       ]
   return (
     <>
-     <div className="footer flex flex-row  bg-green-800 justify-center gap-20 py-10">
-<div>
-  <img src="/logo.png" alt="" className="w-[200px] h-[200px]"/>
+     <div className="footer flex flex-col items-center text-center md:text-left md:flex-row bg-green-800 justify-center gap-20 py-10 px-3">
+<div className='flex flex-col items-center'>
+  <img src="/logo.png" alt="" className="w-[200px] h-[200px] m-0"/>
   <div className="text-white">SBH Healthcare Limited</div>
   <div className="text-white">362 London Road
 Leicester
@@ -79,16 +79,16 @@ LE2 2PU</div>
 </div>
 </div>
 
-<div className="flex flex-col">
+<div className="flex flex-col ">
   <div className="text-white font-bold text-[35px]">Contact Us</div>
   <div className="text-white">Tel:01162251632</div>
   <div className="text-white">Email:contact@mauricare.com</div>
   <div className="mt-2">
   <div className="text-white font-normal text-[35px]">Follow Us</div>
-  <div className="flex flex-row">
-    <img src="/facebook.png" alt="" />
-    <img src="/twitter.png" alt="" />
-    <img src="/linked.png" alt="" />
+  <div className="flex flex-row items-center justify-center">
+    <img src="/facebook.png" alt="" className='w-[50px] h-[50px]'/>
+    <img src="/twitter.png" alt="" className='w-[50px] h-[50px]'/>
+    <img src="/linked.png" alt="" className='w-[50px] h-[50px]'/>
   </div>
   </div>
 </div>

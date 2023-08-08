@@ -16,6 +16,7 @@ import 'swiper/css/pagination';
 // import required modules
 import { FreeMode,Pagination } from 'swiper/modules';
 import { test } from "node:test";
+import Footer from "../footer/Footer";
 
 function HeroSection() {
     const images =['/oldAge.jpg','/oldAge2.jpg','/oldAge3.jpg'];
@@ -142,33 +143,33 @@ const testimonials = [
   return (
 
 <>
-    <div className="w-full h-[700px]">
+    <div className="w-full md:h-[700px]">
         
 <Swiper className="mySwiper w-full h-full relative">
        {
         images.map((element,idx)=> {
-            return <SwiperSlide className="w-full h-full"><img src={element} alt="" className="w-full h-full"/></SwiperSlide>
+            return <SwiperSlide className="w-full h-full" key = {idx}><img src={element} alt="" className="w-full h-full bg-cover"/></SwiperSlide>
         })
        } 
 </Swiper>
             
       
     </div>
-    <div className="flex flex-row justify-between w-full px-12 bg-white py-12">
-    <div className="font-bold text-[35px]">Quality Care Your Loved Ones Deserve</div>
-    <div className="bg-green-800 py-5 px-5 rounded-xl">Call Us Today: <span>01162251632</span></div>
+    <div className="flex flex-col items-center text-center gap-5 md:flex-row md:justify-between w-full px-4 md:px-12 bg-white py-8 md:py-12 ">
+    <div className="font-bold text-[25px] md:text-[35px]">Quality Care Your Loved Ones Deserve</div>
+    <div className="bg-green-800 p-2 md:p-5 rounded-xl font-bold text-[15px]">Call Us Today: <span>01162251632</span></div>
     </div>
        
 
        <div className="flex flex-col items-center justify-center py-5 bg-green-800">
-        <div className="text-[30px] font-bold text-green-500">Our Care Services</div>
-        <div className="text-[20px] w-[50%] text-center">"We collaborate intimately with our residents, their cherished ones, and every invested party to ensure that we provide unwavering assistance for individuals to reside with us as integral members of our extended kinship."</div>
-        <div className="flex flex-row items-center justify-between gap-20 py-10">
+        <div className="text-[20px] text-[30px] font-bold text-green-500 text-center">Our Care Services</div>
+        <div className="text-[16px] md:text-[20px] px-3 md:px-0 md:w-[50%] text-center ">"We collaborate intimately with our residents, their cherished ones, and every invested party to ensure that we provide unwavering assistance for individuals to reside with us as integral members of our extended kinship."</div>
+        <div className="px-3 grid grid-cols-2 md:flex md:flex-row items-center justify-between gap-3 md:gap-20 py-10">
            {
             ourServices.map((element,idx)=> {
-              return <div  className="flex flex-col items-center gap-5">
-                <img src={element.img} alt="" />
-                <div className="text-green-500">{element.name}</div>
+              return <div  className=" flex flex-col items-center gap-5" key = {idx}>
+                <img src={element.img} alt="" className="w-[70px] h-[70px] md:w-[100px] md:h-[100px]"/>
+                <div className="text-green-500 text-center text-[16px]">{element.name}</div>
               </div>
             })
             
@@ -177,37 +178,37 @@ const testimonials = [
        </div>
 
 
-<div className="flex flex-col items-center py-10 px-20">
-  <div className="flex flex-col items-center gap-5 justify-center  text-center">
-        <div className="font-bold text-green-500 text-[20px]">Make an Inquiry</div>
-        <div className="font-semibold text-green-500 text-[18px]">We would love to hear from if you you're a resident or a relative.</div>
-        <div className="w-[700px] text-gray-500">''Our transparent and approachable leadership group encourages staff, residents, and family members to openly express any apprehensions or suggestions. To directly reach our central administration, kindly utilize the provided form. Regarding internal inquiries about our care home, please get in touch with the specific facility.''</div>
+<div className="flex flex-col items-center py-5 px-3 md:py-10 md:px-20">
+  <div className="flex flex-col items-center gap-3 md:gap-5 justify-center  text-center">
+        <div className="font-bold text-green-500 text-[20px] md:text-[30px] ">Make an Inquiry</div>
+        <div className="font-semibold text-green-500  text-[18px] md:text-[25]">We would love to hear from if you you're a resident or a relative.</div>
+        <div className="md:w-[700px] text-gray-500 text-[16px] md:text-[20px]">''Our transparent and approachable leadership group encourages staff, residents, and family members to openly express any apprehensions or suggestions. To directly reach our central administration, kindly utilize the provided form. Regarding internal inquiries about our care home, please get in touch with the specific facility.''</div>
         </div>
 </div>
 
-<div className="flex flex-row items-center justify-center px-10 py-10 gap-20"> 
-<div className="flex flex-col items-center justify-center w-[500px] border border-green-500 rounded-xl gap-5 px-10 py-10">
-<div className="flex flex-col gap-3 w-full"> 
-  <label htmlFor="">Your Name</label>
+<div className="flex flex-row items-center justify-center px-3 md:px-10 py-10 md:gap-20"> 
+<div className="flex flex-col items-center justify-center w-full  md:w-[500px] border border-green-500 rounded-xl gap-5 px-5 md:px-10 py-10">
+<div className="flex flex-col gap-1 md:gap-3 w-full"> 
+  <label htmlFor="" className="text-[16px] text-[20px]">Your Name</label>
   <input type="text" className="w-full h-[30px] rounded-lg outline-none border border-gray-500 "/>
 </div>
-<div className="flex flex-col gap-3 w-full">
-<label htmlFor="">Your Email Address</label>
+<div className="flex flex-col gap-1 md:gap-3 w-full">
+<label htmlFor="" className="text-[16px] text-[20px]">Your Email Address</label>
   <input type="text" className="w-full h-[30px] rounded-lg outline-none border border-gray-500 "/>
 </div>
-<div className="flex flex-col gap-3 w-full">
-<label htmlFor="">Telephone Number (Optional)</label>
+<div className="flex flex-col gap-1 md:gap-3 w-full">
+<label htmlFor="" className="text-[16px] text-[20px]">Telephone Number (Optional)</label>
   <input type="text" className="w-full h-[30px] rounded-lg outline-none border border-gray-500 "/>
 </div>
-<div className="flex flex-col gap-3 w-full">
-<label htmlFor="">What would you like to discuss?</label>
-  {/* <input type="text" className="w-full h-[30px] rounded-lg outline-none border border-gray-500 "/> */}
+<div className="flex flex-col gap-1 md:gap-3 w-full">
+<label htmlFor="" className="text-[16px] text-[20px]">What would you like to discuss?</label>
+
   <textarea name="" id="" cols="30" rows="10" className="outline-none border border-gray-500"></textarea>
 </div>
 <button className="bg-green-800 px-3 py-3 rounded-xl text-white">Send Inquiry</button>
 </div>
 
-<div className="p-2 gap-5 flex flex-col gap-5">
+<div className="p-2 hidden gap-5 md:flex flex-col md:gap-5 ">
   <div className="border border-gray-500 w-[300px] h-[250px] rounded-xl">
     <img src="/care.jpg" alt="" className="w-full h-full bg-cover rounded-xl"/>
   </div>
@@ -219,37 +220,61 @@ const testimonials = [
 
 </div>
 
-<div className="flex flex-row justify-center items-center gap-20  bg-green-800">
-<img src="/design.jpg" alt="" className="w-[60%] h-[500px]"/>
-<div className="flex flex-col items-center w-[40%] pr-10">
-  <h1 className="font-bold text-white text-[30px]">Our Philosophy</h1>
-  <div className="text-white">At our care home, families can trust that their loved ones are in a safe, nurturing, and homely environment. We prioritize dignity, respect, and happiness for each resident, valuing their unique identities. Our dedicated team fosters a warm and supportive atmosphere, encouraging independence and engagement in fulfilling activities. Open communication with staff, residents, and families is vital to us, as we continuously improve our services. Safety is paramount, and our well-trained staff ensures a secure environment. Regular social events strengthen our close-knit community. Our care home is a place of comfort, love, and joy, where residents thrive and families are always welcomed.</div>
+
+
+
+
+
+<div className="flex flex-col items-center xl:flex-row justify-center items-center gap-10 xl:gap-20  bg-green-800 pb-5 xl:pb-0">
+  <div className="w-full xl:w-[60%] xl:h-[500px]">
+<img src="/design.jpg" alt=""  className="bg-cover w-full h-full"/>
+</div>
+<div className="flex flex-col items-center justify-center w-full xl:w-[40%] px-3 xl:px-0 xl:pr-10 text-center xl:text-left">
+  <h1 className="font-bold text-white text-[25px] xl:text-[30px]">Our Philosophy</h1>
+  <div className="text-white text-[18px]">At our care home, families can trust that their loved ones are in a safe, nurturing, and homely environment. We prioritize dignity, respect, and happiness for each resident, valuing their unique identities. Our dedicated team fosters a warm and supportive atmosphere, encouraging independence and engagement in fulfilling activities. Open communication with staff, residents, and families is vital to us, as we continuously improve our services. Safety is paramount, and our well-trained staff ensures a secure environment. Regular social events strengthen our close-knit community. Our care home is a place of comfort, love, and joy, where residents thrive and families are always welcomed.</div>
+</div>
 </div>
 
-</div>
+
+
+
 
 <div className="flex flex-col items-center justify-center py-10">
   <div className="flex flex-col items-center gap-2 pb-5">
-    <div className="font-bold text-green-500 text-[30px]">What Residents and Families Says</div>
-    <div className="text-[20px] text-center">Here are some of our latest reviews from CareHome.co.uk,<br /> the leading care home review web site.</div>
+    <div className="font-bold text-green-500 text-[20px] md:text-[30px] text-center">What Residents and Families Says</div>
+    <div className=" text-[18px] md:text-[20px] text-center">Here are some of our latest reviews from CareHome.co.uk,<br /> the leading care home review web site.</div>
   </div>
       <div className="flex flex-row gap-20 items-center">
         
         <Swiper
-          slidesPerView={3}
-          spaceBetween={30}
           freeMode={true}
+          spaceBetween={20}
           pagination={{
             clickable: true,
           }}
           modules={[FreeMode, Pagination]}
-        className="mySwiper w-[900px]  h-[300px]" style = {{paddingRight:'40px',paddingLeft:'40px',paddingTop:'20px',paddingBottom:'20px'}} 
+        className="mySwiper w-[300px] sm:w-[400px]  md:w-[700px]  lg:w-[900px] h-[300px] px-5 gap-10"
+        breakpoints={{
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+        }}
+        style = {{paddingRight:'40px',paddingLeft:'40px',paddingTop:'20px',paddingBottom:'20px'}} 
       >
               {testimonials.map((element,idx)=> {
-                return <SwiperSlide style = {{margin:0}} className="text-white py-20 flex flex-col gap-3 h-[500px] items-center justify-center text-center rounded-xl px-3 py-5  bg-green-800 ">
+                return <SwiperSlide style = {{margin:0}} key = {idx} className="text-white py-20 flex flex-col w-[300px] sm:w-[400px] gap-3 h-[500px] items-center justify-center text-center rounded-xl px-3 py-5  bg-green-800 ">
                       <div className="">{element.review}</div>
                       <h1 className="font-bold text-[20px] ">{element.name}</h1>
-                      {/* <img src="/star.png" alt="" className="w-[20px] h-[20px]"/> */}</SwiperSlide>
+</SwiperSlide>
               })}        
         
       </Swiper>
@@ -261,7 +286,9 @@ const testimonials = [
 </div>
 
 
-<div className="footer flex flex-row  bg-green-800 justify-center gap-20 py-10">
+
+<Footer/>
+{/* <div className="footer flex flex-row  bg-green-800 justify-center gap-20 py-10">
 <div>
   <img src="/logo.png" alt="" className="w-[200px] h-[200px]"/>
   <div className="text-white">Mauricare Homes</div>
@@ -274,12 +301,11 @@ LE2 2PU</div>
 <div className="flex flex-col gap-1">
         {
           footer1.map((element,idx)=> {
-            return <div className="hover:underline cursor-pointer text-white">{element.name}</div>
+            return <div className="hover:underline cursor-pointer text-white" key = {idx}>{element.name}</div>
           })
         }
 </div>
 </div>
-
 <div className="flex flex-col">
   <div className="text-white font-bold text-[35px]">Contact Us</div>
   <div className="text-white">Tel:01162251632</div>
@@ -293,9 +319,7 @@ LE2 2PU</div>
   </div>
   </div>
 </div>
-
-
-</div>
+</div> */}
 
     </>
 
