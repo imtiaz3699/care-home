@@ -155,6 +155,61 @@ const testimonials = [
             
       
     </div>
+
+    <div className="flex flex-col items-center py-20 gap-5 lg:gap-10">
+      <h1 className="text-[25px] sm:text-[35px] text-center font-bold text-blue-800">What sets us Apart</h1>
+     
+     
+      <div className="flex flex-col-reverse lg:flex-row px-3 sm:px-0 items-center gap-2 lg:gap-10">
+        <div className="w-full h-full sm:w-[500px] sm:h-[400px] drop-shadow-2xl border-4 border-blue-800 rounded-xl shadow-slate-800">
+          <img src="/careworkout.webp" alt="" className="w-full h-full   rounded-lg"/>
+        </div>
+        <div className="flex flex-col w-full sm:w-[500px] lg:w-[450px] gap-2">
+          <h1 className="font-bold text-[20px] gap-3 text-blue-800">Personalized Care:</h1>
+          <p>Within our establishment, we hold a steadfast belief in the distinct and individual needs of each resident. To address this, our approach involves meticulously tailored care plans that prioritize personal preferences and requirements. Our dedicated team is committed to ensuring that every resident receives the attentive and specialized care they merit. This personalized approach extends beyond medical necessities, encompassing a resident's unique hobbies, interests, and background. By upholding this philosophy, we create an environment where every individual is valued and their well-being is at the forefront of our care.</p>
+        </div>
+      </div>
+
+
+      <div className="flex flex-col lg:flex-row items-center px-3 sm:px-0 gap-2 lg:gap-10 mt-0 lg:mt-20">
+      <div className="flex flex-col  w-full sm:w-[500px] lg:w-[450px] gap-3">
+          <h1 className="font-bold text-[20px] text-blue-800">Engaging Activities:</h1>
+          <p>
+Life at SBH is a tapestry of vitality and connection. Our diverse activities, from arts to fitness and outings, keep residents engaged and joyful. These thoughtfully curated experiences foster creativity and holistic well-being. Beyond our walls, captivating outings offer a window to the world. Within our community, friendships flourish, creating a vibrant and supportive atmosphere. As the day ends, residents retire content, embodying the enriching power of genuine human connections.</p>
+        </div>
+        <div className="w-full h-full sm:w-[500px] sm:h-[400px] drop-shadow-2xl border-4 border-blue-800 rounded-xl shadow-slate-800">
+          <img src="/engage.jpg" alt="" className="w-full h-full bg-cover rounded-lg"/>
+        </div>
+      </div>
+
+
+      <div className="flex flex-col-reverse lg:flex-row px-3 sm:px-0 items-center gap-2 lg:gap-10 mt-0 lg:mt-20">
+        <div className="w-full h-full sm:w-[500px] sm:h-[400px] drop-shadow-2xl border-4 border-blue-800 rounded-xl shadow-slate-800">
+          <img src="/dining.jpg" alt="" className="w-full h-full   rounded-lg"/>
+        </div>
+        <div className="flex flex-col w-full sm:w-[500px] lg:w-[450px] gap-2">
+          <h1 className="font-bold text-[20px] gap-3 text-blue-800">Delicious Dining:</h1>
+          <p>At our esteemed old age home, we recognize the pivotal role of nourishment in well-being. Accomplished chefs curate nutritious and delectable meals, tailored to diverse dietary needs, ensuring that each dining moment is a source of joy. Our culinary experts blend health and flavor seamlessly, crafting a variety of dishes that cater to individual preferences. Beyond sustenance, we view dining as a cherished experience, fostering both communal connections and personal comfort. With a commitment to excellence, we prioritize the residents' dietary requirements while elevating their culinary journey.</p>
+        </div>
+      </div>
+
+      <div className="flex flex-col lg:flex-row items-center px-3 sm:px-0 gap-2 lg:gap-10 mt-0 lg:mt-20">
+      <div className="flex flex-col w-full sm:w-[500px] lg:w-[450px] gap-3">
+          <h1 className="font-bold text-[20px] text-blue-800">Safe and Secure:</h1>
+          <p>
+          At the heart of our commitment lies the utmost importance placed on the safety and security of our residents. Our modern facility boasts a range of cutting-edge safety features, seamlessly integrated to provide a secure living space. Complemented by our dedicated and compassionate staff, who are accessible round-the-clock, we ensure a serene and protected environment that promotes a high quality of life. From advanced surveillance systems to secure access protocols, every detail is meticulously designed to safeguard our residents' well-being.</p>
+        </div>
+        <div className="w-full h-full sm:w-[500px] sm:h-[400px] drop-shadow-2xl border-4 border-blue-800 rounded-xl shadow-slate-800">
+          <img src="/elderly-patients.jpg" alt="" className="w-full h-full bg-cover rounded-lg"/>
+        </div>
+      </div>
+
+
+
+    </div>
+
+
+    
     <div className="flex flex-col items-center text-center gap-5 md:flex-row md:justify-between w-full px-4 md:px-12 bg-white py-8 md:py-12 ">
     <div className="font-bold text-[25px] md:text-[35px]">Quality Care Your Loved Ones Deserve</div>
     <div className="bg-green-800 p-2 md:p-5 rounded-xl font-bold text-[15px]">Call Us Today: <span>01162251632</span></div>
@@ -186,18 +241,19 @@ const testimonials = [
         </div>
 </div>
 
+
 <div className="flex flex-row items-center justify-center px-3 md:px-10 py-10 md:gap-20"> 
 <div className="flex flex-col items-center justify-center w-full  md:w-[500px] border border-green-500 rounded-xl gap-5 px-5 md:px-10 py-10">
 <div className="flex flex-col gap-1 md:gap-3 w-full"> 
-  <label htmlFor="" className="text-[16px] text-[20px]">Your Name</label>
+  <label htmlFor="name" className="text-[16px] text-[20px]">Your Name</label>
   <input type="text" className="w-full h-[30px] rounded-lg outline-none border border-gray-500 "/>
 </div>
 <div className="flex flex-col gap-1 md:gap-3 w-full">
-<label htmlFor="" className="text-[16px] text-[20px]">Your Email Address</label>
+<label htmlFor="email" className="text-[16px] text-[20px]">Your Email Address</label>
   <input type="text" className="w-full h-[30px] rounded-lg outline-none border border-gray-500 "/>
 </div>
 <div className="flex flex-col gap-1 md:gap-3 w-full">
-<label htmlFor="" className="text-[16px] text-[20px]">Telephone Number (Optional)</label>
+<label htmlFor="telephone" className="text-[16px] text-[20px]">Telephone Number (Optional)</label>
   <input type="text" className="w-full h-[30px] rounded-lg outline-none border border-gray-500 "/>
 </div>
 <div className="flex flex-col gap-1 md:gap-3 w-full">
@@ -213,7 +269,7 @@ const testimonials = [
     <img src="/care.jpg" alt="" className="w-full h-full bg-cover rounded-xl"/>
   </div>
   <div className="border border-gray-500 w-[300px] h-[300px] rounded-xl">
-  <img src="/care2.jpg" alt="" className="w-full h-full bg-cover bg-cover rounded-xl"/>
+  <img src="/care2.jpg" alt="" className="w-full h-full  bg-cover rounded-xl"/>
   </div>
 </div>
 

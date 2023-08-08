@@ -61,7 +61,7 @@ export default function Navbar () {
         </div>
 
         {
-         dropDown && <div className='bg-green-800 flex flex-col absolute w-full left-0 top-[65px] md:hidden px-5 gap-3 py-5 '>
+         dropDown && <div className='bg-green-800  flex flex-col absolute z-10 w-full left-0 top-[65px] md:hidden px-5 gap-3 py-5 '>
          {navData.map((element,idx)=> {
             
            return <Link key = {idx} href={element.url}>
