@@ -17,6 +17,7 @@ import 'swiper/css/pagination';
 import { FreeMode,Pagination } from 'swiper/modules';
 import { test } from "node:test";
 import Footer from "../footer/Footer";
+import CookieConsent from "../cookie-consent/CookieConsent";
 
 function HeroSection() {
     const images =['/oldAge.jpg','/oldAge2.jpg','/oldAge3.jpg'];
@@ -376,7 +377,7 @@ LE2 2PU</div>
   </div>
 </div>
 </div> */}
-
+{/* <CookieConsent/> */}
     </>
 
   )
