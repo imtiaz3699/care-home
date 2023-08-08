@@ -61,12 +61,10 @@ function Footer() {
   return (
     <>
      <div className="footer flex flex-col items-center text-center md:text-left md:flex-row bg-green-800 justify-center gap-20 py-10 px-3">
-<div className='flex flex-col items-center'>
+<div className='flex flex-col items-center text-center'>
   <img src="/logo.png" alt="" className="w-[200px] h-[200px] m-0"/>
   <div className="text-white">SBH Healthcare Limited</div>
-  <div className="text-white">362 London Road
-Leicester
-LE2 2PU</div>
+  <div className="text-white">311 Brookvale Road <br /> Erdington Birmingham B23 7RR</div>
 </div>
 <div>
 <h1 className="text-white font-bold text-[35px]">SBH Healthcare</h1>
@@ -81,7 +79,7 @@ LE2 2PU</div>
 
 <div className="flex flex-col ">
   <div className="text-white font-bold text-[35px]">Contact Us</div>
-  <div className="text-white">Tel:01162251632</div>
+  <div className="text-white">Tel:07482112058</div>
   <div className="text-white">Email:contact@mauricare.com</div>
   <div className="mt-2">
   <div className="text-white font-normal text-[35px]">Follow Us</div>
@@ -93,6 +91,9 @@ LE2 2PU</div>
   </div>
 </div>
 
+
+{/* Samina Bhatti - 07916789486
+Yusuf Ahmed - 07482112058 */}
 
 </div> 
     </>

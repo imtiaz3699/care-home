@@ -144,23 +144,17 @@ const testimonials = [
   return (
 
 <>
-    <div className="w-full md:h-[700px]">
-        
+    <div className="w-full md:h-[700px]">  
 <Swiper className="mySwiper w-full h-full relative">
        {
         images.map((element,idx)=> {
             return <SwiperSlide className="w-full h-full" key = {idx}><img src={element} alt="" className="w-full h-full bg-cover"/></SwiperSlide>
         })
        } 
-</Swiper>
-            
-      
+</Swiper>  
     </div>
-
     <div className="flex flex-col items-center py-20 gap-5 lg:gap-10">
       <h1 className="text-[25px] sm:text-[35px] text-center font-bold text-blue-800">What sets us Apart</h1>
-     
-     
       <div className="flex flex-col-reverse lg:flex-row px-3 sm:px-0 items-center gap-2 lg:gap-10">
         <div className="w-full h-full sm:w-[500px] sm:h-[400px] drop-shadow-2xl border-4 border-blue-800 rounded-xl shadow-slate-800">
           <img src="/careworkout.webp" alt="" className="w-full h-full   rounded-lg"/>
@@ -194,6 +188,8 @@ Life at SBH is a tapestry of vitality and connection. Our diverse activities, fr
         </div>
       </div>
 
+
+      
       <div className="flex flex-col lg:flex-row items-center px-3 sm:px-0 gap-2 lg:gap-10 mt-0 lg:mt-20">
       <div className="flex flex-col w-full sm:w-[500px] lg:w-[450px] gap-3">
           <h1 className="font-bold text-[20px] text-blue-800">Safe and Secure:</h1>
@@ -204,21 +200,17 @@ Life at SBH is a tapestry of vitality and connection. Our diverse activities, fr
           <img src="/elderly-patients.jpg" alt="" className="w-full h-full bg-cover rounded-lg"/>
         </div>
       </div>
-
-
-
-    </div>
+      </div>
 
 
     
     <div className="flex flex-col items-center text-center gap-5 md:flex-row md:justify-between w-full px-4 md:px-12 bg-white py-8 md:py-12 ">
     <div className="font-bold text-[25px] md:text-[35px]">Quality Care Your Loved Ones Deserve</div>
-    <div className="bg-green-800 p-2 md:p-5 rounded-xl font-bold text-[15px]">Call Us Today: <span>01162251632</span></div>
+    <div className="bg-green-800 p-2 md:p-5 rounded-xl font-bold text-[15px]">Call Us Today: <span>07916789486</span></div>
     </div>
-       
 
        <div className="flex flex-col items-center justify-center py-5 bg-green-800">
-        <div className="text-[20px] text-[30px] font-bold text-green-500 text-center">Our Care Services</div>
+        <div className="text-[20px] md:text-[30px] font-bold text-green-500 text-center">Our Care Services</div>
         <div className="text-[16px] md:text-[20px] px-3 md:px-0 md:w-[50%] text-center ">"We collaborate intimately with our residents, their cherished ones, and every invested party to ensure that we provide unwavering assistance for individuals to reside with us as integral members of our extended kinship."</div>
         <div className="px-3 grid grid-cols-2 md:flex md:flex-row items-center justify-between gap-3 md:gap-20 py-10">
            {
@@ -233,7 +225,6 @@ Life at SBH is a tapestry of vitality and connection. Our diverse activities, fr
         </div>
        </div>
 
-
 <div className="flex flex-col items-center py-5 px-3 md:py-10 md:px-20">
   <div className="flex flex-col items-center gap-3 md:gap-5 justify-center  text-center">
         <div className="font-bold text-green-500 text-[20px] md:text-[30px] ">Make an Inquiry</div>
@@ -243,24 +234,25 @@ Life at SBH is a tapestry of vitality and connection. Our diverse activities, fr
 </div>
 
 
+
 <div className="flex flex-row items-center justify-center px-3 md:px-10 py-10 md:gap-20"> 
 <div className="flex flex-col items-center justify-center w-full  md:w-[500px] border border-green-500 rounded-xl gap-5 px-5 md:px-10 py-10">
 <div className="flex flex-col gap-1 md:gap-3 w-full"> 
-  <label htmlFor="name" className="text-[16px] text-[20px]">Your Name</label>
+  <label htmlFor="name" className="text-[16px] md:text-[20px]">Your Name</label>
   <input type="text" className="w-full h-[30px] rounded-lg outline-none border border-gray-500 "/>
 </div>
 <div className="flex flex-col gap-1 md:gap-3 w-full">
-<label htmlFor="email" className="text-[16px] text-[20px]">Your Email Address</label>
+<label htmlFor="email" className="text-[16px] md:text-[20px]">Your Email Address</label>
   <input type="text" className="w-full h-[30px] rounded-lg outline-none border border-gray-500 "/>
 </div>
 <div className="flex flex-col gap-1 md:gap-3 w-full">
-<label htmlFor="telephone" className="text-[16px] text-[20px]">Telephone Number (Optional)</label>
+<label htmlFor="telephone" className="text-[16px] md:text-[20px]">Telephone Number (Optional)</label>
   <input type="text" className="w-full h-[30px] rounded-lg outline-none border border-gray-500 "/>
 </div>
 <div className="flex flex-col gap-1 md:gap-3 w-full">
-<label htmlFor="" className="text-[16px] text-[20px]">What would you like to discuss?</label>
+<label htmlFor="" className="text-[16px] md:text-[20px]">What would you like to discuss?</label>
 
-  <textarea name="" id="" cols="30" rows="10" className="outline-none border border-gray-500"></textarea>
+  <textarea name="" id="" cols={30} rows={10} className="outline-none border border-gray-500"></textarea>
 </div>
 <button className="bg-green-800 px-3 py-3 rounded-xl text-white">Send Inquiry</button>
 </div>
@@ -275,14 +267,14 @@ Life at SBH is a tapestry of vitality and connection. Our diverse activities, fr
 </div>
 
 
-</div>
+</div>b
 
 
 
 
 
 
-<div className="flex flex-col items-center xl:flex-row justify-center items-center gap-10 xl:gap-20  bg-green-800 pb-5 xl:pb-0">
+<div className="flex flex-col items-center xl:flex-row justify-center gap-10 xl:gap-20  bg-green-800 pb-5 xl:pb-0">
   <div className="w-full xl:w-[60%] xl:h-[500px]">
 <img src="/design.jpg" alt=""  className="bg-cover w-full h-full"/>
 </div>
@@ -341,43 +333,7 @@ Life at SBH is a tapestry of vitality and connection. Our diverse activities, fr
 
 
 </div>
-
-
-
 <Footer/>
-{/* <div className="footer flex flex-row  bg-green-800 justify-center gap-20 py-10">
-<div>
-  <img src="/logo.png" alt="" className="w-[200px] h-[200px]"/>
-  <div className="text-white">Mauricare Homes</div>
-  <div className="text-white">362 London Road
-Leicester
-LE2 2PU</div>
-</div>
-<div>
-<h1 className="text-white font-bold text-[35px]">Mauricare</h1>
-<div className="flex flex-col gap-1">
-        {
-          footer1.map((element,idx)=> {
-            return <div className="hover:underline cursor-pointer text-white" key = {idx}>{element.name}</div>
-          })
-        }
-</div>
-</div>
-<div className="flex flex-col">
-  <div className="text-white font-bold text-[35px]">Contact Us</div>
-  <div className="text-white">Tel:01162251632</div>
-  <div className="text-white">Email:contact@mauricare.com</div>
-  <div className="mt-2">
-  <div className="text-white font-normal text-[35px]">Follow Us</div>
-  <div className="flex flex-row">
-    <img src="/facebook.png" alt="" />
-    <img src="/twitter.png" alt="" />
-    <img src="/linked.png" alt="" />
-  </div>
-  </div>
-</div>
-</div> */}
-{/* <CookieConsent/> */}
     </>
 
   )
