@@ -1,4 +1,6 @@
+import Link from 'next/link'
 import React from 'react'
+
 
 function Footer() {
     const footer1 = [
@@ -77,25 +79,23 @@ function Footer() {
 </div>
 </div>
 
-<div className="flex flex-col ">
-  <div className="text-white font-bold text-[35px]">Contact Us</div>
-  <div className="text-white">Tel:07482112058</div>
-  <div className="text-white">Email:contact@mauricare.com</div>
-  <div className="mt-2">
-  <div className="text-white font-normal text-[35px]">Follow Us</div>
-  <div className="flex flex-row items-center justify-center">
+    <div className="flex flex-col ">
+      <Link href='/about'>
+      <div className="text-white font-bold text-[35px]">Contact Us</div>
+      </Link>
+    
+    <div className="text-white">Tel:07482112058</div>
+    <div className="text-white">Email:contact@sbhhealthcare.com</div>
+    <div className="mt-2">
+    <div className="text-white font-normal text-[35px]">Follow Us</div>
+    <div className="flex flex-row items-center justify-center">
     <img src="/facebook.png" alt="" className='w-[50px] h-[50px]'/>
     <img src="/twitter.png" alt="" className='w-[50px] h-[50px]'/>
     <img src="/linked.png" alt="" className='w-[50px] h-[50px]'/>
-  </div>
-  </div>
-</div>
-
-
-{/* Samina Bhatti - 07916789486
-Yusuf Ahmed - 07482112058 */}
-
-</div> 
+    </div>
+    </div>
+    </div>
+    </div> 
     </>
   )
 }
