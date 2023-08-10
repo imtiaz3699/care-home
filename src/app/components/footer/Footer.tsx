@@ -84,7 +84,7 @@ function Footer() {
       <div className="text-white font-bold text-[35px]">Contact Us</div>
       </Link>
     
-    <div className="text-white">Tel:07482112058</div>
+    <div className="text-white">Tel:074-82112-058</div>
     <div className="text-white">Email:contact@sbhhealthcare.com</div>
     <div className="mt-2">
     <div className="text-white font-normal text-[35px]">Follow Us</div>
