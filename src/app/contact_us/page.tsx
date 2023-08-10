@@ -12,9 +12,9 @@ function ContactUs() {
     <h1 className='font-semibold text-[30px] text-gray-600'>SBH</h1>
     <div className='font-semibold'>Head Office</div>
     <div>Telephone:</div>
-    <div className="bg-green-800 px-3 py-3 rounded-md text-white w-full lg:w-[225px] text-center">Call Us on 0116 225 1632</div>
+    <div className="bg-green-800 px-3 py-3 rounded-md text-white w-full lg:w-[225px] text-center">Call Us on 0791-678-9486</div>
     <div>Email:</div>
-    <div className="bg-green-800 px-3 py-3 rounded-md text-white w-full lg:w-[350px] text-center">Click to email contact@Mauricare.com</div>
+    <div className="bg-green-800 px-3 py-3 rounded-md text-white w-full lg:w-[350px] text-center">Click to email contact@sbhhealthcare.com</div>
     <div className='w-full lg:w-[500px]'>
     For more general questions, why not get in touch with our Head Office by calling or completing the form?
 <br /><br />
