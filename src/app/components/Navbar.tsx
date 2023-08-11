@@ -42,7 +42,7 @@ export default function Navbar () {
     
     return <div >
 
-      <div className='bg-blue-900 hidden xl:flex flex-row items-center py-3 justify-between text-white md:px-20 md:gap-[100px] '>
+      <div className='bg-[#133d66] hidden xl:flex flex-row items-center py-3 justify-between text-white md:px-20 md:gap-[100px] '>
         <div className='flex flex-row items-center gap-[40px]'>
         <div>
           <span className=''>Open Hours:</span> Mon-Fri 8:00 am-6:00Pm
@@ -108,7 +108,7 @@ export default function Navbar () {
             }
         </div>
           }
-          <div className='hidden xl:flex bg-green-800 py-3 px-4 text-black text-center text-white shadow-2xl hover:bg-blue-800 rounded-xl hover:text-white'>Contact Now!</div>
+          <div className='hidden xl:flex py-3 px-4 text-center shadow-2xl hover:bg-[#133d66] border border-[#39b54a] text-[#39b54a] rounded-xl hover:text-white'>Contact Now!</div>
           </div>
 
           </div>
