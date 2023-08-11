@@ -14,38 +14,41 @@ import 'swiper/css/pagination';
 
 
 // import required modules
-import { Autoplay,EffectFade,FreeMode,Pagination,Navigation } from 'swiper/modules';
+import { EffectCreative,Autoplay,EffectFade,FreeMode,Pagination,Navigation } from 'swiper/modules';
 import { test } from "node:test";
 import Footer from "../footer/Footer";
 import CookieConsent from "../cookie-consent/CookieConsent";
+import Link from "next/link";
+import ZoomSlider from "../ZoomSlider/ZoomSlider";
 
 function HeroSection() {
     const images =['/oldAge.jpg','/oldAge2.jpg','/oldAge3.jpg'];
     const sliderImage = [
+       
       {
         img:'/hero1.jpg',
-        text:'Vibrant Morning Walks',
-        text2:'Embrace the Day with Fresh Air and Gentle Exercise',
+        text:'Celebrating Lifes Journey',
+        text2:'Nurturing Seniors with Love and Respect',
       },
       {
         img:'/hero2.jpg',
-        text:'Warm Community Gatherings',
-        text2:'Forge Lifelong Friendships in Heartfelt Conversations',
+        text:'Celebrating Lifes Journey',
+        text2:'Nurturing Seniors with Love and Respect',
       },
       {
         img:'/hero3.jpg',
-        text:'Mindful Yoga Sessions',
-        text2:'Nurture Your Mind, Body, and Spirit Through Gentle Yoga',
+        text:'Celebrating Lifes Journey',
+        text2:'Nurturing Seniors with Love and Respect',
       },
       {
         img:'/hero4.jpg',
-        text:'Joyful Art Therapy',
-        text2:'Express Your Creativity and Unwind with Artful Inspiration',
+        text:'Celebrating Lifes Journey',
+        text2:'Nurturing Seniors with Love and Respect',
       },
       {
         img:'/hero5.jpg',
-        text:'Music that Touches the Soul',
-        text2:'Celebrate Lifes Melodies in Harmonious Tunes',
+        text:'Celebrating Lifes Journey',
+        text2:'Nurturing Seniors with Love and Respect',
       },
     ]
 
@@ -173,35 +176,43 @@ const testimonials = [
   return (
 
 <>
-    <div className="w-full h-[700px] md:h-[700px] relative">  
-<Swiper spaceBetween={30}
+    <div className="w-full h-[700px] ">  
+{/* <Swiper spaceBetween={30}
         centeredSlides={true}
         autoplay={{
-          delay: 1000,
+          delay: 2000,
           disableOnInteraction: false,
         }}
         pagination={{
           clickable: true,
         }}
         navigation={true}
-        modules={[EffectFade,Autoplay, Pagination, Navigation]} className="w-full h-full">
+        modules={[EffectCreative]} className="w-full h-full">
        {
         sliderImage.map((element,idx)=> {
             return <SwiperSlide className="w-full h-full" key = {idx}>
 
-             <div style = {{backgroundImage:`url(${element.img})`}} className="w-full h-full bg-cover">
-                <div className="w-full h-full bg-black opacity-50 text-white">
-                  <div className="flex flex-col justify-center h-full ml-5 md:ml-20 px-3 text-white">
-                  <p className="text-[25px] md:text-[50px]">{element.text}</p>
-                  <p className="text-[18px] md:text-[25px]">{element.text2}</p>
-                  </div>
-                </div>
-              </div>
+<div style={{ backgroundImage: `url(${element.img})` }} className="w-full h-full bg-cover relative">
+  <div className="w-full h-full bg-black absolute opacity-50"></div>
+  <div className="flex flex-col justify-center h-full ml-5 md:ml-20 px-3 text-white relative z-10">
+    <p className="text-green-800 text-[30px] font-bold">Change the World</p>
+    <p className="text-[25px] md:text-[75px]">{element.text}</p>
+    <p className="text-[18px] md:text-[40px]">{element.text2}</p>
+    <Link href ="/contact_us">
+    <button className="bg-green-800 w-[175px] h-[60px] rounded-2xl font-bold text-[20px]">Contact Us</button>
+    </Link>
+  </div>
+</div>
               
               </SwiperSlide>
         })
        } 
-</Swiper>  
+</Swiper> */}
+<div>
+  <ZoomSlider/>
+</div>
+
+</div>
 
 
 
@@ -209,8 +220,11 @@ const testimonials = [
 
 
 
-    </div>
-    
+
+
+
+
+
 <div className="flex flex-col items-center justify-center bg-green-800 gap-4 sm:gap-10 py-5 md:py-20 md:px-10 md:px-0">
         <div className="flex flex-col items-center gap-3 ">
         <svg xmlns="http://www.w3.org/2000/svg" width="60" height="50" viewBox="0 0 42 41.9">
