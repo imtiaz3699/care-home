@@ -44,21 +44,15 @@ more fulfilling life.Your well-being is not just a goal; it's our unwavering com
         </div>
         </div>
       </Overlay>
-
-
-{
-  data.map((element,idx)=> {
-    return  <Slide
-    background={{
-      backgroundImageSrc: element
-    }}
-  />
-  })
-}
-
-      
-
-      {/* <MenuNav /> */}
+      {
+        data.map((element,idx)=> {
+          return  <Slide
+        background={{
+            backgroundImageSrc: element
+        }}
+      />
+      })
+    }
     </HeroSlider>
   );
 }

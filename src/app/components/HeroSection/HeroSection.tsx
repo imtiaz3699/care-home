@@ -208,11 +208,11 @@ const testimonials = [
         whatever we can to assist you and your loved ones with settling into your new home. We warmly welcome prospective 
         residents and their loved ones to come and take a tour of our care.</div>
     </div> */}
-    <div className="bg-yellow-100 text-black px-5 md:px-20 flex justify-center py-20 flex flex-col items-center text-center ">
-<div className="text-[16px] lg:text-[25px] max-w-[1000px] flex flex-col items-center justify-center"><span className="text-[25px] md:text-[35px] lg:text-[50px] font-bold">Who we are</span> 
-   </div>
-   <div className="max-w-[1000px] text-[30px]">
-   Founded with a vision to redefine aging, SBH Health Care has been a trusted refuge for seniors seeking a safe and welcoming environment. Our legacy of care spans years, during which we have nurtured countless lives, forming lasting bonds and enriching the lives of each resident who becomes a part of our extended family.
+    <div className="bg-yellow-100 text-black px-5 md:px-20  py-20 flex flex-col items-center justify-center text-center ">
+    <span className="text-[25px] md:text-[35px] lg:text-[50px] font-bold">Who we are</span>
+
+   <div  className=" text-[30px] flex flex-col xl:flex-row items-center gap-5">
+   <img src="/about-4.jpg" alt="" className="w-[150px] h-[150px] md:w-[300px] md:h-[300px] rounded-full drop-shadow-xl shadow-3xl"/> <div className="text-[20px] md:text-[25px]"> Founded with a vision to redefine aging, SBH Health Care has been a trusted refuge for seniors seeking a safe and welcoming environment. Our legacy of care spans years, during which we have nurtured countless lives, forming lasting bonds and enriching the lives of each resident who becomes a part of our extended family.</div>
    </div>
 </div>
 <div className="flex flex-col items-center justify-center py-20 bg-green-800">
