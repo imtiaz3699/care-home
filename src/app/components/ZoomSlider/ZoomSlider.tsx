@@ -35,7 +35,7 @@ export default function ZoomSlider() {
         <div className="flex flex-col ml-28 justify-center h-full text-black">
           <div className="font-bold text-[50px] text-green-800">Welcome to SBH Healthcare</div>
           <div className="max-w-[1000px] text-[20px]">
-At OptiCare Health Center, we don't just offer healthcare; we provide you with a healthcare home—a haven where we join forces in your wellness journey.
+At SBH Health Care, we don't just offer healthcare; we provide you with a healthcare home—a haven where we join forces in your wellness journey.
 Every step of the way, count on us to wholeheartedly support and guide you towards a healthier, 
 more fulfilling life.Your well-being is not just a goal; it's our unwavering commitment. Discover the difference of a true healthcare partnership at OptiCare Health Center,
  where you're not just a patient – you're a cherished member of our healthcare family.
