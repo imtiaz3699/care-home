@@ -176,38 +176,8 @@ const testimonials = [
   return (
 
 <>
-    <div className="w-full h-[700px] ">  
-{/* <Swiper spaceBetween={30}
-        centeredSlides={true}
-        autoplay={{
-          delay: 2000,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[EffectCreative]} className="w-full h-full">
-       {
-        sliderImage.map((element,idx)=> {
-            return <SwiperSlide className="w-full h-full" key = {idx}>
+    <div className="w-full h-[700px] overflow-hidden">  
 
-<div style={{ backgroundImage: `url(${element.img})` }} className="w-full h-full bg-cover relative">
-  <div className="w-full h-full bg-black absolute opacity-50"></div>
-  <div className="flex flex-col justify-center h-full ml-5 md:ml-20 px-3 text-white relative z-10">
-    <p className="text-green-800 text-[30px] font-bold">Change the World</p>
-    <p className="text-[25px] md:text-[75px]">{element.text}</p>
-    <p className="text-[18px] md:text-[40px]">{element.text2}</p>
-    <Link href ="/contact_us">
-    <button className="bg-green-800 w-[175px] h-[60px] rounded-2xl font-bold text-[20px]">Contact Us</button>
-    </Link>
-  </div>
-</div>
-              
-              </SwiperSlide>
-        })
-       } 
-</Swiper> */}
 <div>
   <ZoomSlider/>
 </div>
@@ -225,7 +195,7 @@ const testimonials = [
 
 
 
-<div className="flex flex-col items-center justify-center bg-green-800 gap-4 sm:gap-10 py-5 md:py-20 md:px-10 md:px-0">
+{/* <div className="flex flex-col items-center justify-center bg-green-800 gap-4 sm:gap-10 py-5 md:py-20 md:px-10 md:px-0">
         <div className="flex flex-col items-center gap-3 ">
         <svg xmlns="http://www.w3.org/2000/svg" width="60" height="50" viewBox="0 0 42 41.9">
   <path fill="black" d="M38.5,30.25V14.15L28,6.8,17.5,14.15V20.6h-3V12.65L28,3l13.5,9.65v17.6ZM28,6.8ZM29,17h2V15H29Zm-4,0h2V15H25Zm4,4h2V19H29Zm-4,0h2V19H25Zm3.3,23.9L12.75,40.45V43.3H2V23.6H17.45L30.2,28.4a5.267,5.267,0,0,1,2.275,1.625A4.958,4.958,0,0,1,33.4,33.25h5.7a4.589,4.589,0,0,1,3.5,1.5A5.7,5.7,0,0,1,44,38.8v1.3ZM5,40.3H9.7V26.6H5Zm23.1,1.5,12.8-3.9a2.619,2.619,0,0,0-.75-1.3,1.661,1.661,0,0,0-1.05-.35H28.75a17.454,17.454,0,0,1-5.2-.75L19.5,34.25l1.1-2.9,3.65,1.2a13.807,13.807,0,0,0,2.375.55,30.135,30.135,0,0,0,3.575.15,3.2,3.2,0,0,0-.225-1.175,1.452,1.452,0,0,0-.775-.825L16.95,26.6h-4.2V37.3ZM9.7,33.45ZM30.2,33.25ZM9.7,33.45ZM12.75,33.45Z" transform="translate(-2 -3)"></path>
@@ -237,7 +207,7 @@ const testimonials = [
         Our team is here to alleviate as much of that stress as possible, and you can rest assured that we will do 
         whatever we can to assist you and your loved ones with settling into your new home. We warmly welcome prospective 
         residents and their loved ones to come and take a tour of our care.</div>
-    </div>
+    </div> */}
     <div className="bg-yellow-100 text-black px-5 md:px-20 flex justify-center py-20 flex flex-col items-center text-center ">
 <div className="text-[16px] lg:text-[25px] max-w-[1000px] flex flex-col items-center justify-center"><span className="text-[25px] md:text-[35px] lg:text-[50px] font-bold">Who we are</span> 
    </div>

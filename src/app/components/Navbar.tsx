@@ -14,13 +14,25 @@ export default function Navbar () {
             url:'/',
         },
         {
+          name:'Services',
+          url:'/',
+      },
+        {
             name:'About Us',
             url:'/about',
         },
         {
-            name:'Join The Team',
-            url:'/join_team',
-        },
+          name:'Gallery',
+          url:'/',
+      },
+      {
+        name:'Appointments',
+        url:'/',
+    },
+        // {
+        //     name:'Join The Team',
+        //     url:'/join_team',
+        // },
         {
             name:'Contact Us',
             url:'/contact_us',
@@ -30,7 +42,7 @@ export default function Navbar () {
     
     return <div >
 
-      <div className='bg-blue-900 hidden xl:flex flex-row items-center py-3 justify-center text-white md:px-20 md:gap-[100px] '>
+      <div className='bg-blue-900 hidden xl:flex flex-row items-center py-3 justify-between text-white md:px-20 md:gap-[100px] '>
         <div className='flex flex-row items-center gap-[40px]'>
         <div>
           <span className=''>Open Hours:</span> Mon-Fri 8:00 am-6:00Pm
@@ -54,29 +66,29 @@ export default function Navbar () {
 
       <div className='bg-green-800'>
 
-        <div className='flex flex-row items-center justify-between container mx-auto bg-green-800 px-3 md:px-20 text-white py-3 '>
+        <div className=' flex flex-row items-center justify-between container mx-auto bg-green-800 px-3 lg:px-20 text-white py-3 '>
           <div className='bg-white rounded-xl flex flex-row items-center justify-betweeen '>
               <img src="/logo.png" alt="" className='w-[50px] h-[50px] md:w-[70px] md:h-[70px]'/>
           </div>
-          <div className='hidden md:flex flex-row gap-10'>
+          <div className='hidden lg:flex flex-row gap-10'>
             {
               navData.map((element,idx)=> {
                 return <>
                       <Link href={element.url}>
-                      <div className=''>{element.name}</div>
+                      <div className='text-[18px]'>{element.name}</div>
                       </Link>
                       </>
               })
             }
           </div>
 
-          <div className='md:hidden' onClick={()=> setDropDown(!dropDown)}>
+          <div className='lg:hidden' onClick={()=> setDropDown(!dropDown)}>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-10 h-10 ">
          <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
          </svg>
           </div>
           {
-            dropDown && <div className='flex flex-col px-5 gap-5 absolute left-0 top-[73px] py-4 text-left bg-green-800 w-full z-10'>
+            dropDown && <div className='lg:hidden flex flex-col px-5 gap-5 absolute left-0 top-[73px] py-4 text-left bg-green-800 w-full z-10'>
             {
               navData.map((element,idx)=> {
 
@@ -87,6 +99,7 @@ export default function Navbar () {
             }
         </div>
           }
+          <div className='hidden xl:flex bg-white py-3 px-4 text-black text-center hover:bg-blue-800 rounded-xl hover:text-white'>Contact Now!</div>
           </div>
 
           </div>
