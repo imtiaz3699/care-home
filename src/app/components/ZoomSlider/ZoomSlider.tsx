@@ -33,10 +33,10 @@ export default function ZoomSlider() {
       }}
     >
       <Overlay className="">
-        <div className="relative w-full h-full">
-        <div className="w-full h-full bg-black opacity-25 flex flex-col px-10 justify-center text-black z-10 absolute">
+        <div className="w-full h-full relative">
+        <div className="w-full h-full  bg-black opacity-50 flex flex-col px-10 justify-center  absolute z-10">
           <div className="font-bold text-[35px] md:text-[50px] text-white  md:ml-28">Welcome to SBH Healthcare</div>
-          <div className="max-w-[1000px] text-white text-[18px]  md:ml-28">
+          <div className="max-w-[709px] text-white text-[18px]  md:ml-28">
 At OptiCare Health Center, we don't just offer healthcare; we provide you with a healthcare home—a haven where we join forces in your wellness journey.
 Every step of the way, count on us to wholeheartedly support and guide you towards a healthier, 
 more fulfilling life.Your well-being is not just a goal; it's our unwavering commitment.
