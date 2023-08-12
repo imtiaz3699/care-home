@@ -322,7 +322,7 @@ const help = [
               <input type="text" placeholder="Name" className="bg-white text-black py-2 px-2 w-full"/>
               <input type="text" placeholder="Email" className="bg-white text-black py-2 px-2 w-full"/>
               <input type="text" placeholder="Phone" className="bg-white text-black py-2 px-2 w-full"/>
-              <textarea name="" id="" cols="30" rows="4" placeholder="Message" className="bg-white text-black py-2 px-2 w-full"></textarea>
+              <textarea name="" id="" cols={4} rows={4} placeholder="Message" className="bg-white text-black py-2 px-2 w-full"></textarea>
               <button className="bg-transparent border-2 border-white px-4 py-1 text-white">Book Appointment</button>
             </div>
         </div>
