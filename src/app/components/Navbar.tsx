@@ -73,7 +73,7 @@ export default function Navbar () {
       </div>
 
 
-      <div className='bg-white'>
+      <div className='bg-white '>
 
         <div className=' flex flex-row items-center justify-between container mx-auto bg-white  px-3 lg:px-20 text-black py-3 '>
           <div className='bg-white rounded-xl flex flex-row items-center justify-betweeen '>
@@ -97,7 +97,7 @@ export default function Navbar () {
          </svg>
           </div>
           {
-            dropDown && <div className='lg:hidden flex flex-col px-5 gap-5 absolute left-0 top-[74px] md:top-[90px] py-4 text-left bg-white w-full z-10'>
+            dropDown && <div className='lg:hidden flex flex-col px-5 gap-5 absolute left-0 top-[60px]  md:top-[70px] py-4 text-left bg-white w-full z-10'>
             {
               navData.map((element,idx)=> {
 
@@ -108,9 +108,9 @@ export default function Navbar () {
             }
         </div>
           }
-          <div className = "flex flex-row items-center gap-5">
-          <div className='hidden xl:flex py-3 px-4 text-center shadow-2xl hover:bg-[#133d66] border border-[#39b54a] text-[#39b54a] hover:text-white'>Contact Now!</div>
-          <div className = "hidden  xl:flex py-3 px-4 text-center shadow-2xl hover:bg-[#133d66] border border-[#39b54a] text-[#39b54a] hover:text-white">Book Appointment</div>
+          <div className = "hidden xl:flex  flex-row items-center gap-5">
+          <div className=' py-3 px-4 text-center shadow-2xl hover:bg-[#133d66] border border-[#39b54a] text-[#39b54a] hover:text-white'>Contact Now!</div>
+          <div className = " py-3 px-4 text-center shadow-2xl hover:bg-[#133d66] border border-[#39b54a] text-[#39b54a] hover:text-white">Book Appointment</div>
           </div>
           </div>
 
