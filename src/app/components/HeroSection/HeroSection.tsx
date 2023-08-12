@@ -20,8 +20,19 @@ import Footer from "../footer/Footer";
 import CookieConsent from "../cookie-consent/CookieConsent";
 import Link from "next/link";
 import ZoomSlider from "../ZoomSlider/ZoomSlider";
+import Modal from "../Modal/Modal";
 
 function HeroSection() {
+  const [showModal ,setShowModal] = React.useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
     const images =['/oldAge.jpg','/oldAge2.jpg','/oldAge3.jpg'];
     const sliderImage = [
        
@@ -133,43 +144,53 @@ const footer1 = [
 const testimonials = [
   {
     name:'Emily Truner',
-    review:'A haven of warmth and care. The staff at this old age home go above and beyond to make each resident feel cherished and valued. I m so grateful for the compassionate environment they provide'
+    review:'A haven of warmth and care. The staff at this old age home go above and beyond to make each resident feel cherished and valued.',
+    img:'/face.jpg'
   },
   {
     name:'George Anderson',
     review:'A true blessing for our seniors. The facilities are top-notch, and the organized activities keep everyone engaged and lively. This old age home sets a shining example for others.',
+    img:'/face.jpg'
   },
   {
     name:'Margaret Hughes',
     review:'Home away from home. The staffs dedication is heartwarming. They ensure that our loved ones are not just cared for, but they flourish with genuine affection.',
+    img:'/face.jpg'
   },
   {
     name:'William Parker',
     review:'Exceptional support for seniors needs. This old age homes commitment to providing personalized attention is commendable. Our family is at peace knowing our relative is in such capable hands.',
+    img:'/face.jpg'
   },
   {
     name:'Lily Foster',
     review:'A treasure for the elderly. The cheerful atmosphere and the constant companionship make it a joyous community. Its evident that the staff here are driven by a deep passion for caregiving.',
+    img:'/face.jpg'
   },
   {
     name:'Samuel Wright',
     review:'A place of respect and honor for seniors. The old age homes commitment to maintaining residents dignity while offering top-quality care is truly inspiring.',
+    img:'/face.jpg'
   },
   {
     name:' Olivia Patel',
     review:'An old age home that feels like family. The warm and friendly ambiance, along with the well-planned recreational activities, creates an environment where seniors can thrive.',
+    img:'/face.jpg'
   },
   {
     name:'Henry Carter',
-    review:'Exceptional attention to detail. The staffs unwavering dedication to meeting each residents unique needs sets this old age home apart. Our family is deeply appreciative.',
+    review:'Exceptional attention to detail. The staffs unwavering dedication to meeting each residents unique needs sets this old age home apart.',
+    img:'/face.jpg'
   },
   {
     name:'Amelia Turner',
-    review:'A haven of tranquility for our loved ones. The picturesque surroundings combined with the staffs genuine care provide a safe and peaceful retreat for seniors.',
+    review:'A haven of tranquility for our loved ones. ',
+    img:'/face.jpg'
   },
   {
     name:'Charles Hughes',
-    review:'A remarkable establishment. The commitment to fostering an environment of companionship and vitality is truly commendable. Our dear ones are in the best hands here.',
+    review:'A remarkable establishment. The commitment to fostering an environment of companionship and vitality is truly commendable.',
+    img:'/face.jpg'
   },
 ]
 
@@ -198,8 +219,21 @@ const help = [
 
   return (
 
-<>
-    <div className="w-full h-[700px] overflow-hidden">  
+<div className="w-full h-full relative">
+{/* {
+  showModal && <div className="w-full h-full bg-black opacity-50 absolute z-10  text-black">
+      <div className="w-[100vw] h-[100vh] relative">
+      <div className="w-[50px] h-[50px] bg-red-500 absolute text-black text-[70px] z-10 left-0 right-0 top-0 bottom-0">
+fdsadasfasdf
+    </div>
+    </div>
+    
+      </div>
+  
+} */}
+
+    <div className="w-full h-[700px] overflow-hidden">
+
 
 <div>
   <ZoomSlider/>
@@ -210,12 +244,12 @@ const help = [
     <div className=" text-black px-5 md:px-20  py-10 flex flex-col items-center justify-center text-center ">
     <span className="text-[25px] md:text-[35px] lg:text-[50px] font-normal">How can we help</span>
     <div className = "text-[16px]">Understand  the unique needs and concerns of seniors.</div>
-    <div className="flex flex-row items-center gap-5 mt-10">
+    <div className="grid grid-cols-1 sm:grid-cols-2 place-items-center lg:grid-cols-4 gap-5 mt-10">
      {
        help.map((element,idx)=> {
-            return <div className="flex flex-col text-left gap-3">
+            return <div className="flex flex-col items-center sm:items-start text-center sm:text-left gap-3">
               <img src={element.img} alt="" className="w-[50px] h-[50px]"/>
-              <p className="text-[25px]">{element.name}</p>
+              <p className="text-[25px] font-semibold">{element.name}</p>
               <p>{element.text}</p>
             </div>
        }) 
@@ -263,20 +297,47 @@ const help = [
 
        
 
-<div className="flex flex-col items-center py-5 px-3 md:py-10 md:px-20">
-  <div className="flex flex-col items-center gap-3 md:gap-3 justify-center  text-center">
-        <div className="font-bold text-green-800 text-[20px] md:text-[30px] ">Book an Appointment</div>
-        <div className="font-semibold text-green-800 text-[18px] md:text-[25]">We would love to hear from if you you're a resident or a relative.</div>
-        <div className="md:w-[700px] text-gray-500 text-[16px] md:text-[20px]">''Our transparent and approachable leadership group encourages staff, residents, and family members to openly express any apprehensions or suggestions. To directly reach our central administration, kindly utilize the provided form. Regarding internal inquiries about our care home, please get in touch with the specific facility. <br />Or You can directly call us on the numbers below</div>
+        <div className="flex flex-col items-center py-5 px-3 md:py-10 md:px-20">
+        <div className="flex flex-col items-center gap-3 md:gap-3 justify-center  text-center">
+        <div className="font-bold  text-[20px] md:text-[30px] ">Book an Appointment</div>
+        <div className="font-semibold  text-[18px] md:text-[25]">We would love to hear from if you you're a resident or a relative.</div>
+        <div className="max-w-[900px] text-gray-500 text-[16px] md:text-[20px]">Our transparent and approachable leadership group encourages staff, residents, and family members to openly express any apprehensions or suggestions. To directly reach our central administration, kindly utilize the provided form.</div>
         </div>
 
         <div className="flex flex-row items-center gap-5 mt-5">
-        <div className="bg-green-800 p-2 py-3  px-4 rounded-xl font-bold text-[15px]">Samina Bhatti :<span>0791-678-9486</span></div>
-        <div className="bg-green-800 py-3  px-4 rounded-xl font-bold text-[15px]">Yusuf Ahmed :<span>0748-211-2058</span></div>
+        <button onClick = {openModal}
+ className="bg-[#39b54a] hover:bg-[#306f38] px-2 py-3 text-white rounded-sm" >Book An Appointment</button>
         </div>
-</div>
 
-
+        
+      </div>
+             
+    <Modal isOpen ={isModalOpen} onClose ={closeModal}>
+      <div className="text-black w-[700px] h-[400px] flex flex-row items-center">
+        <div className="w-[50%] h-full flex flex-col justify-center pl-5 gap-5">
+          <h1 className="text-[25px] font-bold ">Booking Request</h1>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum, ducimus! Ab rem laborum provident error corporis repudiandae, aperiam nobis nihil.</p>
+          <div className="flex flex-row items-center gap-5">
+              <img src="/phone.png" alt="" className="w-[50px] h-[50px]"/>
+              <div>074-82112-058</div>
+          </div>
+          <div className="flex flex-row items-center gap-5">
+              <img src="/email.png" alt="" className="w-[50px] h-[50px]"/>
+              <div>074-82112-058</div>
+          </div>
+        </div>
+        <div className="w-[50%] bg-[#39b54a] h-full px-3 py-2 ">
+            <div className="w-full flex flex-row justify-end cursor-pointer  " onClick={closeModal}><div className="bg-white rounded-full"><img src="/close.png" alt="" className="w-[30px] h-[30px]"/></div></div>
+            <div className="px-5 flex flex-col items-center gap-3 mt-4">
+              <input type="text" placeholder="Name" className="bg-white text-black py-2 px-2 w-full"/>
+              <input type="text" placeholder="Email" className="bg-white text-black py-2 px-2 w-full"/>
+              <input type="text" placeholder="Phone" className="bg-white text-black py-2 px-2 w-full"/>
+              <textarea name="" id="" cols="30" rows="4" placeholder="Message" className="bg-white text-black py-2 px-2 w-full"></textarea>
+              <button className="bg-transparent border-2 border-white px-4 py-1 text-white">Book Appointment</button>
+            </div>
+        </div>
+      </div>
+    </Modal>
 
 
 
@@ -286,10 +347,8 @@ const help = [
     <div className="font-bold text-green-500 text-[20px] md:text-[30px] text-center">What Residents and Families Says</div>
     <div className=" text-[18px] md:text-[20px] text-center">Here are some of our latest reviews from CareHome.co.uk,<br /> the leading care home review web site.</div>
   </div>
-      <div className="flex flex-row gap-20 items-center">
-        
-        <Swiper
-          freeMode={true}
+
+  <Swiper freeMode={true}
           spaceBetween={20}
           pagination={{
             clickable: true,
@@ -307,27 +366,24 @@ const help = [
           },
           1024: {
             slidesPerView: 3,
-            spaceBetween: 30,
+            spaceBetween: 50,
           },
-        }}
-        style = {{paddingRight:'40px',paddingLeft:'40px',paddingTop:'20px',paddingBottom:'20px'}} 
-      >
-              {testimonials.map((element,idx)=> {
-                return <SwiperSlide style = {{margin:0}} key = {idx} className="text-white py-20 flex flex-col w-[300px] sm:w-[400px] gap-3 h-[500px] items-center justify-center text-center rounded-xl px-3 py-5  bg-green-800 ">
-                      <div className="">{element.review}</div>
-                      <h1 className="font-bold text-[20px] ">{element.name}</h1>
-</SwiperSlide>
-              })}        
-        
-      </Swiper>
-        </div>
-  
-
-
-
-</div>
-<Footer/>
-    </>
+        }}>
+{
+  testimonials.map((element,idx)=> {
+    return <SwiperSlide>
+      <div className="bg-[#39b54a] h-[400px] flex flex-col items-center px-3 py-3  rounded-xl">
+        <h1 className="text-white font-bold ">{element.name}</h1>
+        <div className="h-[150px] overflow-hidden mt-3">{element.review}</div>
+        <img src={element.img} alt="" className="w-[70px] h-[70px] rounded-full"/>
+      </div>
+    </SwiperSlide>
+  })
+}
+  </Swiper>   
+    </div>
+    <Footer/>
+    </div>
 
   )
 }
