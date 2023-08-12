@@ -105,19 +105,19 @@ function HeroSection() {
   ]
   const ourServices = [
     {
-      img:'/dementia.webp',
+      img:'/mental-health.png',
       name:'Dementia Care',
     },
     {
-      img:'/nursing-care.webp',
+      img:'/nursing.png',
       name:'Nursing Care',
     },
     {
-      img:'physical-disabilities.webp',
+      img:'wheelchair.png',
       name:'Physical Disabilities',
     },
     {
-      img:'respite-care.webp',
+      img:'care.png',
       name:'Respite Care',
     },
   ]
@@ -220,17 +220,7 @@ const help = [
   return (
 
 <div className="w-full h-full relative">
-{/* {
-  showModal && <div className="w-full h-full bg-black opacity-50 absolute z-10  text-black">
-      <div className="w-[100vw] h-[100vh] relative">
-      <div className="w-[50px] h-[50px] bg-red-500 absolute text-black text-[70px] z-10 left-0 right-0 top-0 bottom-0">
-fdsadasfasdf
-    </div>
-    </div>
-    
-      </div>
-  
-} */}
+
 
     <div className="w-full h-[700px] overflow-hidden">
 
@@ -275,8 +265,8 @@ fdsadasfasdf
        </div>
 
     
-    <div className="flex flex-row items-center justify-center py-10 pb-10 gap-5 lg:gap-10">
-      <div className="flex flex-col items-start max-w-[600px]">
+    <div className="flex flex-col lg:flex-row items-center justify-center py-10 pb-10 gap-5 lg:gap-10">
+      <div className="flex flex-col items-center lg:items-start max-w-[600px] px-3 text-center lg:text-left">
         <h1 className="font-semibold text-[25px]">WHY CHOOSE US</h1>
         <br />
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod repudiandae neque harum  incidunt quisquam iusto saepe,
@@ -372,7 +362,7 @@ fdsadasfasdf
 {
   testimonials.map((element,idx)=> {
     return <SwiperSlide>
-      <div className="bg-black bg-opacity-50 text-white backdrop-filter backdrop-blur-lg p-4  shadow-lg h-[400px] flex flex-col items-center px-3 py-3  rounded-xl">
+      <div className=" bg-white/30 bg-opacity-50 border-2 border-[#39b54a] backdrop-filter backdrop-blur-lg p-4  shadow-lg h-[400px] flex flex-col items-center px-3 py-3  rounded-xl">
         <h1 className="font-bold text-[20px]">{element.name}</h1>
         <div className="h-[150px] overflow-hidden mt-3">{element.review}</div>
         <img src={element.img} alt="" className="w-[70px] h-[70px] rounded-full"/>
