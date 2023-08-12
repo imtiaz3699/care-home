@@ -14,7 +14,7 @@ const data = [
 export default function ZoomSlider() {
   return (
     <HeroSlider
-      height={"100vh"}
+      height={"700px"}
       autoplay
       controller={{
         initialSlide: 1,
