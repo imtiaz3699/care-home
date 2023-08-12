@@ -80,7 +80,7 @@ function Footer() {
 </div>
 </div>
 
-    <div className="flex flex-col ">
+    <div className="flex flex-col items-start ">
       <Link href='/about'>
       <div className="text-white font-bold text-[35px]">Contact Us</div>
       </Link>
