@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import Link from 'next/link'
 import React from 'react'
 
@@ -80,7 +80,7 @@ function Footer() {
 </div>
 </div>
 
-    <div className="flex flex-col items-start ">
+    <div className="flex flex-col items-center md:items-start ">
       <Link href='/about'>
       <div className="text-white font-bold text-[35px]">Contact Us</div>
       </Link>
