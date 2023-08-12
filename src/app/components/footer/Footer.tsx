@@ -63,9 +63,9 @@ function Footer() {
       ]
   return (
     <>
-     <div className="footer flex flex-col items-center text-center md:text-left md:flex-row bg-green-800 justify-center gap-20 py-10 px-3">
-<div className='flex flex-col items-center text-center'>
-  <img src="/logo.png" alt="" className="w-[200px] h-[200px] m-0"/>
+     <div className="footer flex flex-col md:flex-row  text-center md:text-left  bg-green-800 justify-center gap-20 py-10 px-3">
+<div className='flex flex-col items-center text-center gap-3'>
+  <img src="/logo.png" alt="" className="w-[150px] h-[100px] m-0"/>
   <div className="text-white">SBH Healthcare Limited</div>
   <div className="text-white">311 Brookvale Road <br /> Erdington Birmingham B23 7RR</div>
 </div>

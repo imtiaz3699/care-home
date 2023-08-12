@@ -372,8 +372,8 @@ fdsadasfasdf
 {
   testimonials.map((element,idx)=> {
     return <SwiperSlide>
-      <div className="bg-[#39b54a] h-[400px] flex flex-col items-center px-3 py-3  rounded-xl">
-        <h1 className="text-white font-bold ">{element.name}</h1>
+      <div className="bg-black bg-opacity-50 text-white backdrop-filter backdrop-blur-lg p-4  shadow-lg h-[400px] flex flex-col items-center px-3 py-3  rounded-xl">
+        <h1 className="font-bold text-[20px]">{element.name}</h1>
         <div className="h-[150px] overflow-hidden mt-3">{element.review}</div>
         <img src={element.img} alt="" className="w-[70px] h-[70px] rounded-full"/>
       </div>
