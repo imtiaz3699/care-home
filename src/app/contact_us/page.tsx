@@ -13,9 +13,9 @@ function ContactUs() {
     <h1 className='font-semibold text-[30px] text-gray-600'>SBH</h1>
     <div className='font-semibold'>Head Office</div>
     <div>Telephone:</div>
-    <div className="bg-green-800 px-3 py-3 rounded-md text-white w-full lg:w-[225px] text-center">Call Us on 0791-678-9486</div>
+    <div className="bg-[#39b54a] px-3 py-3 rounded-md text-white w-full lg:w-[200px] text-left">0791 678 9486</div>
     <div>Email:</div>
-    <div className="bg-green-800 px-3 py-3 rounded-md text-white w-full lg:w-[350px] text-center">Click to email contact@sbhhealthcare.com</div>
+    <div className="bg-[#39b54a] px-3 py-3 rounded-md text-white w-full lg:w-[300px] text-left">contact@sbhhealthcare.com</div>
     <div className='w-full lg:w-[500px]'>
     For more general questions, why not get in touch with our Head Office by calling or completing the form?
 <br /><br />
@@ -46,7 +46,7 @@ To enquire about a resident or a specific home, get in touch with the individual
   
   <textarea name="discussion" cols={30} rows={10} className="outline-none border border-gray-500"></textarea>
 </div>
-<button className="bg-green-800 px-3 py-3 rounded-xl text-white">Send Inquiry</button>
+<button className="bg-[#39b54a] px-3 py-3 rounded-xl text-white">Send Inquiry</button>
 </div>
     
 
