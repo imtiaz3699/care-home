@@ -226,8 +226,8 @@ const help = [
 </div>
 
     <div className=" text-black px-5 md:px-20 py-20 flex flex-col items-center justify-center text-center  ">
-    <span className="text-[25px] md:text-[35px] lg:text-[50px] font-normal">How can we help</span>
-    <div className = "text-[16px]">Understand  the unique needs and concerns of seniors.</div>
+    <h1 className="text-[25px] md:text-[35px] lg:text-[50px] font-normal">How can we help</h1>
+    <p className="text-[16px] md:text-[20px] px-3 md:px-0  text-center">At <strong className = "text-blue-900">SBH</strong> , our mission is to provide compassionate care and support to our beloved seniors. In the 'How Can We Help' section, we offer a range of services tailored to meet the unique needs of each resident. From personalized care plans and recreational activities to medical assistance and emotional companionship, we're dedicated to enhancing the quality of life for our cherished residents.</p>
     <div className="grid grid-cols-1 sm:grid-cols-2 place-items-center lg:grid-cols-4 gap-5 mt-10">
      {
        help.map((element,idx)=> {
@@ -243,8 +243,24 @@ const help = [
 
 
       <div className="flex flex-col items-center justify-center px-5 md:px-20 py-20 bg-gray-100">
-        <div className="text-[20px] md:text-[36px] font-bold  text-center text-black">Our Care Services</div>
-        <div className="text-[16px] md:text-[25px] px-3 md:px-0 md:w-[70%] text-center ">"We collaborate intimately with our residents, their cherished ones, and every invested party to ensure that we provide unwavering assistance for individuals to reside with us as integral members of our extended kinship."</div>
+        <h1 className="text-[25px] md:text-[35px] lg:text-[50px] font-normal">Our Care Services</h1>
+        <p className="text-[16px] md:text-[20px] px-3 md:px-0  text-center">"We collaborate intimately with our residents, their cherished ones, and every invested party to ensure that we provide unwavering assistance for individuals to reside with us as integral members of our extended kinship."</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 place-items-center lg:grid-cols-4 gap-[120px]  mt-10">
+           {
+            ourServices.map((element,idx)=> {
+              return <div  className=" flex flex-col items-center justify-center gap-5 bg-blue-600 backdrop-filter backdrop-blur-md shadow-2xl px-2 w-[250px] h-[225px] rounded-2xl backdrop-saturate-150" key = {idx}>
+                <img src={element.img} alt="" className="w-[70px] h-[70px] md:w-[100px] md:h-[100px]"/>
+                <div className="font-semibold text-center text-[16px] text-white">{element.name}</div>
+              </div>
+            })
+            
+           } 
+            
+        </div>
+       </div>
+       <div className="flex flex-col items-center justify-center px-5 md:px-20 py-20 bg-gray-100">
+        <h1 className="text-[25px] md:text-[35px] lg:text-[50px] font-normal">Our Care Services</h1>
+        <p className="text-[16px] md:text-[20px] px-3 md:px-0  text-center">"We collaborate intimately with our residents, their cherished ones, and every invested party to ensure that we provide unwavering assistance for individuals to reside with us as integral members of our extended kinship."</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 place-items-center lg:grid-cols-4 gap-[120px]  mt-10">
            {
             ourServices.map((element,idx)=> {
@@ -281,19 +297,17 @@ const help = [
 
 
 
-        <div className="flex flex-col items-center py-5 px-3 md:py-10 md:px-20">
-        <div className="flex flex-col items-center gap-3 md:gap-3 justify-center  text-center">
-        <div className="font-bold  text-[20px] md:text-[30px] ">Book an Appointment</div>
-        <div className="font-semibold  text-[18px] md:text-[25]">We would love to hear from if you you're a resident or a relative.</div>
-        <div className="max-w-full text-gray-500 text-[16px] md:text-[20px]">Our transparent and approachable leadership group encourages staff, residents, and family members to openly express any apprehensions or suggestions. To directly reach our central administration, kindly utilize the provided form.</div>
+        <div className="flex flex-col items-center py-5 px-3 text-white md:py-10 md:px-20 bg-[#218e9e]" style ={{backgroundImage: "linear-gradient(to left, #051f46, #00256d, #002793, #0024b8, #1410da)"}}>
+        <div className="flex flex-col items-center gap-3 justify-center text-center">
+        <h1 className="text-[25px] md:text-[35px] lg:text-[50px] font-normal">Book an Appointment</h1>
+        <div className=" text-[18px] md:text-[25] mt-[-15px]">We would love to hear from if you you're a resident or a relative.</div>
+        <p className="text-[16px] md:text-[20px] px-3 md:px-0  text-center">Our transparent and approachable leadership group encourages staff, residents, and family members to openly express any apprehensions or suggestions. To directly reach our central administration, kindly utilize the provided form.</p>
         </div>
 
         <div className="flex flex-row items-center gap-5 mt-5">
         <button onClick = {openModal}
  className="bg-[#39b54a] hover:bg-[#306f38] px-2 py-3 text-white rounded-sm" >Book An Appointment</button>
         </div>
-
-        
       </div>
              
     <Modal isOpen ={isModalOpen} onClose ={closeModal}>
@@ -328,8 +342,8 @@ const help = [
 
 <div className="flex flex-col items-center justify-center md:px-20 py-10">
   <div className="flex flex-col items-center gap-2 pb-5">
-    <div className="font-bold text-green-500 text-[20px] md:text-[30px] text-center">What Residents and Families Says</div>
-    <div className=" text-[18px] md:text-[20px] text-center">Here are some of our latest reviews from CareHome.co.uk,<br /> the leading care home review web site.</div>
+    <h1 className="text-[25px] md:text-[35px] lg:text-[50px] font-normal">What Residents and Families Says</h1>
+    <p className="text-[16px] md:text-[20px] px-3 md:px-0  text-center">Here are some of our latest reviews from CareHome.co.uk,<br /> the leading care home review web site.</p>
   </div>
 
   <Swiper freeMode={true}

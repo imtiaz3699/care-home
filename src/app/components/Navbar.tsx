@@ -108,7 +108,10 @@ export default function Navbar () {
             }
         </div>
           }
-          <div className='hidden xl:flex py-3 px-4 text-center shadow-2xl hover:bg-[#133d66] border border-[#39b54a] text-[#39b54a] rounded-xl hover:text-white'>Contact Now!</div>
+          <div className = "flex flex-row items-center gap-5">
+          <div className='hidden xl:flex py-3 px-4 text-center shadow-2xl hover:bg-[#133d66] border border-[#39b54a] text-[#39b54a] hover:text-white'>Contact Now!</div>
+          <div className = "hidden  xl:flex py-3 px-4 text-center shadow-2xl hover:bg-[#133d66] border border-[#39b54a] text-[#39b54a] hover:text-white">Book Appointment</div>
+          </div>
           </div>
 
           </div>
