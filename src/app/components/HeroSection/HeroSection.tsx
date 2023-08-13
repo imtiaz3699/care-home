@@ -169,49 +169,49 @@ const testimonials = [
     img:'/face.jpg'
   },
   {
-    name:'George Anderson',
+    name:'Amelia',
     review:'A true blessing for our seniors. The facilities are top-notch, and the organized activities keep everyone engaged and lively. This old age home sets a shining example for others.',
-    img:'/face.jpg'
+    img:'/face1.jpg'
   },
   {
     name:'Margaret Hughes',
     review:'Home away from home. The staffs dedication is heartwarming. They ensure that our loved ones are not just cared for, but they flourish with genuine affection.',
-    img:'/face.jpg'
+    img:'/face2.jpg'
   },
   {
-    name:'William Parker',
+    name:'Freya Parker',
     review:'Exceptional support for seniors needs. This old age homes commitment to providing personalized attention is commendable. Our family is at peace knowing our relative is in such capable hands.',
-    img:'/face.jpg'
+    img:'/face3.jpg'
   },
   {
-    name:'Lily Foster',
+    name:'Joseph Foster',
     review:'A treasure for the elderly. The cheerful atmosphere and the constant companionship make it a joyous community. Its evident that the staff here are driven by a deep passion for caregiving.',
-    img:'/face.jpg'
+    img:'/face4.jpg'
   },
   {
     name:'Samuel Wright',
     review:'A place of respect and honor for seniors. The old age homes commitment to maintaining residents dignity while offering top-quality care is truly inspiring.',
-    img:'/face.jpg'
+    img:'/face5.jpg'
   },
   {
-    name:' Olivia Patel',
+    name:'Alexander Patel',
     review:'An old age home that feels like family. The warm and friendly ambiance, along with the well-planned recreational activities, creates an environment where seniors can thrive.',
-    img:'/face.jpg'
+    img:'/face6.jpg'
   },
   {
     name:'Henry Carter',
     review:'Exceptional attention to detail. The staffs unwavering dedication to meeting each residents unique needs sets this old age home apart.',
-    img:'/face.jpg'
+    img:'/face7.jpg'
   },
   {
-    name:'Amelia Turner',
+    name:'Benjamin Turner',
     review:'A haven of tranquility for our loved ones. ',
-    img:'/face.jpg'
+    img:'/face8.jpg'
   },
   {
     name:'Charles Hughes',
     review:'A remarkable establishment. The commitment to fostering an environment of companionship and vitality is truly commendable.',
-    img:'/face.jpg'
+    img:'/face9.jpg'
   },
 ]
 
@@ -349,14 +349,15 @@ const ourCare = [
       <div className="text-black w-[700px] h-[400px] flex flex-row items-center">
         <div className="w-[50%] h-full flex flex-col justify-center pl-5 gap-5">
           <h1 className="text-[25px] font-bold ">Booking Request</h1>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum, ducimus! Ab rem laborum provident error corporis repudiandae, aperiam nobis nihil.</p>
+          <p>If you have any urgent inquiries or need to reschedule your appointment, please contact us at Phone Number or Email Address.
+</p>
           <div className="flex flex-row items-center gap-5">
               <img src="/phone.png" alt="" className="w-[50px] h-[50px]"/>
-              <div>074-82112-058</div>
+              <div>074 82112 058</div>
           </div>
           <div className="flex flex-row items-center gap-5">
               <img src="/email.png" alt="" className="w-[50px] h-[50px]"/>
-              <div>074-82112-058</div>
+              <div>contact@sbhhealthcare.com</div>
           </div>
         </div>
         <div className="w-[50%] bg-[#39b54a] h-full px-3 py-2 ">
@@ -408,10 +409,12 @@ const ourCare = [
 {
   testimonials.map((element,idx)=> {
     return <SwiperSlide>
-      <div className=" bg-white/30 bg-opacity-50 border-2 border-[#39b54a] backdrop-filter backdrop-blur-lg p-4  shadow-lg h-[400px] flex flex-col items-center px-3 py-3  rounded-xl">
-        <h1 className="font-bold text-[20px]">{element.name}</h1>
-        <div className="h-[150px] overflow-hidden mt-3">{element.review}</div>
-        <img src={element.img} alt="" className="w-[70px] h-[70px] rounded-full"/>
+      <div className="  h-[500px] flex flex-col items-center">
+        <div className="bg-blue-900 h-[200px] px-2 py-2 overflow-hidden flex flex-col items-center text-white">
+        <h1 className="font-bold text-[18px]">{element.name}</h1>
+            <div className="mt-3 text-[14px] ">{element.review}</div>
+        </div>
+        <img src={element.img} alt="" className="w-[70px] h-[70px] mt-5 rounded-full"/>
       </div>
     </SwiperSlide>
   })
