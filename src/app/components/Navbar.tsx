@@ -3,16 +3,19 @@
 import React,{useState} from 'react'
 import Image from "next/image";
 import Link from 'next/link';
+import {usePathname} from 'next/navigation';
 
 interface NavbarProps {
   handleModal? : (param : any) => void;
   showModal? : boolean;
 }
  const Navbar: React.FC<NavbarProps> = ({handleModal,showModal})=> {
-
+  const pathname = usePathname();
+  console.log(pathname)
  
 
     const [dropDown,setDropDown] = useState(false);
+
     const navData = [
         {
             name:'Home',
@@ -28,7 +31,7 @@ interface NavbarProps {
         },
         {
           name:'Gallery',
-          url:'/',
+          url:'',
         },
         {
             name:'Contact Us',
@@ -81,7 +84,7 @@ interface NavbarProps {
               navData.map((element,idx)=> {
                 return <>
                       <Link href={element.url}>
-                      <div className='text-[18px] hover:text-blue-800'>{element.name}</div>
+                      <div className={pathname === element.url ? 'text-[18px] text-blue-700' : 'text-[18px] hover:text-blue-700'}>{element.name}</div>
                       </Link>
                       </>
               })
@@ -106,7 +109,7 @@ interface NavbarProps {
         </div>
           }
           
-          <div className = " py-3 px-4 text-center shadow-2xl hover:bg-[#133d66] border border-[#39b54a] text-[#39b54a] hover:text-white" onClick ={handleModal}>Book Appointment</div>
+          <div className = "hidden lg:flex py-3 px-4 text-center shadow-2xl hover:bg-[#133d66] border border-[#39b54a] text-[#39b54a] hover:text-white" onClick ={handleModal}>Book Appointment</div>
           
           </div>
 

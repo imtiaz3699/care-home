@@ -37,7 +37,7 @@ function Services() {
         },
         {
             img:'palliative-care.png',
-            description:'Palliative care homes focus on improving the quality of life for individuals with serious illnesses, regardless of prognosis. The care includes pain management, symptom relief, and emotional support to enhance overall well-being.',
+            description:'Palliative care homes enhance life quality for seriously ill individuals, offering pain management, symptom relief, and emotional support to improve overall well-being, irrespective of prognosis.',
             name:'Palliative Care:',
         },
         {
@@ -51,20 +51,20 @@ function Services() {
     <div>
       <Navbar/>
 <div className='w-full h-[500px] object-cover' style = {{backgroundImage:'url(/our-services.png)'}}></div>
-<div className='grid grid-cols-3 place-items-center py-20 px-20'>
-        {
-            ourServices.map((element,idx)=> {
-                return <div className='flex flex-col items-center w-full'>
-                    <div className=" flex flex-col items-center justify-center gap-5 bg-blue-600 backdrop-filter backdrop-blur-md shadow-2xl px-2 w-[250px] h-[225px] rounded-2xl backdrop-saturate-150">
-                    <img src={element.img} alt="" className="w-[70px] h-[70px] md:w-[100px] md:h-[100px]"/>
-                    <h1>{element.name}</h1>    
-                    <div>fds</div>
-                    </div>
-                    
-                    <p>{element.description}</p>
-                </div>
-            })
-        }
+<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  place-items-center  px-20 gap-20 translate-y-[-2%] lg:translate-y-[-4%] 2xl:grid-cols-4 2xl:translate-y-[-10%] '>
+{
+    ourServices.map((element,idx)=> {
+        return <div className='w-[300px] bg-white text-center px-3 rounded-xl h-[450px] shadow-2xl shadow-slate-700 drop-shadow-2xl border-2  py-5 flex flex-col items-center'>
+        <div className='translate-y-[-50px] bg-blue-500 top-0 rounded-xl w-[70px] h-[70px] flex flex-row items-center justify-center'>
+        <img src={element.img} alt="" className="w-[50px] h-[50px] md:w-[50px] md:h-[50px]"/>
+        </div>
+        <div className='font-bold text-[25]'>{element.name}</div>
+        <div className='mt-3 font-normal text-[18px]'>{element.description}</div>
+    </div>
+    })
+}
+
+
 </div>
 <Footer/>
     </div>

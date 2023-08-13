@@ -110,38 +110,47 @@ const HeroSection: React.FC<HeroSectionProps> = ({ showModal, handleModal }) => 
   ]
   const ourServices = [
     {
-      img:'/mental-health.png',
-      name:'Dementia Care',
+        img:'/wheelchair.png',
+        description:'Assisted living care homes provide support for seniors who need help with daily activities such as bathing, dressing, and medication management. Residents enjoy private apartments and communal spaces while receiving assistance tailored to their individual needs.',
+        name:'Assisted Living Care',
     },
     {
-      img:'/nursing.png',
-      name:'Nursing Care',
+        img:'/mental-health.png',
+        description:'Memory care homes specialize in caring for individuals with Alzheimers disease, dementia, or other memory-related conditions. These facilities offer a secure environment, structured routines, and specialized therapies to help residents maintain their cognitive functions.',
+        name:'Memory Care:',
     },
     {
-      img:'wheelchair.png',
-      name:'Physical Disabilities',
+        img:'/respite-care.png',
+        description:'Respite care homes offer short-term stays for seniors, allowing primary caregivers to take a break from their responsibilities. This service ensures that the elderly receive proper care and attention while their caregivers tend to personal matters.',
+        name:'Respite Care:',
     },
     {
-      img:'/respite-care.png',
-      name:'Respite Care',
+        img:'/nursing.png',
+        description:'Nursing homes provide round-the-clock medical care for seniors with complex health needs. They offer skilled nursing services, rehabilitation therapies, and specialized medical treatments in a supervised environment.',
+        name:'Nursing Homes:',
     },
     {
-      img:'/mental-health.png',
-      name:'Dementia Care',
+        img:'/nursing-care.png',
+        description:'Hospice care homes focus on providing comfort, pain management, and emotional support to individuals with terminal illnesses. The goal is to improve the quality of life during the final stages of life.',
+        name:'Hospice Care:',
     },
     {
-      img:'/nursing.png',
-      name:'Nursing Care',
+        img:'/independent-living.png',
+        description:'Independent living communities cater to active seniors who want to maintain their autonomy while enjoying a supportive community. These homes offer amenities like social activities, maintenance services, and a sense of belonging.',
+        name:'Independent Living:',
     },
     {
-      img:'wheelchair.png',
-      name:'Physical Disabilities',
+        img:'palliative-care.png',
+        description:'Palliative care homes enhance life quality for seriously ill individuals, offering pain management, symptom relief, and emotional support to improve overall well-being, irrespective of prognosis.',
+        name:'Palliative Care:',
     },
     {
-      img:'/respite-care.png',
-      name:'Respite Care',
+        img:'/assistive-care.png',
+        description:'Assisted home care services provide support for seniors who prefer to remain in their own homes. Caregivers assist with tasks like meal preparation, medication reminders, and companionship, allowing seniors to age in a familiar environment.',
+        name:'Assisted Home Care:',
     },
-  ]
+
+]
 const footer1 = [
   {
     name:'About Us',
@@ -286,31 +295,32 @@ const ourCare = [
       <div className="flex flex-col items-center justify-center px-5 md:px-20 py-20 bg-gray-100">
         <h1 className="text-[25px] md:text-[35px] lg:text-[50px] font-normal">Our Care Services</h1>
         <p className="text-[16px] md:text-[20px] px-3 md:px-0  text-center">"We collaborate intimately with our residents, their cherished ones, and every invested party to ensure that we provide unwavering assistance for individuals to reside with us as integral members of our extended kinship."</p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 place-items-center lg:grid-cols-4 gap-[120px]  mt-10">
-           {
-            ourServices.map((element,idx)=> {
-              return <> <div  className=" flex flex-col items-center justify-center gap-5 bg-blue-600 backdrop-filter backdrop-blur-md shadow-2xl px-2 w-[250px] h-[225px] rounded-2xl backdrop-saturate-150" key = {idx}>
-                <img src={element.img} alt="" className="w-[70px] h-[70px] md:w-[100px] md:h-[100px]"/>
-                <div className="font-semibold text-center text-[16px] text-white">{element.name}</div>
-              </div>
-              
-              </>
-            })
-            
-           } 
-            
+        <div className='grid grid-cols-1 mt-20 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 place-items-center  px-20 gap-20     '>
+{
+    ourServices.map((element,idx)=> {
+        return <div className='w-[300px] bg-white text-center px-3 rounded-xl h-[450px] shadow-2xl shadow-slate-700 drop-shadow-2xl border-2  py-5 flex flex-col items-center'>
+        <div className='translate-y-[-50px] bg-blue-900 top-0 rounded-xl w-[70px] h-[70px] flex flex-row items-center justify-center'>
+        <img src={element.img} alt="" className="w-[50px] h-[50px] md:w-[50px] md:h-[50px]"/>
         </div>
+        <div className='font-bold text-[25]'>{element.name}</div>
+        <div className='mt-3 font-normal text-[18px]'>{element.description}</div>
+    </div>
+    })
+}
+
+
+</div>
        </div>
        
 
 
-    <div className="flex flex-col  lg:flex-row items-center justify-between py-20 md:px-20 px-3 ">
+    <div className="flex flex-col  lg:flex-row items-center justify-between gap-10 py-20 md:px-20 px-3 ">
 
 
       <div className="flex flex-col items-center lg:items-start max-w-[800px] px-3 text-center lg:text-left">
         <h1 className="font-semibold text-[25px]">WHY CHOOSE US</h1>
         <br />
-        <p>"Discover a higher standard of care with us. Our experienced team is dedicated to ensuring your loved one's comfort and well-being every day.
+        <p className="px-3 md:px-0">"Discover a higher standard of care with us. Our experienced team is dedicated to ensuring your loved one's comfort and well-being every day.
          <br /><br /> At SBH Healthcare, we blend personalized support with a welcoming community, creating a place they can truly call home. Trust us to provide the exceptional care your family deserves."</p>
         <button className="bg-[#39b54a] py-2 px-3 text-white mt-5">Getting Started</button>
       </div>
@@ -318,7 +328,7 @@ const ourCare = [
 
 
       
-        <div className="flex flex-col w-full md:w-[400px] items-center gap-5">
+        <div className="flex flex-col w-full px-2 md:w-[400px] items-center gap-5">
           <div className="px-2 py-3 border-2 border-[#39b54a] w-full md:w-[400px]">1. Convenient Speciality Care</div>
           <div className="px-2 py-3 border-2 border-[#39b54a] w-full md:w-[400px]">2. Attention to Quality of Life</div>
           <div className="px-2 py-3 border-2 border-[#39b54a] w-full md:w-[400px]">3. Medical Health Care</div>
@@ -398,7 +408,7 @@ const ourCare = [
             spaceBetween: 10,
           },
           1024: {
-            slidesPerView: 5,
+            slidesPerView: 3,
             spaceBetween: 50,
           },
           1499:{
