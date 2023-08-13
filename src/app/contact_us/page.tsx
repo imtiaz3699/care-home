@@ -37,7 +37,10 @@ function ContactUs() {
   return (
     <>
 <Navbar/>
-<div className='w-full h-[500px] object-cover bg-no-repeat bg-blue-900' ></div>
+<div className='w-full h-[500px] flex flex-row items-center justify-center object-cover bg-no-repeat bg-blue-400
+'>
+  <img src="/pngwing.com.png" alt="" className='w-[1000px] h-[500px]'/>
+</div>
 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center  px-20 gap-20 translate-y-[-10%] lg:translate-y-[-4%]  2xl:translate-y-[-30%] '>
 {
     contactUs.map((element,idx)=> {
