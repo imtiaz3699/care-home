@@ -8,7 +8,7 @@ interface NavbarProps {
   handleModal : (param : any) => void;
   showModal: boolean;
 }
- const Navbar: React.FC<NavbarProps> = ({handleModal})=> {
+ const Navbar: React.FC<NavbarProps> = ({handleModal,showModal})=> {
 
  
 
