@@ -37,10 +37,10 @@ function ContactUs() {
     <>
 <Navbar/>
 <div className='w-full h-[500px] object-cover' style = {{backgroundImage:'url(/our-services.png)'}}></div>
-<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  place-items-center w-full  px-20 gap-20 translate-y-[-10%] lg:translate-y-[-4%] 2xl:grid-cols-4 2xl:translate-y-[-30%] '>
+<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center  px-20 gap-20 translate-y-[-10%] lg:translate-y-[-4%]  2xl:translate-y-[-30%] '>
 {
     contactUs.map((element,idx)=> {
-        return <div className='w-[300px] bg-white text-center px-3 rounded-xl  shadow-2xl shadow-slate-700 drop-shadow-2xl border-2  py-5 h-[200px] flex flex-col items-center '>
+        return <div className='w-[300px] bg-white text-center px-3 rounded-xl shadow-2xl shadow-slate-700 drop-shadow-2xl border-2 py-5 h-[200px] flex flex-col items-center '>
         <div className=' top-0 rounded-xl w-[70px] h-[70px] flex flex-row items-center justify-center'>
         <img src={element.img} alt="" className="w-[50px] h-[50px] md:w-[50px] md:h-[50px]"/>
         </div>
@@ -54,7 +54,7 @@ function ContactUs() {
 <div className='flex flex-row items-center justify-center'>
   
 </div>
-<div className='px-20 py-20'>This is the best</div>
+{/* <div className='px-20 py-20'>This is the best</div> */}
 <div className='flex flex-col lg:flex-row items-center justify-center px-3 md:px-20 py-20 gap-20'>
   <div className='flex flex-col gap-10'>
     <div className='flex flex-row items-center gap-10'>
