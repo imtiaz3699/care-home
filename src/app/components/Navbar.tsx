@@ -50,7 +50,7 @@ interface NavbarProps {
         <div>
           <span>Phone : </span>0791 678 9486
         </div>
-        <div><span>Email : </span>contact@sbhhealthcare.com</div>
+        <div><span>Email : </span>Info@sbhhealthcare.co.uk</div>
         </div>
 
         <div className='flex flex-row items-center gap-4'>

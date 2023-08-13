@@ -15,7 +15,7 @@ function ContactUs() {
     <div>Telephone:</div>
     <div className="bg-[#39b54a] px-3 py-3 rounded-md text-white w-full lg:w-[200px] text-left">0791 678 9486</div>
     <div>Email:</div>
-    <div className="bg-[#39b54a] px-3 py-3 rounded-md text-white w-full lg:w-[300px] text-left">contact@sbhhealthcare.com</div>
+    <div className="bg-[#39b54a] px-3 py-3 rounded-md text-white w-full lg:w-[300px] text-left">Info@sbhhealthcare.co.uk</div>
     <div className='w-full lg:w-[500px]'>
     For more general questions, why not get in touch with our Head Office by calling or completing the form?
 <br /><br />
