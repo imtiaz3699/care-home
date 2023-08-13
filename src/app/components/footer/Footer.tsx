@@ -18,8 +18,8 @@ function Footer() {
           url:'/services',
         },
         {
-          name:'Testimonials',
-          url:'/',
+          name:'Privacy Policy',
+          url:'/privacy-policy',
         },
       ]
      

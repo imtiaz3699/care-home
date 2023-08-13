@@ -37,7 +37,7 @@ export default function ZoomSlider() {
         <div className="w-full h-full  bg-black opacity-50 flex flex-col px-10 justify-center  absolute z-10">
           <div className="font-bold text-[35px] md:text-[50px] text-white  md:ml-28">Welcome to SBH Healthcare</div>
           <div className="max-w-[709px] text-white text-[18px]  md:ml-28">
-At SBH Healthcare, we don't just offer healthcare; we provide you with a healthcare services—a haven where we join forces in your wellness journey.
+At SBH Healthcare, we don't just offer healthcare we provide you with a haven where we join forces in your wellness journey.
 Every step of the way, count on us to wholeheartedly support and guide you towards a healthier, 
 more fulfilling life.Your well-being is not just a goal, it's our unwavering commitment.
           </div>

@@ -37,7 +37,7 @@ function ContactUs() {
   return (
     <>
 <Navbar/>
-<div className='w-full h-[500px] object-cover' style = {{backgroundImage:'url(/our-services.png)'}}></div>
+<div className='w-full h-[500px] object-cover bg-no-repeat bg-blue-900' ></div>
 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center  px-20 gap-20 translate-y-[-10%] lg:translate-y-[-4%]  2xl:translate-y-[-30%] '>
 {
     contactUs.map((element,idx)=> {
@@ -84,12 +84,7 @@ function ContactUs() {
     <p>We believe in sustainability is vitally important.</p>
     {/* <GoogleMaps/> */}
     <div className='mt-10 w-full lg:w-[600px]'>
-    <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.8195613507864!3d-6.194741395493371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5390917b759%3A0x6b45e67356080477!2sPT%20Kulkul%20Teknologi%20Internasional!5e0!3m2!1sen!2sid!4v1601138221085!5m2!1sen!2sid"
-              width="100%"
-              height="450"
-              
-            />
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2427.634398776235!2d-1.8764738235322869!3d52.521955172061695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870a4add33279fb%3A0xb12f53034c64394f!2s311%20Brookvale%20Rd%2C%20Birmingham%20B23%207RR%2C%20UK!5e0!3m2!1sen!2s!4v1691957753352!5m2!1sen!2s" width="100%" height="450px"   loading="lazy" ></iframe>
     </div>
   </div>
 </div>
