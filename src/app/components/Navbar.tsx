@@ -77,7 +77,7 @@ interface NavbarProps {
 
         <div className=' flex flex-row items-center justify-between container mx-auto bg-white  px-3 lg:px-20 text-black py-3 '>
           <div className='bg-white rounded-xl flex flex-row items-center justify-betweeen '>
-              <img src="/logo.png" alt="" className='w-[70px] h-[40px] md:w-[100px] md:h-[60px]'/>
+              <img src="/logo.png" alt="" className='w-[70px] h-[40px] md:w-[120px] md:h-[80px]'/>
           </div>
           <div className='hidden lg:flex flex-row gap-10'>
             {

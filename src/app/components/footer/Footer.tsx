@@ -11,15 +11,15 @@ function Footer() {
         },
         {
           name:'Our Philosophy',
-          url:'',
+          url:'/',
         },
         {
-          name:'History',
-          url:'',
+          name:'Our Services',
+          url:'/services',
         },
         {
           name:'Testimonials',
-          url:'',
+          url:'/',
         },
       ]
      
@@ -44,12 +44,12 @@ function Footer() {
 </div>
 
     <div className="flex flex-col items-center md:items-start ">
-      <Link href='/about'>
+      
       <div className="text-white font-bold text-[35px]">Contact Us</div>
-      </Link>
+      
     
-    <div className="text-white">Tel : 074-82112-058</div>
-    <div className="text-white">Email:Info@sbhhealthcare.co.uk</div>
+    <div className="text-white flex flex-col">Tel : 0748 211 2058 <span className='ml-9'>0791 678 9486</span></div>
+    <div className="text-white">Email : Info@sbhhealthcare.co.uk</div>
     <div className="mt-2">
     <div className="text-white font-normal text-[35px]">Follow Us</div>
     <div className="flex flex-row items-center justify-center">
