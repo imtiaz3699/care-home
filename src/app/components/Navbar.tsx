@@ -48,7 +48,7 @@ interface NavbarProps {
           <span className=''>Open Hours:</span> Mon-Fri 8:00 am-6:00Pm
         </div>
         <div>
-          <span>Phone : </span>0791 678 9486
+          <span>Phone : </span>0791 678 9486 &nbsp; &nbsp;  0748 211 2058
         </div>
         <div><span>Email : </span>Info@sbhhealthcare.co.uk</div>
         </div>
