@@ -25,7 +25,7 @@ function Footer() {
      
   return (
     <>
-     <div className="footer flex flex-col md:flex-row  md:justify-between md:px-20 text-center md:text-left  bg-green-800 justify-center gap-20 py-10">
+     <div className="footer flex flex-col md:flex-row  md:justify-between md:px-20 text-center md:text-left  bg-gray-800 justify-center gap-20 py-10">
 <div className='flex flex-col items-center text-center gap-3'>
   <img src="/logo.png" alt="" className="w-[150px] h-[100px] m-0"/>
   <div className="text-white">SBH Healthcare Limited</div>
@@ -48,8 +48,8 @@ function Footer() {
       <div className="text-white font-bold text-[35px]">Contact Us</div>
       </Link>
     
-    <div className="text-white">Tel:074-82112-058</div>
-    <div className="text-white">Email:contact@sbhhealthcare.com</div>
+    <div className="text-white">Tel : 074-82112-058</div>
+    <div className="text-white">Email:Info@sbhhealthcare.co.uk</div>
     <div className="mt-2">
     <div className="text-white font-normal text-[35px]">Follow Us</div>
     <div className="flex flex-row items-center justify-center">
