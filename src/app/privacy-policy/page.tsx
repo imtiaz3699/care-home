@@ -40,7 +40,7 @@ We comply with the General Data Protection Regulation (GDPR) and other relevant 
 This Privacy and Policy document may be updated from time to time. We encourage you to review this document periodically to stay informed about how we protect your information.
 <br />
 <h1 className = "font-semibold">Contact Us:</h1>
-For any inquiries or concerns regarding privacy and personal information, please contact our Data Protection Officer at contact@email.com.
+For any inquiries or concerns regarding privacy and personal information, please contact our Data Protection Officer at <a href="" className="text-blue-900">info@sbhhealthcare.com</a>
 
 <p>At Carehome Services, we prioritize privacy and take all necessary steps to maintain the confidentiality and security of personal information. Your trust is of the utmost importance to us, and we are committed to upholding the highest standards in privacy protection.</p>
 </div>
