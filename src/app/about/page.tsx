@@ -100,7 +100,9 @@ const dataFinal = [
             })
            }             
       </div>
-
+<div className='w-full px-20 flex flex-row items-center py-20'>
+           <div className='w-full h-[300px] bg-blue-900'></div>
+</div>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  place-items-center py-20 px-20 gap-20   '>
     {
         ourCare.map((element,idx)=> {
@@ -114,18 +116,7 @@ const dataFinal = [
         })
     }        
       </div>
-{/* <div className=' py-20 text-center font-bold text-[30px] px-3 bg-blue-900 md:text-[35px] text-white'>
-    Our Philosophy of Care
-</div> */}
-{/* <div className='py-20 flex flex-row justify-center px-3'>
-    <div className='bg-blue-900 text-white p-4 border border-green-800 rounded-xl w-[800px]'>
-        <div className='text-[18] md:text-[20px] '>Every SBH Residence operates based on a care philosophy that mandates the provision of a secure and cozy setting for all inhabitants. Our commitment entails treating everyone with honor and impartiality, regardless of their requirements and histories, within an ambiance of confidence and recognition.</div>
-        <br />
-        <div className=''>We hold a firm conviction in championing self-reliance and recognizing the uniqueness of each resident. It is our tenet that every individual receives a personalized care strategy tailored to their needs and desires, affording them the autonomy to shape elements of their daily regimen. Moreover, we wholeheartedly embrace and encourage recurrent gatherings with kin and companions.
-<br /><br />
-To ensure that our high standard of care is maintained, an independent quality assurance system is in place.</div>
-    </div>
-</div> */}
+
 
 <Footer/>
     </>
