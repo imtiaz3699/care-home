@@ -68,46 +68,6 @@ const HeroSection: React.FC<HeroSectionProps> = ({ showModal, handleModal }) => 
       },
     ]
 
-
-  const houseAddress = [
-    {
-      name:'Ashby Lodge wakefield',
-      url:'',
-    },
-    {
-      name:'Ashfield House, Conventry',
-      url:'',
-    },
-    {
-      name:'As Care Leicester',
-      url:'',
-    },
-    {
-      name:'Ashview House, Stoke-on-Trent',
-      url:'',
-    },
-    {
-      name:'Old Vicarage Workshop',
-      url:'',
-    },
-    {
-      name:'Ashton Court Rotherham',
-      url:'',
-    },
-    {
-      name:'Aston Manor Dewsbury',
-      url:'',
-    },
-    {
-      name:'Ashford House Liecestershire',
-      url:'',
-    },
-    {
-      name:'London Road Specialist Nursing Home,Leicester',
-      url:'',
-    },
-    
-  ]
   const ourServices = [
     {
         img:'/wheelchair.png',
@@ -116,38 +76,38 @@ const HeroSection: React.FC<HeroSectionProps> = ({ showModal, handleModal }) => 
     },
     {
         img:'/mental-health.png',
-        description:'Memory care homes specialize in caring for individuals with Alzheimers disease, dementia, or other memory-related conditions. These facilities offer a secure environment, structured routines, and specialized therapies to help residents maintain their cognitive functions.',
-        name:'Memory Care:',
+        description:'For residents requiring specialized care, our dementia and memory care services are designed to provide support, comfort, and a safe environment for individuals living with memory-related conditions.',
+        name:'Dementia and Memory Care: ',
     },
     {
         img:'/respite-care.png',
-        description:'Respite care homes offer short-term stays for seniors, allowing primary caregivers to take a break from their responsibilities. This service ensures that the elderly receive proper care and attention while their caregivers tend to personal matters.',
-        name:'Respite Care:',
+        description:'Our modern and well-maintained facilities offer a comfortable and homely atmosphere. Residents can choose from a range of accommodation options that suit their lifestyle and budget, all designed to provide a sense of belonging and security.',
+        name:'Comfortable Accommodation :',
     },
     {
         img:'/nursing.png',
-        description:'Nursing homes provide round-the-clock medical care for seniors with complex health needs. They offer skilled nursing services, rehabilitation therapies, and specialized medical treatments in a supervised environment.',
-        name:'Nursing Homes:',
+        description:'Good nutrition is vital for overall well-being. Our in-house culinary team prepares delicious, balanced meals that cater to individual dietary needs and preferences, ensuring residents receive nourishment that contributes to their health.',
+        name:'Nutritious Dining :',
     },
     {
         img:'/nursing-care.png',
-        description:'Hospice care homes focus on providing comfort, pain management, and emotional support to individuals with terminal illnesses. The goal is to improve the quality of life during the final stages of life.',
-        name:'Hospice Care:',
+        description:'Health and safety are paramount. Our skilled medical professionals are available around the clock to provide immediate assistance and care whenever its needed, ensuring peace of mind for both residents and their families.',
+        name:'24/7 Medical Support :',
     },
     {
         img:'/independent-living.png',
-        description:'Independent living communities cater to active seniors who want to maintain their autonomy while enjoying a supportive community. These homes offer amenities like social activities, maintenance services, and a sense of belonging.',
-        name:'Independent Living:',
+        description:'We understand that every individual has unique needs and preferences. Our experienced team collaborates with residents and their families to create personalized care plans that cater to specific requirements, ensuring that each resident receives the attention they deserve.',
+        name:'Personalized Care Plans :',
     },
     {
         img:'palliative-care.png',
-        description:'Palliative care homes enhance life quality for seriously ill individuals, offering pain management, symptom relief, and emotional support to improve overall well-being, irrespective of prognosis.',
-        name:'Palliative Care:',
+        description:'We believe in promoting an active and enjoyable lifestyle. Our carefully crafted recreational activities and social events encourage residents to stay engaged, form meaningful connections, and maintain a vibrant sense of community.',
+        name:'Engaging Activities :',
     },
     {
         img:'/assistive-care.png',
-        description:'Assisted home care services provide support for seniors who prefer to remain in their own homes. Caregivers assist with tasks like meal preparation, medication reminders, and companionship, allowing seniors to age in a familiar environment.',
-        name:'Assisted Home Care:',
+        description:'We believe in fostering a strong sense of family and community. Families are encouraged to participate in their loved ones care journey, with regular updates, communication channels, and opportunities to engage in various activities.',
+        name:'Family Involvement :',
     },
 
 ]
@@ -175,52 +135,52 @@ const testimonials = [
   {
     name:'Emily Truner',
     review:'A haven of warmth and care. The staff at this old age home go above and beyond to make each resident feel cherished and valued.',
-    img:'/face.jpg'
+    img:'/dummyImage.jpg'
   },
   {
     name:'Amelia',
     review:'A true blessing for our seniors. The facilities are top-notch, and the organized activities keep everyone engaged and lively. This old age home sets a shining example for others.',
-    img:'/face1.jpg'
+    img:'/dummyImage3.jpg'
   },
   {
     name:'Margaret Hughes',
     review:'Home away from home. The staffs dedication is heartwarming. They ensure that our loved ones are not just cared for, but they flourish with genuine affection.',
-    img:'/face2.jpg'
+    img:'/dummyImage2.jpg'
   },
   {
     name:'Freya Parker',
     review:'Exceptional support for seniors needs. This old age homes commitment to providing personalized attention is commendable. Our family is at peace knowing our relative is in such capable hands.',
-    img:'/face3.jpg'
+    img:'/dummyImage.jpg'
   },
   {
     name:'Joseph Foster',
     review:'A treasure for the elderly. The cheerful atmosphere and the constant companionship make it a joyous community. Its evident that the staff here are driven by a deep passion for caregiving.',
-    img:'/face4.jpg'
+    img:'/dummyImage2.jpg'
   },
   {
     name:'Samuel Wright',
     review:'A place of respect and honor for seniors. The old age homes commitment to maintaining residents dignity while offering top-quality care is truly inspiring.',
-    img:'/face5.jpg'
+    img:'/dummyImage3.jpg'
   },
   {
     name:'Alexander Patel',
     review:'An old age home that feels like family. The warm and friendly ambiance, along with the well-planned recreational activities, creates an environment where seniors can thrive.',
-    img:'/face6.jpg'
+    img:'/dummyImage.jpg'
   },
   {
     name:'Henry Carter',
     review:'Exceptional attention to detail. The staffs unwavering dedication to meeting each residents unique needs sets this old age home apart.',
-    img:'/face7.jpg'
+    img:'/dummyImage3.jpg'
   },
   {
     name:'Benjamin Turner',
     review:'A haven of tranquility for our loved ones. ',
-    img:'/face8.jpg'
+    img:'/dummyImage2.jpg'
   },
   {
     name:'Charles Hughes',
     review:'A remarkable establishment. The commitment to fostering an environment of companionship and vitality is truly commendable.',
-    img:'/face9.jpg'
+    img:'/dummyImage3.jpg'
   },
 ]
 
@@ -273,7 +233,7 @@ const ourCare = [
   <ZoomSlider/>
 </div>
 
-    <div className=" text-black px-5 md:px-20 py-20 flex flex-col items-center justify-center text-center  ">
+    <div className=" text-black px-5 md:px-20 py-10 flex flex-col items-center justify-center text-center  ">
     <h1 className="text-[25px] md:text-[35px] lg:text-[50px] font-normal">Welcome to SBH</h1>
     <p className="text-[16px] md:text-[20px] px-3 md:px-0  text-center">At <strong className = "text-blue-900">SBH</strong> , our mission is to provide compassionate care and support to our beloved seniors. In the 'How Can We Help' section, we offer a range of services tailored to meet the unique needs of each resident. From personalized care plans and recreational activities to medical assistance and emotional companionship, we're dedicated to enhancing the quality of life for our cherished residents.</p>
     <div className='py-10 container- mx-auto flex flex-col md:flex-row px-3  justify-center gap-20'>
@@ -294,7 +254,7 @@ const ourCare = [
 
       <div className="flex flex-col items-center justify-center px-5 md:px-20 py-20 bg-gray-100">
         <h1 className="text-[25px] md:text-[35px] lg:text-[50px] font-normal">Our Care Services</h1>
-        <p className="text-[16px] md:text-[20px] px-3 md:px-0  text-center">"We collaborate intimately with our residents, their cherished ones, and every invested party to ensure that we provide unwavering assistance for individuals to reside with us as integral members of our extended kinship."</p>
+        <p className="text-[16px] md:text-[20px] px-3 md:px-0  text-center">At our Carehome Services, we are dedicated to offering top-notch care and support to individuals who require assistance in their daily lives. Our range of services is designed to ensure the well-being, safety, and happiness of our residents, promoting a comfortable and enriching environment for all.</p>
         <div className='grid grid-cols-1 mt-20 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 place-items-center  px-20 gap-20     '>
 {
     ourServices.map((element,idx)=> {
@@ -322,7 +282,9 @@ const ourCare = [
         <br />
         <p className="px-3 md:px-0">"Discover a higher standard of care with us. Our experienced team is dedicated to ensuring your loved one's comfort and well-being every day.
          <br /><br /> At SBH Healthcare, we blend personalized support with a welcoming community, creating a place they can truly call home. Trust us to provide the exceptional care your family deserves."</p>
+         <Link href='/services'>
         <button className="bg-[#39b54a] py-2 px-3 text-white mt-5">Getting Started</button>
+        </Link>
       </div>
 
 
@@ -360,14 +322,17 @@ const ourCare = [
         <div className="w-[50%] h-full flex flex-col justify-center pl-5 gap-5">
           <h1 className="text-[25px] font-bold ">Booking Request</h1>
           <p>If you have any urgent inquiries or need to reschedule your appointment, please contact us at Phone Number or Email Address.
-</p>
+          </p>
           <div className="flex flex-row items-center gap-5">
               <img src="/phone.png" alt="" className="w-[50px] h-[50px]"/>
-              <div>074 82112 058</div>
+              <div className="flex flex-col items-center">
+              <div>0748 211 2058</div>
+              <div>0791 678 9486</div>
+              </div>
           </div>
           <div className="flex flex-row items-center gap-5">
               <img src="/email.png" alt="" className="w-[50px] h-[50px]"/>
-              <div>contact@sbhhealthcare.com</div>
+              <div>info@sbhhealthcare.com</div>
           </div>
         </div>
         <div className="w-[50%] bg-[#39b54a] h-full px-3 py-2 ">

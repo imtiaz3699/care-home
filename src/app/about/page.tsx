@@ -87,13 +87,13 @@ const dataFinal = [
   return (
     <>
       <Navbar/>
-      <div className='w-full h-[500px] bg-cover' style = {{backgroundImage:'url(/about-us.jpg)'}}></div>
+      <div className='w-full h-[500px] object-fit md:bg-cover ' style = {{backgroundImage:'url(/about-us.jpg)'}}></div>
 
       <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 place-items-center px-3 md:px-20 py-20'>
            
            {
             dataFinal.map((element,idx)=> {
-                return <div className='w-[300px]  bg-blue-500 text-center px-3 rounded-xl h-[250px] shadow-2xl shadow-slate-700 drop-shadow-2xl py-5 flex flex-col items-center justify-center'>
+                return <div className='w-[300px] bg-blue-500 text-center px-3 rounded-xl h-[250px] shadow-2xl shadow-slate-700 drop-shadow-2xl py-5 flex flex-col items-center justify-center'>
             <img src={element.img} alt="" className='text-[100px] h-[100px]'/>
             <h1>{element.name}</h1>
     </div>

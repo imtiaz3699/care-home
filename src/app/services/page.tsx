@@ -12,40 +12,40 @@ function Services() {
         },
         {
             img:'/mental-health.png',
-            description:'Memory care homes specialize in caring for individuals with Alzheimers disease, dementia, or other memory-related conditions. These facilities offer a secure environment, structured routines, and specialized therapies to help residents maintain their cognitive functions.',
-            name:'Memory Care:',
+            description:'For residents requiring specialized care, our dementia and memory care services are designed to provide support, comfort, and a safe environment for individuals living with memory-related conditions.',
+            name:'Dementia and Memory Care: ',
         },
         {
             img:'/respite-care.png',
-            description:'Respite care homes offer short-term stays for seniors, allowing primary caregivers to take a break from their responsibilities. This service ensures that the elderly receive proper care and attention while their caregivers tend to personal matters.',
-            name:'Respite Care:',
+            description:'Our modern and well-maintained facilities offer a comfortable and homely atmosphere. Residents can choose from a range of accommodation options that suit their lifestyle and budget, all designed to provide a sense of belonging and security.',
+            name:'Comfortable Accommodation :',
         },
         {
             img:'/nursing.png',
-            description:'Nursing homes provide round-the-clock medical care for seniors with complex health needs. They offer skilled nursing services, rehabilitation therapies, and specialized medical treatments in a supervised environment.',
-            name:'Nursing Homes:',
+            description:'Good nutrition is vital for overall well-being. Our in-house culinary team prepares delicious, balanced meals that cater to individual dietary needs and preferences, ensuring residents receive nourishment that contributes to their health.',
+            name:'Nutritious Dining :',
         },
         {
             img:'/nursing-care.png',
-            description:'Hospice care homes focus on providing comfort, pain management, and emotional support to individuals with terminal illnesses. The goal is to improve the quality of life during the final stages of life.',
-            name:'Hospice Care:',
+            description:'Health and safety are paramount. Our skilled medical professionals are available around the clock to provide immediate assistance and care whenever its needed, ensuring peace of mind for both residents and their families.',
+            name:'24/7 Medical Support :',
         },
         {
             img:'/independent-living.png',
-            description:'Independent living communities cater to active seniors who want to maintain their autonomy while enjoying a supportive community. These homes offer amenities like social activities, maintenance services, and a sense of belonging.',
-            name:'Independent Living:',
+            description:'We understand that every individual has unique needs and preferences. Our experienced team collaborates with residents and their families to create personalized care plans that cater to specific requirements, ensuring that each resident receives the attention they deserve.',
+            name:'Personalized Care Plans :',
         },
         {
             img:'palliative-care.png',
-            description:'Palliative care homes enhance life quality for seriously ill individuals, offering pain management, symptom relief, and emotional support to improve overall well-being, irrespective of prognosis.',
-            name:'Palliative Care:',
+            description:'We believe in promoting an active and enjoyable lifestyle. Our carefully crafted recreational activities and social events encourage residents to stay engaged, form meaningful connections, and maintain a vibrant sense of community.',
+            name:'Engaging Activities :',
         },
         {
             img:'/assistive-care.png',
-            description:'Assisted home care services provide support for seniors who prefer to remain in their own homes. Caregivers assist with tasks like meal preparation, medication reminders, and companionship, allowing seniors to age in a familiar environment.',
-            name:'Assisted Home Care:',
+            description:'We believe in fostering a strong sense of family and community. Families are encouraged to participate in their loved ones care journey, with regular updates, communication channels, and opportunities to engage in various activities.',
+            name:'Family Involvement :',
         },
-
+    
     ]
   return (
     <div>

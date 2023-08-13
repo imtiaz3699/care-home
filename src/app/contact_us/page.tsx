@@ -16,6 +16,7 @@ function ContactUs() {
       img:'/phone.png',
       name:'PHONE NUMBER',
       description:'0791 678 9486',
+      description2:'0748 211 2058'
     },
     // {
     //   img:'/fax.png',
@@ -46,6 +47,9 @@ function ContactUs() {
         </div>
         <div className='font-bold text-[25]'>{element.name}</div>
         <div className='mt-3 font-normal text-[16px]'>{element.description}</div>
+        {
+          element.description2 && <div className='font-normal text-[16px]'>{element.description2}</div>
+        }
     </div>
     })
 }
