@@ -5,8 +5,8 @@ import Image from "next/image";
 import Link from 'next/link';
 
 interface NavbarProps {
-  handleModal : (param : any) => void;
-  showModal: boolean;
+  handleModal? : (param : any) => void;
+  showModal? : boolean;
 }
  const Navbar: React.FC<NavbarProps> = ({handleModal,showModal})=> {
 
