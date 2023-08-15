@@ -339,7 +339,7 @@ const ourCare = [
           </div>
           <div className="flex flex-row items-center gap-5">
               <img src="/email.png" alt="" className="w-[50px] h-[50px]"/>
-              <div>info@sbhhealthcare.com</div>
+              <div>info@sbhhealthcare.co.pk</div>
           </div>
 
 
