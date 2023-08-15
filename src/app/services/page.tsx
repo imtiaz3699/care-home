@@ -2,6 +2,7 @@
 import React from 'react'
 import Navbar from '../components/Navbar';
 import Footer from '../components/footer/Footer';
+import { useMediaQuery } from 'react-responsive';
 
 function Services() {
     const ourServices = [
@@ -47,10 +48,21 @@ function Services() {
         },
     
     ]
+
+    const isSmallScreen = useMediaQuery({ maxWidth: 768 }); // Adjust the breakpoint as needed
+
   return (
     <div>
       <Navbar/>
-<div className='w-full h-[500px] object-cover' style = {{backgroundImage:'url(/our-services.png)'}}></div>
+
+     <div className='w-full h-[500px] object-cover flex flex-col items-center justify-center' style = {{backgroundImage:'url(/our-services.png)'}}>
+       {
+            isSmallScreen && <div className='flex flex-row items-center justify-center font-bold text-center text-white text-[60px]'>
+            Our Services
+            </div>
+       } 
+    </div>
+  
 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  place-items-center  px-20 gap-20 translate-y-[-2%] lg:translate-y-[-4%] 2xl:grid-cols-4 2xl:translate-y-[-10%] '>
 {
     ourServices.map((element,idx)=> {

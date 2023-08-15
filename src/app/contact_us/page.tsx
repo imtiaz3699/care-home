@@ -37,7 +37,7 @@ function ContactUs() {
   return (
     <>
 <Navbar/>
-<div className='w-full h-[500px] flex flex-row items-center justify-center object-cover bg-no-repeat bg-blue-400
+<div className='w-full h-[500px] object-cover flex flex-col items-center justify-center  bg-blue-400
 '>
   <img src="/pngwing.com.png" alt="" className='w-[1000px] h-[500px]'/>
 </div>

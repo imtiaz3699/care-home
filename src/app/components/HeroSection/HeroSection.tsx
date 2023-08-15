@@ -319,11 +319,17 @@ const ourCare = [
       </div>
              
     <Modal showModal ={showModal} handleModal ={handleModal}>
-      <div className="text-black w-[700px] h-[400px] flex flex-row items-center">
-        <div className="w-[50%] h-full flex flex-col justify-center pl-5 gap-5">
-          <h1 className="text-[25px] font-bold ">Booking Request</h1>
-          <p>If you have any urgent inquiries or need to reschedule your appointment, please contact us at Phone Number or Email Address.
+      <div className="text-black w-full px-3 md:px-0 py-5 md:py-0 md:w-[700px] md:h-[400px] flex flex-col md:flex-row items-center">
+        <div className="w-full md:w-[50%] h-full flex flex-col justify-center pl-5 gap-5">
+          <div className="flex flex-row items-center justify-center">
+          <h1 className="text-[20px] md:text-[25px] font-bold w-full">Booking Request</h1>
+          <div className="w-full flex md:hidden flex-row justify-end cursor-pointer  " onClick={handleModal}><div className="bg-white rounded-full"><img src="/close.png" alt="" className="w-[30px] h-[30px]"/></div></div>
+          </div>
+          
+          <p className="px-3">If you have any urgent inquiries or need to reschedule your appointment, please contact us at Phone Number or Email Address.
           </p>
+
+          
           <div className="flex flex-row items-center gap-5">
               <img src="/phone.png" alt="" className="w-[50px] h-[50px]"/>
               <div className="flex flex-col items-center">
@@ -335,10 +341,13 @@ const ourCare = [
               <img src="/email.png" alt="" className="w-[50px] h-[50px]"/>
               <div>info@sbhhealthcare.com</div>
           </div>
+
+
+
         </div>
-        <div className="w-[50%] bg-[#39b54a] h-full px-3 py-2 ">
-            <div className="w-full flex flex-row justify-end cursor-pointer  " onClick={handleModal}><div className="bg-white rounded-full"><img src="/close.png" alt="" className="w-[30px] h-[30px]"/></div></div>
-            <div className="px-5 flex flex-col items-center gap-3 mt-4">
+        <div className="w-full mt-4 md:mt-0 md:w-[50%] bg-[#39b54a] h-full px-3 py-2 ">
+            <div className="hidden  w-full md:flex flex-row justify-end cursor-pointer  " onClick={handleModal}><div className="bg-white rounded-full"><img src="/close.png" alt="" className="w-[30px] h-[30px]"/></div></div>
+            <div className=" w-full flex flex-col items-center gap-3 mt-4">
               <input type="text" placeholder="Name" className="bg-white text-black py-2 px-2 w-full"/>
               <input type="text" placeholder="Email" className="bg-white text-black py-2 px-2 w-full"/>
               <input type="text" placeholder="Phone" className="bg-white text-black py-2 px-2 w-full"/>

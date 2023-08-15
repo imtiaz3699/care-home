@@ -2,6 +2,7 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/footer/Footer'
+import { useMediaQuery } from 'react-responsive';
 
 function page() {
     const data = [
@@ -84,10 +85,22 @@ const dataFinal = [
         name:'Collaboration and Coordination',
     },
 ]
+// const isSmallScreen = window.innerWidth <= 768;
+const isSmallScreen = useMediaQuery({ maxWidth: 768 });
+const isBigScreen = useMediaQuery({ minWidth: 769 });
   return (
     <>
       <Navbar/>
-      <div className='w-full h-[500px] object-fit md:bg-cover ' style = {{backgroundImage:'url(/about-us.jpg)'}}></div>
+
+     {
+        isBigScreen && <div className='w-full h-[500px] object-fit md:bg-cover ' style = {{backgroundImage:'url(/about-us.jpg)'}}></div>
+     }
+     {
+        isSmallScreen && <div className='w-full h-[500px] bg-[#133d66] flex flex-row items-center justify-center'>
+            <div className='text-[50px] text-white font-bold'>About Us</div>
+        </div>
+     } 
+      
 
       <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 place-items-center px-3 md:px-20 py-20'>
            
