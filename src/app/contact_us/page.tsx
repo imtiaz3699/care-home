@@ -37,9 +37,10 @@ function ContactUs() {
   return (
     <>
 <Navbar/>
-<div className='w-full h-[500px] object-cover flex flex-col items-center justify-center  bg-blue-400
+<div className='w-full h-[500px] object-cover flex flex-row items-center justify-center bg-blue-900
 '>
-  <img src="/pngwing.com.png" alt="" className='w-[1000px] h-[500px]'/>
+  <div className='font-bold text-[50px] md:text-[100px] text-white '>Contact Us</div>
+  {/* <img src="/pngwing.com.png" alt="" className='w-[1000px] h-[500px]'/> */}
 </div>
 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center  px-20 gap-20 translate-y-[-10%] lg:translate-y-[-4%]  2xl:translate-y-[-30%] '>
 {

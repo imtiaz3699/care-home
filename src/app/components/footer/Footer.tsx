@@ -10,10 +10,6 @@ function Footer() {
           url:'/about',
         },
         {
-          name:'Our Philosophy',
-          url:'/',
-        },
-        {
           name:'Our Services',
           url:'/services',
         },
