@@ -2,6 +2,7 @@
 import React from 'react'
 import Navbar from '../components/Navbar';
 import Footer from '../components/footer/Footer';
+import { useMediaQuery } from 'react-responsive';
 
 function Services() {
     const ourServices = [
@@ -47,7 +48,9 @@ function Services() {
         },
     
     ]
-    const isSmallScreen = window.innerWidth <= 768; 
+
+    const isSmallScreen = useMediaQuery({ maxWidth: 768 }); // Adjust the breakpoint as needed
+
   return (
     <div>
       <Navbar/>

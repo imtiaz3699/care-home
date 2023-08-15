@@ -2,6 +2,7 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/footer/Footer'
+import { useMediaQuery } from 'react-responsive';
 
 function page() {
     const data = [
@@ -84,8 +85,9 @@ const dataFinal = [
         name:'Collaboration and Coordination',
     },
 ]
-const isSmallScreen = window.innerWidth <= 768;
-const isBigScreen = window.innerWidth >= 770;
+// const isSmallScreen = window.innerWidth <= 768;
+const isSmallScreen = useMediaQuery({ maxWidth: 768 });
+const isBigScreen = useMediaQuery({ minWidth: 769 });
   return (
     <>
       <Navbar/>
