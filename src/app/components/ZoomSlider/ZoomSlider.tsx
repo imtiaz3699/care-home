@@ -1,9 +1,6 @@
 'use client'
 import HeroSlider, { Overlay, Slide, MenuNav } from "hero-slider";
-// import Wrapper from "./components/Wrapper";
-// import Title from "./components/Title";
-// import Subtitle from "./components/Subtitle";
-
+import Link from "next/link";
 const bogliasco = "https://i.imgur.com/Gu5Cznz.jpg";
 const countyClare = "https://i.imgur.com/idjXzVQ.jpg";
 const craterRock = "https://i.imgur.com/8DYumaY.jpg";
@@ -34,14 +31,31 @@ export default function ZoomSlider() {
     >
       <Overlay className="">
         <div className="w-full h-full relative">
-        <div className="w-full h-full  bg-black opacity-50 flex flex-col px-10 justify-center  absolute z-10">
-          <div className="font-bold text-[35px] md:text-[50px] text-white  md:ml-28">Welcome to SBH Healthcare</div>
-          <div className="max-w-[709px] text-white text-[18px]  md:ml-28">
-At SBH Healthcare, we don't just offer healthcare we provide you with a haven where we join forces in your wellness journey.
-Every step of the way, count on us to wholeheartedly support and guide you towards a healthier, 
-more fulfilling life.Your well-being is not just a goal, it's our unwavering commitment.
-          </div>
-        </div>
+        <div className="relative w-full h-full">
+  {/* Overlay with opacity */}
+  <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
+  
+  {/* Inner container */}
+  <div className="relative bg-transparent w-full h-full flex flex-col px-10 justify-center z-20">
+    {/* Text content */}
+    <div className="font-bold text-[35px] md:text-[50px] text-white md:ml-28">
+      Welcome to SBH Healthcare
+    </div>
+    <div className="max-w-[709px] text-white text-[18px] md:ml-28">
+      At SBH Healthcare, we don't just offer healthcare we provide you with a haven where we join forces in your wellness journey.
+      Every step of the way, count on us to wholeheartedly support and guide you towards a healthier, more fulfilling life.
+      Your well-being is not just a goal, it's our unwavering commitment.
+    </div>
+    
+    {/* Button */}
+    <Link href='/contact_us'>
+      <button className="bg-blue-900 md:ml-28 absolute px-4 py-3 text-white mt-5">
+        Learn more...
+      </button>
+    </Link>
+  </div>
+</div>
+
         </div>
       </Overlay>
       {
