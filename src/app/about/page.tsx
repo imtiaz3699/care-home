@@ -93,15 +93,15 @@ const dataFinal = [
            
            {
             dataFinal.map((element,idx)=> {
-                return <div className='w-[300px] bg-blue-500 text-center px-3 rounded-xl h-[250px] shadow-2xl shadow-slate-700 drop-shadow-2xl py-5 flex flex-col items-center justify-center'>
+                return <div className='w-[300px] bg-blue-500 text-center px-3 rounded-xl h-[250px] shadow-2xl shadow-slate-700 drop-shadow-2xl gap-4 py-5 flex flex-col items-center justify-center'>
             <img src={element.img} alt="" className='text-[100px] h-[100px]'/>
-            <h1>{element.name}</h1>
+            <h1 className=' font-bold text-white text-[18px]'>{element.name}</h1>
     </div>
             })
            }             
       </div>
-<div className='w-full px-20 flex flex-row items-center py-20'>
-           <div className='w-full h-[300px] bg-blue-900'></div>
+<div className='w-full h-full flex flex-row items-center flex flex-row items-center justify-center'>
+           <div className='w-full py-20 bg-[#133d66] text-[20px] text-center px-20 text-white'>SBH Healthcare is a trusted name in healthcare services, dedicated to providing compassionate and comprehensive care to individuals and communities. With a strong commitment to excellence, we offer a range of personalized healthcare solutions designed to meet diverse needs. Our team of skilled professionals brings expertise and empathy to every interaction, ensuring the highest standards of care. At SBH Healthcare, we strive to empower healthier lives through a blend of innovation, integrity, and genuine concern for the well-being of those we serve.</div>
 </div>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  place-items-center py-20 px-20 gap-20   '>
     {
