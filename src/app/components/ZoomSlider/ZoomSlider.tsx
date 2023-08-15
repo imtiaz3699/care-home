@@ -1,3 +1,4 @@
+'use client'
 import HeroSlider, { Overlay, Slide, MenuNav } from "hero-slider";
 // import Wrapper from "./components/Wrapper";
 // import Title from "./components/Title";
@@ -13,7 +14,7 @@ const data = [
 export default function ZoomSlider() {
   return (
     <HeroSlider
-      height={"100vh"}
+      height={"700px"}
       autoplay
       controller={{
         initialSlide: 1,
@@ -32,31 +33,26 @@ export default function ZoomSlider() {
       }}
     >
       <Overlay className="">
-        <div className="flex flex-col ml-28 justify-center h-full text-black">
-          <div className="font-bold text-[50px] text-green-800">Welcome to SBH Healthcare</div>
-          <div className="max-w-[1000px] text-[20px]">
-At SBH Health Care, we don't just offer healthcare; we provide you with a healthcare home—a haven where we join forces in your wellness journey.
+        <div className="w-full h-full relative">
+        <div className="w-full h-full  bg-black opacity-50 flex flex-col px-10 justify-center  absolute z-10">
+          <div className="font-bold text-[35px] md:text-[50px] text-white  md:ml-28">Welcome to SBH Healthcare</div>
+          <div className="max-w-[709px] text-white text-[18px]  md:ml-28">
+At SBH Healthcare, we don't just offer healthcare we provide you with a haven where we join forces in your wellness journey.
 Every step of the way, count on us to wholeheartedly support and guide you towards a healthier, 
-more fulfilling life.Your well-being is not just a goal; it's our unwavering commitment. Discover the difference of a true healthcare partnership at OptiCare Health Center,
- where you're not just a patient – you're a cherished member of our healthcare family.
+more fulfilling life.Your well-being is not just a goal, it's our unwavering commitment.
           </div>
         </div>
+        </div>
       </Overlay>
-
-
-{
-  data.map((element,idx)=> {
-    return  <Slide
-    background={{
-      backgroundImageSrc: element
-    }}
-  />
-  })
-}
-
-      
-
-      {/* <MenuNav /> */}
+      {
+        data.map((element,idx)=> {
+          return  <Slide
+        background={{
+            backgroundImageSrc: element
+        }}
+      />
+      })
+    }
     </HeroSlider>
   );
 }

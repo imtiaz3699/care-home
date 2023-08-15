@@ -1,3 +1,4 @@
+"use client"
 import Link from 'next/link'
 import React from 'react'
 
@@ -6,65 +7,27 @@ function Footer() {
     const footer1 = [
         {
           name:'About Us',
-          url:'',
+          url:'/about',
         },
         {
           name:'Our Philosophy',
-          url:'',
+          url:'/',
         },
         {
-          name:'History',
-          url:'',
+          name:'Our Services',
+          url:'/services',
         },
         {
-          name:'Testimonials',
-          url:'',
+          name:'Privacy Policy',
+          url:'/privacy-policy',
         },
       ]
-      const houseAddress = [
-        {
-          name:'Ashby Lodge wakefield',
-          url:'',
-        },
-        {
-          name:'Ashfield House, Conventry',
-          url:'',
-        },
-        {
-          name:'As Care Leicester',
-          url:'',
-        },
-        {
-          name:'Ashview House, Stoke-on-Trent',
-          url:'',
-        },
-        {
-          name:'Old Vicarage Workshop',
-          url:'',
-        },
-        {
-          name:'Ashton Court Rotherham',
-          url:'',
-        },
-        {
-          name:'Aston Manor Dewsbury',
-          url:'',
-        },
-        {
-          name:'Ashford House Liecestershire',
-          url:'',
-        },
-        {
-          name:'London Road Specialist Nursing Home,Leicester',
-          url:'',
-        },
-        
-      ]
+     
   return (
     <>
-     <div className="footer flex flex-col items-center text-center md:text-left md:flex-row bg-green-800 justify-center gap-20 py-10 px-3">
-<div className='flex flex-col items-center text-center'>
-  <img src="/logo.png" alt="" className="w-[200px] h-[200px] m-0"/>
+     <div className="footer flex flex-col md:flex-row  md:justify-between md:px-20 text-center md:text-left  bg-gray-800 justify-center gap-20 py-10">
+<div className='flex flex-col items-center text-center gap-3'>
+  <img src="/logo.png" alt="" className="w-[150px] h-[100px] m-0"/>
   <div className="text-white">SBH Healthcare Limited</div>
   <div className="text-white">311 Brookvale Road <br /> Erdington Birmingham B23 7RR</div>
 </div>
@@ -73,19 +36,20 @@ function Footer() {
 <div className="flex flex-col gap-1">
         {
           footer1.map((element,idx)=> {
-            return <div className="hover:underline cursor-pointer text-white">{element.name}</div>
+            
+            return <Link href={element.url}> <div className="hover:underline cursor-pointer text-white">{element.name}</div> </Link>
           })
         }
 </div>
 </div>
 
-    <div className="flex flex-col ">
-      <Link href='/about'>
+    <div className="flex flex-col items-center md:items-start ">
+      
       <div className="text-white font-bold text-[35px]">Contact Us</div>
-      </Link>
+      
     
-    <div className="text-white">Tel:074-82112-058</div>
-    <div className="text-white">Email:contact@sbhhealthcare.com</div>
+    <div className="text-white flex flex-col">Tel : 0748 211 2058 <span className='ml-9'>0791 678 9486</span></div>
+    <div className="text-white">Email : Info@sbhhealthcare.co.uk</div>
     <div className="mt-2">
     <div className="text-white font-normal text-[35px]">Follow Us</div>
     <div className="flex flex-row items-center justify-center">

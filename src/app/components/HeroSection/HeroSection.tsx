@@ -20,8 +20,24 @@ import Footer from "../footer/Footer";
 import CookieConsent from "../cookie-consent/CookieConsent";
 import Link from "next/link";
 import ZoomSlider from "../ZoomSlider/ZoomSlider";
+import Modal from "../Modal/Modal";
 
-function HeroSection() {
+interface HeroSectionProps {
+  showModal: boolean;
+  handleModal: () => void;
+}
+const HeroSection: React.FC<HeroSectionProps> = ({ showModal, handleModal }) => {
+  // const [showModal ,setShowModal] = React.useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+
+    setIsModalOpen(false);
+  };
     const images =['/oldAge.jpg','/oldAge2.jpg','/oldAge3.jpg'];
     const sliderImage = [
        
@@ -52,64 +68,49 @@ function HeroSection() {
       },
     ]
 
-
-  const houseAddress = [
-    {
-      name:'Ashby Lodge wakefield',
-      url:'',
-    },
-    {
-      name:'Ashfield House, Conventry',
-      url:'',
-    },
-    {
-      name:'As Care Leicester',
-      url:'',
-    },
-    {
-      name:'Ashview House, Stoke-on-Trent',
-      url:'',
-    },
-    {
-      name:'Old Vicarage Workshop',
-      url:'',
-    },
-    {
-      name:'Ashton Court Rotherham',
-      url:'',
-    },
-    {
-      name:'Aston Manor Dewsbury',
-      url:'',
-    },
-    {
-      name:'Ashford House Liecestershire',
-      url:'',
-    },
-    {
-      name:'London Road Specialist Nursing Home,Leicester',
-      url:'',
-    },
-    
-  ]
   const ourServices = [
     {
-      img:'/dementia.webp',
-      name:'Dementia Care',
+        img:'/wheelchair.png',
+        description:'Assisted living care homes provide support for seniors who need help with daily activities such as bathing, dressing, and medication management. Residents enjoy private apartments and communal spaces while receiving assistance tailored to their individual needs.',
+        name:'Assisted Living Care',
     },
     {
-      img:'/nursing-care.webp',
-      name:'Nursing Care',
+        img:'/mental-health.png',
+        description:'For residents requiring specialized care, our dementia and memory care services are designed to provide support, comfort, and a safe environment for individuals living with memory-related conditions.',
+        name:'Dementia and Memory Care: ',
     },
     {
-      img:'physical-disabilities.webp',
-      name:'Physical Disabilities',
+        img:'/respite-care.png',
+        description:'Our modern and well-maintained facilities offer a comfortable and homely atmosphere. Residents can choose from a range of accommodation options that suit their lifestyle and budget, all designed to provide a sense of belonging and security.',
+        name:'Comfortable Accommodation :',
     },
     {
-      img:'respite-care.webp',
-      name:'Respite Care',
+        img:'/nursing.png',
+        description:'Good nutrition is vital for overall well-being. Our in-house culinary team prepares delicious, balanced meals that cater to individual dietary needs and preferences, ensuring residents receive nourishment that contributes to their health.',
+        name:'Nutritious Dining :',
     },
-  ]
+    {
+        img:'/nursing-care.png',
+        description:'Health and safety are paramount. Our skilled medical professionals are available around the clock to provide immediate assistance and care whenever its needed, ensuring peace of mind for both residents and their families.',
+        name:'24/7 Medical Support :',
+    },
+    {
+        img:'/independent-living.png',
+        description:'We understand that every individual has unique needs and preferences. Our experienced team collaborates with residents and their families to create personalized care plans that cater to specific requirements, ensuring that each resident receives the attention they deserve.',
+        name:'Personalized Care Plans :',
+    },
+    {
+        img:'palliative-care.png',
+        description:'We believe in promoting an active and enjoyable lifestyle. Our carefully crafted recreational activities and social events encourage residents to stay engaged, form meaningful connections, and maintain a vibrant sense of community.',
+        name:'Engaging Activities :',
+    },
+    {
+        img:'/assistive-care.png',
+        description:'We believe in fostering a strong sense of family and community. Families are encouraged to participate in their loved ones care journey, with regular updates, communication channels, and opportunities to engage in various activities.',
+        name:'Family Involvement :',
+    },
+
+]
 const footer1 = [
   {
     name:'About Us',
@@ -133,248 +134,235 @@ const footer1 = [
 const testimonials = [
   {
     name:'Emily Truner',
-    review:'A haven of warmth and care. The staff at this old age home go above and beyond to make each resident feel cherished and valued. I m so grateful for the compassionate environment they provide'
+    review:'A haven of warmth and care. The staff at this old age home go above and beyond to make each resident feel cherished and valued.',
+    img:'/dummyImage.jpg'
   },
   {
-    name:'George Anderson',
+    name:'Amelia',
     review:'A true blessing for our seniors. The facilities are top-notch, and the organized activities keep everyone engaged and lively. This old age home sets a shining example for others.',
+    img:'/dummyImage3.jpg'
   },
   {
     name:'Margaret Hughes',
     review:'Home away from home. The staffs dedication is heartwarming. They ensure that our loved ones are not just cared for, but they flourish with genuine affection.',
+    img:'/dummyImage2.jpg'
   },
   {
-    name:'William Parker',
+    name:'Freya Parker',
     review:'Exceptional support for seniors needs. This old age homes commitment to providing personalized attention is commendable. Our family is at peace knowing our relative is in such capable hands.',
+    img:'/dummyImage.jpg'
   },
   {
-    name:'Lily Foster',
+    name:'Joseph Foster',
     review:'A treasure for the elderly. The cheerful atmosphere and the constant companionship make it a joyous community. Its evident that the staff here are driven by a deep passion for caregiving.',
+    img:'/dummyImage2.jpg'
   },
   {
     name:'Samuel Wright',
     review:'A place of respect and honor for seniors. The old age homes commitment to maintaining residents dignity while offering top-quality care is truly inspiring.',
+    img:'/dummyImage3.jpg'
   },
   {
-    name:' Olivia Patel',
+    name:'Alexander Patel',
     review:'An old age home that feels like family. The warm and friendly ambiance, along with the well-planned recreational activities, creates an environment where seniors can thrive.',
+    img:'/dummyImage.jpg'
   },
   {
     name:'Henry Carter',
-    review:'Exceptional attention to detail. The staffs unwavering dedication to meeting each residents unique needs sets this old age home apart. Our family is deeply appreciative.',
+    review:'Exceptional attention to detail. The staffs unwavering dedication to meeting each residents unique needs sets this old age home apart.',
+    img:'/dummyImage3.jpg'
   },
   {
-    name:'Amelia Turner',
-    review:'A haven of tranquility for our loved ones. The picturesque surroundings combined with the staffs genuine care provide a safe and peaceful retreat for seniors.',
+    name:'Benjamin Turner',
+    review:'A haven of tranquility for our loved ones. ',
+    img:'/dummyImage2.jpg'
   },
   {
     name:'Charles Hughes',
-    review:'A remarkable establishment. The commitment to fostering an environment of companionship and vitality is truly commendable. Our dear ones are in the best hands here.',
+    review:'A remarkable establishment. The commitment to fostering an environment of companionship and vitality is truly commendable.',
+    img:'/dummyImage3.jpg'
   },
+]
+
+const help = [
+  {
+    img:'/hospital-01.png',
+    name:'Medical Care',
+    text:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam, illum!',
+  },
+  {
+    img:'/nursing-01.png',
+    name:'Skilled Nursing',
+    text:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam, illum!',
+  },
+  {
+    img:'/sneaker-01.png',
+    name:'Fitness Center',
+    text:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam, illum!',
+  },
+  {
+    img:'/support-01.png',
+    name:'Daily Support',
+    text:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam, illum!',
+  },
+]
+const ourCare = [
+  {
+      img:'/ourCare1.webp',
+      name:'Our Care',
+      detail:'Above all, our fundamental purpose revolves around not merely sustaining, but elevating the quality of life for our inhabitants. We firmly hold the view that advancing in years should be a jubilant commemoration of accumulated wisdom and experiences'
+  },
+  {
+      img:'/ourCare2.webp',
+      name:'Our Homes',
+      detail:'Our living spaces are thoughtfully designed to create a genuine sense of comforting familiarity, featuring delightful surroundings, beautifully decorated rooms, outstanding meals, and most importantly, an unmatched level of care.',
+  },
+  {
+      img:'/our-values.jpg',
+      name:'Our Values',
+      detail:
+      'The families of our residents can find solace in the knowledge that their cherished ones are ensconced within a secure, compassionate, and inviting milieu. Their pride, esteem, well-being, and individualities are entrusted to capable guardianship.' 
+  }
 ]
 
   return (
 
-<>
-    <div className="w-full h-[700px] overflow-hidden">  
-{/* <Swiper spaceBetween={30}
-        centeredSlides={true}
-        autoplay={{
-          delay: 2000,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[EffectCreative]} className="w-full h-full">
-       {
-        sliderImage.map((element,idx)=> {
-            return <SwiperSlide className="w-full h-full" key = {idx}>
+<div className="w-full h-full relative">
+    <div className="w-full h-[700px]">
 
-<div style={{ backgroundImage: `url(${element.img})` }} className="w-full h-full bg-cover relative">
-  <div className="w-full h-full bg-black absolute opacity-50"></div>
-  <div className="flex flex-col justify-center h-full ml-5 md:ml-20 px-3 text-white relative z-10">
-    <p className="text-green-800 text-[30px] font-bold">Change the World</p>
-    <p className="text-[25px] md:text-[75px]">{element.text}</p>
-    <p className="text-[18px] md:text-[40px]">{element.text2}</p>
-    <Link href ="/contact_us">
-    <button className="bg-green-800 w-[175px] h-[60px] rounded-2xl font-bold text-[20px]">Contact Us</button>
-    </Link>
-  </div>
-</div>
-              
-              </SwiperSlide>
-        })
-       } 
-</Swiper> */}
-<div>
   <ZoomSlider/>
 </div>
 
+    <div className=" text-black px-5 md:px-20 py-10 flex flex-col items-center justify-center text-center  ">
+    <h1 className="text-[25px] md:text-[35px] lg:text-[50px] font-normal">Welcome to SBH</h1>
+    <p className="text-[16px] md:text-[20px] px-3 md:px-0  text-center">At <strong className = "text-blue-900">SBH</strong> , our mission is to provide compassionate care and support to our beloved seniors. In the 'How Can We Help' section, we offer a range of services tailored to meet the unique needs of each resident. From personalized care plans and recreational activities to medical assistance and emotional companionship, we're dedicated to enhancing the quality of life for our cherished residents.</p>
+    <div className='py-10 container- mx-auto flex flex-col md:flex-row px-3  justify-center gap-20'>
+    {
+        ourCare.map((element,idx)=> {
+            return <div className='flex flex-col items-center gap-4'>
+                <div className='w-[150px] h-[150px] md:w-[200px] md:h-[200px] rounded-full drop-shadow-2xl shadow-2xl overflow-hidden'>
+            <img src={element.img} alt="" className='box-shadow-xl w-full h-full'/>
+            </div>
+            <h1 className='text-gray-500  font-bold text-[30px]'>{element.name}</h1>
+            <div className='max-w-[300px] text-gray-500 text-justify'>{element.detail}</div>
+        </div>
+        })
+    }        
+      </div>
+    </div>
+
+
+      <div className="flex flex-col items-center justify-center px-5 md:px-20 py-20 bg-gray-100">
+        <h1 className="text-[25px] md:text-[35px] lg:text-[50px] font-normal">Our Care Services</h1>
+        <p className="text-[16px] md:text-[20px] px-3 md:px-0  text-center">At our Carehome Services, we are dedicated to offering top-notch care and support to individuals who require assistance in their daily lives. Our range of services is designed to ensure the well-being, safety, and happiness of our residents, promoting a comfortable and enriching environment for all.</p>
+        <div className='grid grid-cols-1 mt-20 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 place-items-center  px-20 gap-20     '>
+{
+    ourServices.map((element,idx)=> {
+        return <div className='w-[300px] bg-white text-center px-3 rounded-xl h-[450px] shadow-2xl shadow-slate-700 drop-shadow-2xl border-2  py-5 flex flex-col items-center'>
+        <div className='translate-y-[-50px] bg-blue-900 top-0 rounded-xl w-[70px] h-[70px] flex flex-row items-center justify-center'>
+        <img src={element.img} alt="" className="w-[50px] h-[50px] md:w-[50px] md:h-[50px]"/>
+        </div>
+        <div className='font-bold text-[25]'>{element.name}</div>
+        <div className='mt-3 font-normal text-[18px]'>{element.description}</div>
+    </div>
+    })
+}
+
+
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-{/* <div className="flex flex-col items-center justify-center bg-green-800 gap-4 sm:gap-10 py-5 md:py-20 md:px-10 md:px-0">
-        <div className="flex flex-col items-center gap-3 ">
-        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="50" viewBox="0 0 42 41.9">
-  <path fill="black" d="M38.5,30.25V14.15L28,6.8,17.5,14.15V20.6h-3V12.65L28,3l13.5,9.65v17.6ZM28,6.8ZM29,17h2V15H29Zm-4,0h2V15H25Zm4,4h2V19H29Zm-4,0h2V19H25Zm3.3,23.9L12.75,40.45V43.3H2V23.6H17.45L30.2,28.4a5.267,5.267,0,0,1,2.275,1.625A4.958,4.958,0,0,1,33.4,33.25h5.7a4.589,4.589,0,0,1,3.5,1.5A5.7,5.7,0,0,1,44,38.8v1.3ZM5,40.3H9.7V26.6H5Zm23.1,1.5,12.8-3.9a2.619,2.619,0,0,0-.75-1.3,1.661,1.661,0,0,0-1.05-.35H28.75a17.454,17.454,0,0,1-5.2-.75L19.5,34.25l1.1-2.9,3.65,1.2a13.807,13.807,0,0,0,2.375.55,30.135,30.135,0,0,0,3.575.15,3.2,3.2,0,0,0-.225-1.175,1.452,1.452,0,0,0-.775-.825L16.95,26.6h-4.2V37.3ZM9.7,33.45ZM30.2,33.25ZM9.7,33.45ZM12.75,33.45Z" transform="translate(-2 -3)"></path>
-</svg>
-          <p className="text-[36px] font-bold">Welcome to SBH Healthcare</p>
-        </div>
-        <div className="text-[20px] max-w-[1400px] sm:text-[25px] lg:text-[30px] px-3 text-black text-center ">Welcome to SBH Health Care,Where we understand that there are many care homes and nursing homes,
-        and to choose the right one is a big decision that can often be stressful.
-        Our team is here to alleviate as much of that stress as possible, and you can rest assured that we will do 
-        whatever we can to assist you and your loved ones with settling into your new home. We warmly welcome prospective 
-        residents and their loved ones to come and take a tour of our care.</div>
-    </div> */}
-
-
-
-    {/* <div className="bg-yellow-100 text-black px-5 md:px-20 flex justify-center py-20 flex flex-col items-center text-center ">
-<div className="text-[16px] lg:text-[25px] max-w-[1000px] flex flex-col items-center justify-center"><span className="text-[25px] md:text-[35px] lg:text-[50px] font-bold">Who we are</span> 
-   </div>
-   <div className="max-w-[1000px] text-[30px]">
-   Founded with a vision to redefine aging, SBH Health Care has been a trusted refuge for seniors seeking a safe and welcoming environment. Our legacy of care spans years, during which we have nurtured countless lives, forming lasting bonds and enriching the lives of each resident who becomes a part of our extended family.
-   </div>
-</div> */}
-
-
-
-<div className="flex flex-col items-center justify-center py-20 bg-green-800">
-        <div className="text-[20px] md:text-[36px] font-bold  text-center text-black">Our Care Services</div>
-        <div className="text-[16px] md:text-[30px] px-3 md:px-0 md:w-[50%] text-center ">"We collaborate intimately with our residents, their cherished ones, and every invested party to ensure that we provide unwavering assistance for individuals to reside with us as integral members of our extended kinship."</div>
-        <div className="px-3 grid grid-cols-2 md:flex md:flex-row items-center justify-between gap-3 md:gap-20 py-10">
-           {
-            ourServices.map((element,idx)=> {
-              return <div  className=" flex flex-col items-center gap-5" key = {idx}>
-                <img src={element.img} alt="" className="w-[70px] h-[70px] md:w-[100px] md:h-[100px]"/>
-                <div className="text-green-500 text-center text-[16px]">{element.name}</div>
-              </div>
-            })
-            
-           } 
-        </div>
        </div>
+       
 
-    
-    <div className="flex flex-col items-center pb-10 gap-5 lg:gap-10">
-      <h1 className="text-[25px] sm:text-[35px] text-center font-bold text-blue-800 mt-10">Why Choose us</h1>
-      <div className="flex flex-col-reverse lg:flex-row px-3 sm:px-0 items-center gap-2 lg:gap-10">
-        <div className="w-full h-full sm:w-[500px] sm:h-[400px] drop-shadow-2xl border-4 border-blue-800 rounded-xl shadow-slate-800">
-          <img src="/careworkout.webp" alt="" className="w-full h-full   rounded-lg"/>
-        </div>
-        <div className="flex flex-col w-full sm:w-[500px] lg:w-[450px] gap-2">
-          <h1 className="font-bold text-[20px] gap-3 text-blue-800">Personalized Care:</h1>
-          <p>Within our establishment, we hold a steadfast belief in the distinct and individual needs of each resident.
-            To address this, our approach involves meticulously tailored care plans that prioritize personal preferences and requirements.
-            Our dedicated team is committed to ensuring that every resident receives the attentive and specialized care they merit.
-            This personalized approach extends beyond medical necessities, encompassing a resident's unique hobbies, interests, and background.
-            By upholding this philosophy, we create an environment where every individual is valued and their well-being is at the forefront of our care.</p>
-        </div>
+
+    <div className="flex flex-col  lg:flex-row items-center justify-between gap-10 py-20 md:px-20 px-3 ">
+
+
+      <div className="flex flex-col items-center lg:items-start max-w-[800px] px-3 text-center lg:text-left">
+        <h1 className="font-semibold text-[25px]">WHY CHOOSE US</h1>
+        <br />
+        <p className="px-3 md:px-0">"Discover a higher standard of care with us. Our experienced team is dedicated to ensuring your loved one's comfort and well-being every day.
+         <br /><br /> At SBH Healthcare, we blend personalized support with a welcoming community, creating a place they can truly call home. Trust us to provide the exceptional care your family deserves."</p>
+         <Link href='/services'>
+        <button className="bg-[#39b54a] py-2 px-3 text-white mt-5">Getting Started</button>
+        </Link>
       </div>
 
-
-      <div className="flex flex-col lg:flex-row items-center justify-center py-5 px-3 sm:px-0 gap-2 lg:gap-10 mt-0 lg:mt-20 bg-green-800 w-full">
-      <div className="flex flex-col  w-full sm:w-[500px] lg:w-[450px] gap-3">
-          <h1 className="font-bold text-[20px] text-blue-800">Engaging Activities:</h1>
-          <p>
-Life at SBH is a tapestry of vitality and connection. Our diverse activities, from arts to fitness and outings, keep residents engaged and joyful. These thoughtfully curated experiences foster creativity and holistic well-being. Beyond our walls, captivating outings offer a window to the world. Within our community, friendships flourish, creating a vibrant and supportive atmosphere. As the day ends, residents retire content, embodying the enriching power of genuine human connections.</p>
-        </div>
-        <div className="w-full h-full sm:w-[500px] sm:h-[400px] drop-shadow-2xl border-4 border-blue-800 rounded-xl shadow-slate-800">
-          <img src="/engage.jpg" alt="" className="w-full h-full bg-cover rounded-lg"/>
-        </div>
-      </div>
-
-
-      <div className="flex flex-col-reverse lg:flex-row px-3 sm:px-0 items-center gap-2 lg:gap-10 mt-0 lg:mt-20">
-        <div className="w-full h-full sm:w-[500px] sm:h-[400px] drop-shadow-2xl border-4 border-blue-800 rounded-xl shadow-slate-800">
-          <img src="/dining.jpg" alt="" className="w-full h-full   rounded-lg"/>
-        </div>
-        <div className="flex flex-col w-full sm:w-[500px] lg:w-[450px] gap-2">
-          <h1 className="font-bold text-[20px] gap-3 text-blue-800">Delicious Dining:</h1>
-          <p>At our esteemed old age home, we recognize the pivotal role of nourishment in well-being. Accomplished chefs curate nutritious and delectable meals, tailored to diverse dietary needs, ensuring that each dining moment is a source of joy. Our culinary experts blend health and flavor seamlessly, crafting a variety of dishes that cater to individual preferences. Beyond sustenance, we view dining as a cherished experience, fostering both communal connections and personal comfort. With a commitment to excellence, we prioritize the residents' dietary requirements while elevating their culinary journey.</p>
-        </div>
-      </div>
 
 
       
-      <div className="flex flex-col lg:flex-row items-center px-3 sm:px-0 gap-2 lg:gap-10 mt-0 lg:mt-20 py-5 bg-green-800 w-full justify-center">
-      <div className="flex flex-col w-full sm:w-[500px] lg:w-[450px] gap-3">
-          <h1 className="font-bold text-[20px] text-blue-800">Safe and Secure:</h1>
-          <p>
-          At the heart of our commitment lies the utmost importance placed on the safety and security of our residents. Our modern facility boasts a range of cutting-edge safety features, seamlessly integrated to provide a secure living space. Complemented by our dedicated and compassionate staff, who are accessible round-the-clock, we ensure a serene and protected environment that promotes a high quality of life. From advanced surveillance systems to secure access protocols, every detail is meticulously designed to safeguard our residents' well-being.</p>
-        </div>
-        <div className="w-full h-full sm:w-[500px] sm:h-[400px] drop-shadow-2xl border-4 border-blue-800 rounded-xl shadow-slate-800">
-          <img src="/elderly-patients.jpg" alt="" className="w-full h-full bg-cover rounded-lg"/>
-        </div>
-      </div>
+        <div className="flex flex-col w-full px-2 md:w-[400px] items-center gap-5">
+          <div className="px-2 py-3 border-2 border-[#39b54a] w-full md:w-[400px]">1. Convenient Speciality Care</div>
+          <div className="px-2 py-3 border-2 border-[#39b54a] w-full md:w-[400px]">2. Attention to Quality of Life</div>
+          <div className="px-2 py-3 border-2 border-[#39b54a] w-full md:w-[400px]">3. Medical Health Care</div>
       </div>
 
 
-    
-    
 
-       
+      </div>
 
-<div className="flex flex-col items-center py-5 px-3 md:py-10 md:px-20">
-  <div className="flex flex-col items-center gap-3 md:gap-3 justify-center  text-center">
-        <div className="font-bold text-green-800 text-[20px] md:text-[30px] ">Book an Appointment</div>
-        <div className="font-semibold text-green-800 text-[18px] md:text-[25]">We would love to hear from if you you're a resident or a relative.</div>
-        <div className="md:w-[700px] text-gray-500 text-[16px] md:text-[20px]">''Our transparent and approachable leadership group encourages staff, residents, and family members to openly express any apprehensions or suggestions. To directly reach our central administration, kindly utilize the provided form. Regarding internal inquiries about our care home, please get in touch with the specific facility. <br />Or You can directly call us on the numbers below</div>
+
+
+
+
+        <div className="flex flex-col items-center py-5 px-3 text-white md:py-10 md:px-20 bg-[#218e9e]" style ={{backgroundImage: "linear-gradient(to left, #051f46, #00256d, #002793, #0024b8, #1410da)"}}>
+        <div className="flex flex-col items-center gap-3 justify-center text-center">
+        <h1 className="text-[25px] md:text-[35px] lg:text-[50px] font-normal">Book an Appointment</h1>
+        <div className=" text-[18px] md:text-[25] mt-[-15px]">We would love to hear from if you you're a resident or a relative.</div>
+        <p className="text-[16px] md:text-[20px] px-3 md:px-0  text-center">Our transparent and approachable leadership group encourages staff, residents, and family members to openly express any apprehensions or suggestions. To directly reach our central administration, kindly utilize the provided form.</p>
         </div>
 
         <div className="flex flex-row items-center gap-5 mt-5">
-        <div className="bg-green-800 p-2 py-3  px-4 rounded-xl font-bold text-[15px]">Samina Bhatti :<span>0791-678-9486</span></div>
-        <div className="bg-green-800 py-3  px-4 rounded-xl font-bold text-[15px]">Yusuf Ahmed :<span>0748-211-2058</span></div>
+        <button onClick = {handleModal}
+ className="bg-[#39b54a] hover:bg-[#306f38] px-2 py-3 text-white rounded-sm" >Book An Appointment</button>
         </div>
-</div>
-<div className="flex flex-col items-center xl:flex-row justify-center gap-10 xl:gap-20  bg-green-800 pb-5 xl:pb-0">
-  <div className="w-full xl:w-[60%] xl:h-[500px]">
-<img src="/design.jpg" alt=""  className="bg-cover w-full h-full"/>
-</div>
-<div className="flex flex-col items-center justify-center w-full xl:w-[40%] px-3 xl:px-0 xl:pr-10 text-center xl:text-left">
-  <h1 className="font-bold text-white text-[25px] xl:text-[30px]">Our Philosophy</h1>
-  <div className="text-white text-[18px]">At our care home, families can trust that their loved ones are in a safe,
-   nurturing, and homely environment. We prioritize dignity, respect, 
-   and happiness for each resident, valuing their unique identities. 
-   Our dedicated team fosters a warm and supportive atmosphere, encouraging independence and engagement in fulfilling activities.
-   Open communication with staff, residents, and families is vital to us,
-   as we continuously improve our services. Safety is paramount, and our well-trained staff ensures a secure environment.
-   Regular social events strengthen our close-knit community.
-   Our care home is a place of comfort, love, and joy, where residents thrive and families are always welcomed.</div>
-</div>
-</div>
+      </div>
+             
+    <Modal showModal ={showModal} handleModal ={handleModal}>
+      <div className="text-black w-[700px] h-[400px] flex flex-row items-center">
+        <div className="w-[50%] h-full flex flex-col justify-center pl-5 gap-5">
+          <h1 className="text-[25px] font-bold ">Booking Request</h1>
+          <p>If you have any urgent inquiries or need to reschedule your appointment, please contact us at Phone Number or Email Address.
+          </p>
+          <div className="flex flex-row items-center gap-5">
+              <img src="/phone.png" alt="" className="w-[50px] h-[50px]"/>
+              <div className="flex flex-col items-center">
+              <div>0748 211 2058</div>
+              <div>0791 678 9486</div>
+              </div>
+          </div>
+          <div className="flex flex-row items-center gap-5">
+              <img src="/email.png" alt="" className="w-[50px] h-[50px]"/>
+              <div>info@sbhhealthcare.com</div>
+          </div>
+        </div>
+        <div className="w-[50%] bg-[#39b54a] h-full px-3 py-2 ">
+            <div className="w-full flex flex-row justify-end cursor-pointer  " onClick={handleModal}><div className="bg-white rounded-full"><img src="/close.png" alt="" className="w-[30px] h-[30px]"/></div></div>
+            <div className="px-5 flex flex-col items-center gap-3 mt-4">
+              <input type="text" placeholder="Name" className="bg-white text-black py-2 px-2 w-full"/>
+              <input type="text" placeholder="Email" className="bg-white text-black py-2 px-2 w-full"/>
+              <input type="text" placeholder="Phone" className="bg-white text-black py-2 px-2 w-full"/>
+              <textarea name="" id="" cols={4} rows={4} placeholder="Message" className="bg-white text-black py-2 px-2 w-full"></textarea>
+              <button className="bg-transparent border-2 border-white px-4 py-1 text-white">Book Appointment</button>
+            </div>
+        </div>
+      </div>
+    </Modal>
 
 
 
 
-
-<div className="flex flex-col items-center justify-center py-10">
+<div className="flex flex-col items-center justify-center md:px-20 py-10">
   <div className="flex flex-col items-center gap-2 pb-5">
-    <div className="font-bold text-green-500 text-[20px] md:text-[30px] text-center">What Residents and Families Says</div>
-    <div className=" text-[18px] md:text-[20px] text-center">Here are some of our latest reviews from CareHome.co.uk,<br /> the leading care home review web site.</div>
+    <h1 className="text-[25px] md:text-[35px] lg:text-[50px] font-normal text-center">What Residents and Families Says</h1>
   </div>
-      <div className="flex flex-row gap-20 items-center">
-        
-        <Swiper
-          freeMode={true}
+
+  <Swiper freeMode={true}
           spaceBetween={20}
           pagination={{
             clickable: true,
           }}
           modules={[FreeMode, Pagination]}
-        className="mySwiper w-[300px] sm:w-[400px]  md:w-[700px]  lg:w-[900px] h-[300px] px-5 gap-10"
+        className="mySwiper w-[300px] sm:w-[400px]  md:w-[700px]  lg:w-full h-[300px] px-5 gap-10"
         breakpoints={{
           640: {
             slidesPerView: 1,
@@ -386,27 +374,30 @@ Life at SBH is a tapestry of vitality and connection. Our diverse activities, fr
           },
           1024: {
             slidesPerView: 3,
-            spaceBetween: 30,
+            spaceBetween: 50,
           },
-        }}
-        style = {{paddingRight:'40px',paddingLeft:'40px',paddingTop:'20px',paddingBottom:'20px'}} 
-      >
-              {testimonials.map((element,idx)=> {
-                return <SwiperSlide style = {{margin:0}} key = {idx} className="text-white py-20 flex flex-col w-[300px] sm:w-[400px] gap-3 h-[500px] items-center justify-center text-center rounded-xl px-3 py-5  bg-green-800 ">
-                      <div className="">{element.review}</div>
-                      <h1 className="font-bold text-[20px] ">{element.name}</h1>
-</SwiperSlide>
-              })}        
-        
-      </Swiper>
+          1499:{
+            slidesPerView: 4,
+            spaceBetween: 50,
+          }
+        }}>
+{
+  testimonials.map((element,idx)=> {
+    return <SwiperSlide>
+      <div className="  h-[500px] flex flex-col items-center">
+        <div className="bg-blue-900 h-[200px] px-2 py-2 overflow-hidden flex flex-col items-center text-white">
+        <h1 className="font-bold text-[18px]">{element.name}</h1>
+            <div className="mt-3 text-[14px] ">{element.review}</div>
         </div>
-  
-
-
-
-</div>
-<Footer/>
-    </>
+        <img src={element.img} alt="" className="w-[70px] h-[70px] mt-5 rounded-full"/>
+      </div>
+    </SwiperSlide>
+  })
+}
+  </Swiper>   
+    </div>
+    <Footer/>
+    </div>
 
   )
 }
