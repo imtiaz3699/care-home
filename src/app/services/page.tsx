@@ -57,7 +57,7 @@ function Services() {
 
      <div className='w-full h-[500px] object-cover flex flex-col items-center justify-center' style = {{backgroundImage:'url(/our-services.png)'}}>
        {
-            isSmallScreen && <div className='flex flex-row items-center justify-center font-bold text-center text-white text-[60px]'>
+            isSmallScreen && <div className='flex flex-row items-center justify-center font-bold text-center text-white text-[50px] md:text-[100px]'>
             Our Services
             </div>
        } 

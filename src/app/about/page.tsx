@@ -3,6 +3,7 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/footer/Footer'
 import { useMediaQuery } from 'react-responsive';
+import Modal from '../components/Modal/Modal';
 
 function page() {
     const data = [
@@ -93,10 +94,11 @@ const isBigScreen = useMediaQuery({ minWidth: 769 });
       <Navbar/>
 
      {
-        isBigScreen && <div className='w-full h-[500px] object-fit md:bg-cover ' style = {{backgroundImage:'url(/about-us.jpg)'}}></div>
+        isBigScreen && <div className='w-full h-[500px] object-cover flex flex-row items-center justify-center bg-[#133d66]'>
+            <h1 className='font-bold text-[50px] md:text-[100px] text-white '>About Us</h1>        </div>
      }
      {
-        isSmallScreen && <div className='w-full h-[500px] bg-[#133d66] flex flex-row items-center justify-center'>
+        isSmallScreen && <div className='w-full h-[400px] bg-[#133d66] flex flex-row items-center justify-center'>
             <div className='text-[50px] text-white font-bold'>About Us</div>
         </div>
      } 
@@ -129,7 +131,7 @@ const isBigScreen = useMediaQuery({ minWidth: 769 });
         })
     }        
       </div>
-
+      
 
 <Footer/>
     </>
