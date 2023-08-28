@@ -234,8 +234,8 @@ const ourCare = [
 </div>
 
     <div className=" text-black px-5 md:px-20 py-10 flex flex-col items-center justify-center text-center  ">
-    <h1 className="text-[25px] md:text-[35px] lg:text-[50px] font-normal">Welcome to SBH</h1>
-    <p className="text-[16px] md:text-[20px] px-3 md:px-0  text-center">At <strong className = "text-blue-900">SBH</strong> , our mission is to provide compassionate care and support to our beloved seniors. In the 'How Can We Help' section, we offer a range of services tailored to meet the unique needs of each resident. From personalized care plans and recreational activities to medical assistance and emotional companionship, we're dedicated to enhancing the quality of life for our cherished residents.</p>
+    <h1 className="text-[25px] md:text-[35px] lg:text-[50px] font-normal">Welcome to SBH Domiciliary Care</h1>
+    <p className="text-[16px] md:text-[20px] px-3 md:px-0  text-center">At <strong className = "text-blue-900">SBH Domiciliary Care</strong>, we are more than caregivers; we are companions on your journey to wellbeing. With a deep-rooted commitment to enhancing lives, we provide compassionate home care solutions that empower independence and nurture a sense of belonging.</p>
     
     <div className='py-10 container- mx-auto flex flex-col md:flex-row px-3  justify-center gap-20'>
     {
