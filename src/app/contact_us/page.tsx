@@ -10,7 +10,8 @@ function ContactUs() {
     {
       img:'/location.png',
       name:'OUR MAIN OFFICE',
-      description:'SBH Healthcare Limited 311 Brookvale Road Erdington Birmingham B23 7RR',
+      description:'SBH Healthcare Limited',
+      description2:'311 Brookvale Road Erdington Birmingham B23 7RR',
     },
     {
       img:'/phone.png',
@@ -18,11 +19,6 @@ function ContactUs() {
       description:'0791 678 9486',
       description2:'0748 211 2058'
     },
-    // {
-    //   img:'/fax.png',
-    //   name:'FAX',
-    //   description:'074-82112-058',
-    // },
     {
       img:'/emil-us.png',
       name:'EMAIL',
