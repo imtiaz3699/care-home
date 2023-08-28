@@ -30,10 +30,6 @@ interface NavbarProps {
             url:'/about',
         },
         {
-          name:'Gallery',
-          url:'',
-        },
-        {
             name:'Contact Us',
             url:'/contact_us',
         },

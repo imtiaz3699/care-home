@@ -17,6 +17,10 @@ function Footer() {
           name:'Privacy Policy',
           url:'/privacy-policy',
         },
+        {
+          name:'Useful Links',
+          url:'',
+        },
       ]
      
   return (
