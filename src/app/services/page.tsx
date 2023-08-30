@@ -75,7 +75,7 @@ function Services() {
 {
     ourServices.map((element,idx)=> {
         return <div className='w-[300px] bg-white text-center px-3 rounded-xl h-[400px] shadow-2xl shadow-slate-700 drop-shadow-2xl border-2  py-5 flex flex-col items-center'>
-        <div className='translate-y-[-50px] bg-blue-500 top-0 rounded-xl w-[70px] h-[70px] flex flex-row items-center justify-center'>
+        <div className='translate-y-[-50px] bg-blue-900 top-0 rounded-xl w-[70px] h-[70px] flex flex-row items-center justify-center'>
         <img src={element.img} alt="" className="w-[50px] h-[50px] md:w-[50px] md:h-[50px]"/>
         </div>
         <div className='font-bold text-[25]'>{element.name}</div>

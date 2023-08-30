@@ -289,8 +289,9 @@ const ourCare = [
       <div className="flex flex-col items-center lg:items-start max-w-[800px] px-3 text-center lg:text-left">
         <h1 className="font-semibold text-[25px]">WHY CHOOSE US</h1>
         <br />
+         
         <p className="px-3 md:px-0">"Discover a higher standard of care with us. Our experienced team is dedicated to ensuring your loved one's comfort and well-being every day.
-         <br /><br /> At SBH Healthcare, we blend personalized support with a welcoming community, creating a place they can truly call home. Trust us to provide the exceptional care your family deserves."</p>
+         <br /><br /> At SBH Domiciliary Care, we blend personalized support with a welcoming community, creating a place they can truly call home. Trust us to provide the exceptional care your family deserves."</p>
          <Link href='/services'>
         <button className="bg-[#39b54a] py-2 px-3 text-white mt-5">Getting Started</button>
         </Link>
