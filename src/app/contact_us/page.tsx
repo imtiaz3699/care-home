@@ -10,7 +10,7 @@ function ContactUs() {
     {
       img:'/location.png',
       name:'OUR MAIN OFFICE',
-      description:'SBH Healthcare Limited',
+      description:'SBH Domiciliary Care',
       description2:'311 Brookvale Road Erdington Birmingham B23 7RR',
     },
     {
