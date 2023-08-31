@@ -116,7 +116,7 @@ const isBigScreen = useMediaQuery({ minWidth: 769 });
            }             
       </div>
 <div className='w-full h-full flex flex-row items-center flex flex-row items-center justify-center'>
-           <div className='w-full py-20 bg-[#133d66] text-[20px] text-center px-20 text-white'>SBH Healthcare is a trusted name in healthcare services, dedicated to providing compassionate and comprehensive care to individuals and communities. With a strong commitment to excellence, we offer a range of personalized healthcare solutions designed to meet diverse needs. Our team of skilled professionals brings expertise and empathy to every interaction, ensuring the highest standards of care. At SBH Healthcare, we strive to empower healthier lives through a blend of innovation, integrity, and genuine concern for the well-being of those we serve.</div>
+           <div className='w-full py-20 bg-[#133d66] text-[20px] text-center px-20 text-white'>SBH Domiciliary Care is a trusted name in healthcare services, dedicated to providing compassionate and comprehensive care to individuals and communities. With a strong commitment to excellence, we offer a range of personalized healthcare solutions designed to meet diverse needs. Our team of skilled professionals brings expertise and empathy to every interaction, ensuring the highest standards of care. At SBH Domiciliary Care, we strive to empower healthier lives through a blend of innovation, integrity, and genuine concern for the well-being of those we serve.</div>
 </div>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  place-items-center py-20 px-20 gap-20   '>
     {
