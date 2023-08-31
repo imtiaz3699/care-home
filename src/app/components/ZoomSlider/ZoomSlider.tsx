@@ -60,7 +60,7 @@ export default function ZoomSlider() {
   <div className="relative bg-transparent w-full h-full flex flex-col px-10 justify-center z-20">
     {/* Text content */}
     <div className="font-bold text-[25px] sm:text-[35px] md:text-[50px] text-white md:ml-28">
-      Welcome to SBH Healthcare
+      Welcome to SBH Domiciliary Care
     </div>
 
     

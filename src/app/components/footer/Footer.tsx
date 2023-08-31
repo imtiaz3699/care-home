@@ -28,11 +28,11 @@ function Footer() {
      <div className="footer flex flex-col md:flex-row  md:justify-between md:px-20 text-center md:text-left  bg-gray-800 justify-center gap-20 py-10">
 <div className='flex flex-col items-center text-center gap-3'>
   <img src="/logo.png" alt="" className="w-[150px] h-[100px] m-0"/>
-  <div className="text-white">SBH Healthcare Limited</div>
+  <div className="text-white">SBH Domiciliary Care</div>
   <div className="text-white">311 Brookvale Road <br /> Erdington Birmingham B23 7RR</div>
 </div>
 <div>
-<h1 className="text-white font-bold text-[35px]">SBH Healthcare</h1>
+<h1 className="text-white font-bold text-[35px]">SBH Domiciliary Care</h1>
 <div className="flex flex-col gap-1">
         {
           footer1.map((element,idx)=> {
